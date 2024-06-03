@@ -16,6 +16,21 @@ philosophy:
   image: 
     image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
     image_focus: 
+banner: 
+  image: 
+    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+    image_focus: 
+work: 
+  gallery: 
+   - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+     name: Casa Padang Padang
+     location: 40.753N, 73.963W
+   - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+     name: Casa Padang Padang
+     location: 40.753N, 73.963W
+   - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+     name: Casa Padang Padang
+     location: 40.753N, 73.963W
 seo:
  meta-description: 
  keywords:
@@ -68,4 +83,61 @@ seo:
 
   <!-- Image -->
   <div class="bg-image-style" style="background-image: url('{{ page.philosophy.image.image_path }}'); background-position: {{ page.philosophy.image.image_focus }};"></div>
+</section>
+
+<!-- Banner -->
+<section class="bg-image-style min-h-[70vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
+
+<!-- Past Work -->
+<section>
+  <div class="grid grid-cols-2">
+
+    <!-- Left Column -->
+    <h2 class="editable">Some text here introducing your projects and the work you have done</h2>
+
+    <!-- Right Column -->
+    <div class="editable">
+      <ul>
+
+        <!-- 1st Work -->
+        <li>
+          <span>Padang Villas</span>
+          <span>2 Bed Villa Studio</span>
+        </li>
+
+        <!-- 2nd Work -->
+        <li>
+          <span>Amari Villas</span>
+          <span>2 Bed Villa / Studio</span>
+        </li>
+
+        <!-- 3rd Work -->
+        <li>
+          <span>Makalu Villas</span>
+          <span>X Bed Villa</span>
+        </li>
+
+        <!-- 4th Work -->
+        <li>
+          <span>Nyala Villas</span>
+          <span>X Bed Villa / Detail</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="grid grid-cols-3 gap-4">
+    {% for item in page.work.gallery %}
+    <!-- Image -->
+    <div>
+      <div class="bg-image-style aspect-portrait" style="background-image: url('{{ item.image_path }}');"></div>
+      <div>
+        <h3>{{ item.name }}</h3>
+        <span>{{ item.location }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
 </section>
