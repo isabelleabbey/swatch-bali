@@ -1,11 +1,71 @@
 ---
 layout: default
+title: Page Title
+header: 
+  image-left: 
+    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+    image_focus: 
+  image-right: 
+    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+    image_focus: 
+about: 
+  image: 
+    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+    image_focus: 
+philosophy: 
+  image: 
+    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+    image_focus: 
 seo:
-  title: This should appear in the browser tab
-  description:
-  keywords:
-  social_image:
-  hide-from-google: false
+ meta-description: 
+ keywords:
+ social_image:
+ twitter_card:
+ twitter_description:
+ type: website
+ hide-from-google: false
 ---
 
-<p class="bg-yellow-400"> This is some text on the homepage...and a test </p>
+<!-- Hero Banner -->
+<section class="grid grid-cols-2">
+
+    <!-- Left Column -->
+    <div class="bg-image-style min-h-[100vh]" style="background-image: url('{{ page.header.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};"></div>
+
+    <!-- Right Column -->
+    <div class="bg-image-style" style="background-image: url('{{ page.header.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"></div>
+</section>
+
+<!-- About Section -->
+<section>
+  <h2>Crafting unique spaces through meaningful collaborations</h2>
+
+  <!-- Image -->
+  <div class="grid grid-cols-2 gap-12">
+    <div class="bg-image-style" style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"></div>
+
+  <!-- Text -->
+    <div>
+      <span>Design/enrich/inspire</span>
+      <div>
+        <p>As a practice, we strive to deliver finely crafted projects that maximise value and wellbeing. We believe in architecture having the power to enrich our lives and the city we live in.</p>Swatch Architects brings this belief to every project— a commitment to consistency and purity of intent, to ambitious and intelligent design, and to delivering well-crafted architecture through meaningful collaborations with clients.</p><p>As designers, we lead with innovation, intelligence and vision.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Philosophy -->
+<section class="grid grid-cols-2 gap-12">
+
+  <!-- Text -->
+  <div>
+    <h2 class="editable">At Swatch Architects, innovation and creativity are at the core of our design philosophy.</h2>
+    <p>London born and Bali based, our approach is a harmonious dance of natural beauty and functional form. Our experienced architectural team blends purpose with expertise to transform your architectural dreams into a tangible reality.</p>
+    <p>As a boutique firm, we respond to our client' needs by designing projects in an intimate and hands on way, collaborating and creating with people that we know and trust. We love what we do and invest great time and passion in delivering projects which are beautifully conceived and finely crafted.</p>
+    <a href="#">Our work</a>
+  </div>
+
+  <!-- Image -->
+  <div class="bg-image-style" style="background-image: url('{{ page.philosophy.image.image_path }}'); background-position: {{ page.philosophy.image.image_focus }};"></div>
+</section>
