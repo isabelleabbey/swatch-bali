@@ -494,6 +494,8 @@ p:last-child {
 }
 /* Buttons */
 .link {
+  margin-top: 2rem;
+  display: block;
   font-family: meno-banner, serif;
   font-size: 1.1rem;
   text-transform: lowercase;
@@ -533,12 +535,6 @@ p:last-child {
 .fixed {
   position: fixed;
 }
-.absolute {
-  position: absolute;
-}
-.relative {
-  position: relative;
-}
 .bottom-0 {
   bottom: 0px;
 }
@@ -548,23 +544,17 @@ p:last-child {
 .top-0 {
   top: 0px;
 }
-.z-20 {
-  z-index: 20;
-}
 .z-10 {
   z-index: 10;
 }
-.col-span-10 {
-  grid-column: span 10 / span 10;
-}
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-.col-span-9 {
-  grid-column: span 9 / span 9;
+.z-20 {
+  z-index: 20;
 }
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+.col-span-9 {
+  grid-column: span 9 / span 9;
 }
 .m-2 {
   margin: 0.5rem;
@@ -579,10 +569,6 @@ p:last-child {
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
-}
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -608,17 +594,11 @@ p:last-child {
 .mt-4 {
   margin-top: 1rem;
 }
-.mt-auto {
-  margin-top: auto;
-}
-.-mt-16 {
-  margin-top: -4rem;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
 .mt-8 {
   margin-top: 2rem;
+}
+.mt-auto {
+  margin-top: auto;
 }
 .block {
   display: block;
@@ -650,6 +630,9 @@ p:last-child {
 .min-h-\[70vh\] {
   min-height: 70vh;
 }
+.w-\[30\%\] {
+  width: 30%;
+}
 .w-\[40\%\] {
   width: 40%;
 }
@@ -661,9 +644,6 @@ p:last-child {
 }
 .w-full {
   width: 100%;
-}
-.w-\[30\%\] {
-  width: 30%;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -681,17 +661,14 @@ p:last-child {
   -moz-columns: 2;
        columns: 2;
 }
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -714,14 +691,14 @@ p:last-child {
 .justify-items-center {
   justify-items: center;
 }
+.gap-12 {
+  gap: 3rem;
+}
 .gap-4 {
   gap: 1rem;
 }
 .gap-8 {
   gap: 2rem;
-}
-.gap-12 {
-  gap: 3rem;
 }
 .self-end {
   align-self: flex-end;
@@ -779,11 +756,12 @@ p:last-child {
 .p-2 {
   padding: 0.5rem;
 }
-.p-4 {
-  padding: 1rem;
-}
 .p-5p {
   padding: 5%;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .px-8 {
   padding-left: 2rem;
@@ -797,10 +775,6 @@ p:last-child {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 .pb-10p {
   padding-bottom: 10%;
 }
@@ -810,26 +784,20 @@ p:last-child {
 .pb-5p {
   padding-bottom: 5%;
 }
-.pl-10p {
-  padding-left: 10%;
-}
-.pt-5p {
-  padding-top: 5%;
-}
 .pb-8 {
   padding-bottom: 2rem;
 }
-.pt-12 {
-  padding-top: 3rem;
-}
-.pt-24 {
-  padding-top: 6rem;
+.pl-10p {
+  padding-left: 10%;
 }
 .pt-16 {
   padding-top: 4rem;
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pt-5p {
+  padding-top: 5%;
 }
 .text-center {
   text-align: center;
@@ -848,6 +816,9 @@ p:last-child {
 .uppercase {
   text-transform: uppercase;
 }
+.text-\[0\.7\] {
+  color: 0.7;
+}
 .text-light {
   --tw-text-opacity: 1;
   color: rgb(241 237 230 / var(--tw-text-opacity));
@@ -855,12 +826,6 @@ p:last-child {
 .text-main {
   --tw-text-opacity: 1;
   color: rgb(199 185 163 / var(--tw-text-opacity));
-}
-.text-\[0\.8\] {
-  color: 0.8;
-}
-.text-\[0\.7\] {
-  color: 0.7;
 }
 
 /* ----------- Import Typekit -----*/
@@ -874,11 +839,6 @@ p:last-child {
 .tk-brandon-grotesque { font-family: "brandon-grotesque", sans-serif; }
 .tk-meno-banner { font-family: "meno-banner", serif; }
 .tk-monotype-grotesque { font-family: "monotype-grotesque", sans-serif; }
-@media (min-width: 640px) {
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 @media (min-width: 768px) {
   .md\:w-\[40\%\] {
     width: 40%;

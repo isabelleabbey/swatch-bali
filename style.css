@@ -77,7 +77,7 @@
 
     /* Buttons */
     .link {
-        @apply font-serif italic underline text-[1.1rem] lowercase
+        @apply font-serif italic underline text-[1.1rem] lowercase mt-8 block
     }
 
     .list-project {
