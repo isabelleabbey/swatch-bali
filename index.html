@@ -51,6 +51,7 @@ seo:
     <div class="bg-image-style h-[100vh]" style="background-image: url('{{ page.header.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"></div>
 </section>
 
+
 <!-- About Section -->
 <section class="pb-5p">
   <div class="py-5p mx-8 border-t border-dark">
@@ -58,19 +59,20 @@ seo:
   </div>
 
   <!-- Image and Text Container -->
-  <div class="flex gap-12 min-h-[60vh]">
+  <div class="flex min-h-[60vh]">
 
     <!-- Image -->
     <div class="bg-image-style flex-1 min-h-[60vh]" style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"></div>
 
     <!-- Text -->
-    <div class="flex-1 flex flex-col justify-between mx-8 border-t border-dark">
+    <div class="flex-1 flex flex-col justify-between mr-8 border-t border-dark">
       <p class="pt-5p text-right">Design/enrich/inspire</p>
       <div class="flex justify-start self-end">
         <div class="w-[60%]">
           <p>As a practice, we strive to deliver finely crafted projects that maximise value and wellbeing. We believe in architecture having the power to enrich our lives and the city we live in.</p>
           <p>Swatch Architects brings this belief to every project— a commitment to consistency and purity of intent, to ambitious and intelligent design, and to delivering well-crafted architecture through meaningful collaborations with clients.</p>
           <p>As designers, we lead with innovation, intelligence and vision.</p>
+          <a href="#">Our practice</a>
         </div>
       </div>
     </div>
@@ -79,56 +81,65 @@ seo:
 </section>
 
 
+<!-- Philosophy Section -->
+<section class="pb-5p">
 
-<!-- Philosophy -->
-<section class="grid grid-cols-2 gap-12">
+  <!-- Image and Text Container -->
+  <div class="flex gap-12 min-h-[60vh]">
 
-  <!-- Text -->
-  <div>
-    <h2 class="editable">At Swatch Architects, innovation and creativity are at the core of our design philosophy.</h2>
-    <p>London born and Bali based, our approach is a harmonious dance of natural beauty and functional form. Our experienced architectural team blends purpose with expertise to transform your architectural dreams into a tangible reality.</p>
-    <p>As a boutique firm, we respond to our client' needs by designing projects in an intimate and hands on way, collaborating and creating with people that we know and trust. We love what we do and invest great time and passion in delivering projects which are beautifully conceived and finely crafted.</p>
-    <a href="#">Our work</a>
+    <!-- Text -->
+    <div class="flex-1 flex flex-col justify-between ml-8 border-b border-dark">
+      <div class="flex justify-start mt-auto">
+        <div class="w-[60%] pb-12">
+          <h2 class="editable">At Swatch Architects, innovation and creativity are at the core of our design philosophy.</h2>
+          <p>London born and Bali based, our approach is a harmonious dance of natural beauty and functional form. Our experienced architectural team blends purpose with expertise to transform your architectural dreams into a tangible reality.</p>
+          <p>As a boutique firm, we respond to our client' needs by designing projects in an intimate and hands on way, collaborating and creating with people that we know and trust. We love what we do and invest great time and passion in delivering projects which are beautifully conceived and finely crafted.</p>
+          <a href="#">Our work</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="bg-image-style flex-1 min-h-[60vh]" style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"></div>
+
   </div>
-
-  <!-- Image -->
-  <div class="bg-image-style" style="background-image: url('{{ page.philosophy.image.image_path }}'); background-position: {{ page.philosophy.image.image_focus }};"></div>
 </section>
+
 
 <!-- Banner -->
 <section class="bg-image-style min-h-[70vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
 
 <!-- Past Work -->
-<section>
-  <div class="grid grid-cols-2">
+<section class="pt-5p px-8">
+  <div class="grid grid-cols-2 pb-10p">
 
     <!-- Left Column -->
     <h2 class="editable">Some text here introducing your projects and the work you have done</h2>
 
     <!-- Right Column -->
-    <div class="editable">
+    <div>
       <ul>
 
         <!-- 1st Work -->
-        <li>
+        <li class="border-y border-dark py-2 flex justify-between">
           <span>Padang Villas</span>
           <span>2 Bed Villa Studio</span>
         </li>
 
         <!-- 2nd Work -->
-        <li>
+        <li class="border-b border-dark py-2 flex justify-between">
           <span>Amari Villas</span>
           <span>2 Bed Villa / Studio</span>
         </li>
 
         <!-- 3rd Work -->
-        <li>
+        <li class="border-b border-dark py-2 flex justify-between">
           <span>Makalu Villas</span>
           <span>X Bed Villa</span>
         </li>
 
         <!-- 4th Work -->
-        <li>
+        <li class="border-b border-dark py-2 flex justify-between">
           <span>Nyala Villas</span>
           <span>X Bed Villa / Detail</span>
         </li>
@@ -141,8 +152,8 @@ seo:
     {% for item in page.work.gallery %}
     <!-- Image -->
     <div>
-      <div class="bg-image-style aspect-portrait" style="background-image: url('{{ item.image_path }}');"></div>
-      <div>
+      <div class="bg-image-style aspect-portrait border-[12px] border-main" style="background-image: url('{{ item.image_path }}');"></div>
+      <div class="bg-main p-4 flex justify-between">
         <h3>{{ item.name }}</h3>
         <span>{{ item.location }}</span>
       </div>
