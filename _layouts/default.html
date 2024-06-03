@@ -22,7 +22,7 @@
 
     {{content}}
 
-    <footer class="pt-5p pb-8 mx-8">
+    <footer class="pt-5p mx-8">
 
         <!-- Logo -->
         <div class="border-b border-dark">
@@ -47,7 +47,7 @@
             <!-- Right Column -->
             <nav class="col-span-3 columns-2 text-right">
                 {% for item in site.data.navigation.footer %}
-                    <a href="{{ item.url }}" class="block uppercase mb-4">{{ item.title }}</a>
+                    <a href="{{ item.nav_link }}" class="block uppercase mb-4">{{ item.nav_title }}</a>
                 {% endfor %}
             </nav>
             

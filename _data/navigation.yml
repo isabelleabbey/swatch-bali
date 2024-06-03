@@ -1,20 +1,22 @@
 header:
-  - title: Home
-    url: /homepage
-  - title: About
-    url: /about  
-  - title: Contact
-    url: /contact
+  - nav_title: Home
+    nav_link: /
+  - nav_title: About
+    nav_link: /about    
+  - nav_title: Services
+    nav_link: /services
+  - nav_title: Contact
+    nav_link: /contact
 footer:
-  - title: Practice
-    url: /
-  - title: Projects
-    url: /  
-  - title: Invest
-    url: /
-  - title: Careers
-    url: /
-  - title: Journal
-    url: /  
-  - title: Contact
-    url: /
+  - nav_title: Practice
+    nav_link: /
+  - nav_title: Projects
+    nav_link: /    
+  - nav_title: Invest
+    nav_link: /
+  - nav_title: Careers
+    nav_link: /
+  - nav_title: Journal
+    nav_link: /
+  - nav_title: Contact
+    nav_link: /

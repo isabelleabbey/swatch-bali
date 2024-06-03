@@ -1,28 +1,30 @@
-general:
-  site-name: 
-  form-email: 
-  logo_path: 
-  logo-max-width: 
-  logo-text: 
 seo:
-  site_name:
+  site_name: 
   title:
   type: website
-  description:
-  keywords:
+  description: 
+  keywords: 
   social_image:
+  author: 
+  twitter_description: 
 social:
   instagram_username: 
   facebook_username:
   pinterest_username:
-  linkedin_username: 
-  twitter_username:
-  tiktok_username:
+  linkedin_username:
+  twitter_username: 
+  tiktok_username: 
   youtube_username:
 brand:
-  primary_logo_path: 
+  primary_color: '#B1BAB5'
+  secondary_color: '#5F9595'
+  light_color: '#FFFFFF'
+  dark_color: 
+  bright_color:
+  primary_logo_path: /images/brand_logo.png
   secondary_logo_path:
   submark_logo_path:
 technical:
-  google-analytics_tag:
+  google-analytics_embed:
   instagram_widget_embed:
+  code_for_head:
