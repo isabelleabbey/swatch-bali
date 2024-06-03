@@ -8,8 +8,8 @@ module.exports = {
     ],
     theme: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
-        serif: ['Italiana', 'serif'],
+        sans: ['brandon-grotesque', 'sans-serif'],
+        serif: ['meno-banner', 'serif'],
       },
       extend: {
         spacing: {
@@ -32,6 +32,7 @@ module.exports = {
         },
         colors: {
           'dark': '#231F20',
+          'medium': '#E5E0D3',
           'light': '#F1EDE6',
           'main': '#C7B9A3',
           'feature': '#C98665',
