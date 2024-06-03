@@ -16,11 +16,11 @@ social:
   tiktok_username: 
   youtube_username:
 brand:
-  primary_color: '#B1BAB5'
-  secondary_color: '#5F9595'
-  light_color: '#FFFFFF'
-  dark_color: 
-  bright_color:
+  primary_color: '#E5E0D3'
+  secondary_color: '#C7B9A3'
+  light_color: '#F1EDE6'
+  dark_color: '#231F20'
+  bright_color: '#C98665'
   primary_logo_path: /images/brand_logo.png
   secondary_logo_path:
   submark_logo_path:
