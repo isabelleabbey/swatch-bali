@@ -570,6 +570,18 @@ p:last-child {
   margin-left: 2rem;
   margin-right: 2rem;
 }
+.mx-\[30\%\] {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.my-\[20\%\] {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+.mx-\[25\%\] {
+  margin-left: 25%;
+  margin-right: 25%;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -599,6 +611,12 @@ p:last-child {
 }
 .mt-auto {
   margin-top: auto;
+}
+.ml-24 {
+  margin-left: 6rem;
+}
+.mr-24 {
+  margin-right: 6rem;
 }
 .block {
   display: block;
@@ -709,6 +727,9 @@ p:last-child {
 .border-\[12px\] {
   border-width: 12px;
 }
+.border-\[16px\] {
+  border-width: 16px;
+}
 .border-x-\[24px\] {
   border-left-width: 24px;
   border-right-width: 24px;
@@ -728,6 +749,9 @@ p:last-child {
 }
 .border-t-\[32px\] {
   border-top-width: 32px;
+}
+.border-t-\[24px\] {
+  border-top-width: 24px;
 }
 .border-accent {
   --tw-border-opacity: 1;
