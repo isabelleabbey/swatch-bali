@@ -761,6 +761,9 @@ p:last-child {
 .p-2 {
   padding: 0.5rem;
 }
+.p-5 {
+  padding: 1.25rem;
+}
 .p-5p {
   padding: 5%;
 }
@@ -847,5 +850,8 @@ p:last-child {
 @media (min-width: 768px) {
   .md\:w-\[40\%\] {
     width: 40%;
+  }
+  .md\:p-10 {
+    padding: 2.5rem;
   }
 }
