@@ -97,11 +97,16 @@
     /* Typography */
 
     .subtitle {
-        @apply uppercase text-[1.5rem]
+        @apply uppercase text-[1.3rem]
     }
 
     .serif-lg {
         @apply font-serif text-[2.5rem] leading-[1em]
+    }
+
+    /* Spacing */
+    .margin-heading {
+        @apply mb-12
     }
 
 }

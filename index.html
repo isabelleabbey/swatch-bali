@@ -82,7 +82,7 @@ seo:
 
 
 <!-- Philosophy Section -->
-<section class="pb-5p">
+<section class="py-5p">
 
   <!-- Image and Text Container -->
   <div class="grid grid-cols-2">
@@ -90,11 +90,11 @@ seo:
     <!-- Text -->
     <div class="flex-1 flex flex-col justify-between ml-8 mr-16 border-b border-dark">
       <div class="flex justify-start mt-auto">
-        <div class="w-[60%] pb-12">
-          <h2 class="editable">At Swatch Architects, innovation and creativity are at the core of our design philosophy.</h2>
+        <div class="w-[70%] pb-12">
+          <h2 class="serif-lg margin-heading">At Swatch Architects, <em>innovation</em> and <em>creativity</em> are <em>at the core</em> of our design <em>philosophy</em>.</h2>
           <p>London born and Bali based, our approach is a harmonious dance of natural beauty and functional form. Our experienced architectural team blends purpose with expertise to transform your architectural dreams into a tangible reality.</p>
           <p>As a boutique firm, we respond to our client' needs by designing projects in an intimate and hands on way, collaborating and creating with people that we know and trust. We love what we do and invest great time and passion in delivering projects which are beautifully conceived and finely crafted.</p>
-          <a href="#">Our work</a>
+          <a href="#" class="link">Our work</a>
         </div>
       </div>
     </div>
@@ -114,48 +114,48 @@ seo:
   <div class="grid grid-cols-2 pb-10p">
 
     <!-- Left Column -->
-    <h2 class="editable">Some text here introducing your projects and the work you have done</h2>
+    <h2 class="w-[70%] serif-lg editable">Some <em>text here</em> introducing your projects and <em>the work you</em> have done</h2>
 
     <!-- Right Column -->
-    <div>
+    <div class="pl-10p">
       <ul>
 
         <!-- 1st Work -->
-        <li class="border-y border-dark py-2 flex justify-between">
-          <span>Padang Villas</span>
-          <span>2 Bed Villa Studio</span>
+        <li class="border-y border-dark py-4 flex justify-between">
+          <span class="uppercase">Padang Villas</span>
+          <span class="text-main">2 Bed Villa Studio</span>
         </li>
 
         <!-- 2nd Work -->
-        <li class="border-b border-dark py-2 flex justify-between">
-          <span>Amari Villas</span>
-          <span>2 Bed Villa / Studio</span>
+        <li class="border-b border-dark py-4 flex justify-between">
+          <span class="uppercase">Amari Villas</span>
+          <span class="text-main">2 Bed Villa / Studio</span>
         </li>
 
         <!-- 3rd Work -->
-        <li class="border-b border-dark py-2 flex justify-between">
-          <span>Makalu Villas</span>
-          <span>X Bed Villa</span>
+        <li class="border-b border-dark py-4 flex justify-between">
+          <span class="uppercase">Makalu Villas</span>
+          <span class="text-main">X Bed Villa</span>
         </li>
 
         <!-- 4th Work -->
-        <li class="border-b border-dark py-2 flex justify-between">
-          <span>Nyala Villas</span>
-          <span>X Bed Villa / Detail</span>
+        <li class="border-b border-dark py-4 flex justify-between">
+          <span class="uppercase">Nyala Villas</span>
+          <span class="text-main">X Bed Villa / Detail</span>
         </li>
       </ul>
     </div>
   </div>
 
   <!-- Gallery -->
-  <div class="grid grid-cols-3 gap-4">
+  <div class="grid grid-cols-3 gap-8">
     {% for item in page.work.gallery %}
     <!-- Image -->
     <div>
-      <div class="bg-image-style aspect-portrait border-[12px] border-main" style="background-image: url('{{ item.image_path }}');"></div>
-      <div class="bg-main p-4 flex justify-between">
-        <h3>{{ item.name }}</h3>
-        <span>{{ item.location }}</span>
+      <div class="bg-image-style aspect-portrait border-[12px] {% cycle 'border-accent', 'border-main' %}" style="background-image: url('{{ item.image_path }}');"></div>
+      <div class="{% cycle 'bg-accent', 'bg-main' %} pt-16 pb-8 px-4 flex justify-between">
+        <h3 class="subtitle text-light">{{ item.name }}</h3>
+        <span class="subtitle text-light">{{ item.location }}</span>
       </div>
     </div>
     {% endfor %}

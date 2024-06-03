@@ -36,6 +36,7 @@ module.exports = {
           'light': '#F1EDE6',
           'main': '#C7B9A3',
           'feature': '#C98665',
+          'accent': '#99a397',
           'transparent': 'transparent',
         },
       },
