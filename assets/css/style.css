@@ -559,9 +559,6 @@ p:last-child {
 .m-2 {
   margin: 0.5rem;
 }
-.m-\[20\%\] {
-  margin: 20%;
-}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -570,17 +567,13 @@ p:last-child {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-.mx-\[30\%\] {
-  margin-left: 30%;
-  margin-right: 30%;
+.mx-\[25\%\] {
+  margin-left: 25%;
+  margin-right: 25%;
 }
 .my-\[20\%\] {
   margin-top: 20%;
   margin-bottom: 20%;
-}
-.mx-\[25\%\] {
-  margin-left: 25%;
-  margin-right: 25%;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -588,8 +581,8 @@ p:last-child {
 .mb-8 {
   margin-bottom: 2rem;
 }
-.ml-16 {
-  margin-left: 4rem;
+.ml-24 {
+  margin-left: 6rem;
 }
 .ml-4 {
   margin-left: 1rem;
@@ -597,8 +590,8 @@ p:last-child {
 .ml-8 {
   margin-left: 2rem;
 }
-.mr-16 {
-  margin-right: 4rem;
+.mr-24 {
+  margin-right: 6rem;
 }
 .mr-8 {
   margin-right: 2rem;
@@ -611,12 +604,6 @@ p:last-child {
 }
 .mt-auto {
   margin-top: auto;
-}
-.ml-24 {
-  margin-left: 6rem;
-}
-.mr-24 {
-  margin-right: 6rem;
 }
 .block {
   display: block;
@@ -724,9 +711,6 @@ p:last-child {
 .border {
   border-width: 1px;
 }
-.border-\[12px\] {
-  border-width: 12px;
-}
 .border-\[16px\] {
   border-width: 16px;
 }
@@ -746,9 +730,6 @@ p:last-child {
 }
 .border-t {
   border-top-width: 1px;
-}
-.border-t-\[32px\] {
-  border-top-width: 32px;
 }
 .border-t-\[24px\] {
   border-top-width: 24px;
@@ -779,6 +760,9 @@ p:last-child {
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-5 {
+  padding: 1.25rem;
 }
 .p-5p {
   padding: 5%;
@@ -866,5 +850,8 @@ p:last-child {
 @media (min-width: 768px) {
   .md\:w-\[40\%\] {
     width: 40%;
+  }
+  .md\:p-10 {
+    padding: 2.5rem;
   }
 }
