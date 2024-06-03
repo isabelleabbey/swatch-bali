@@ -6,9 +6,15 @@ header:
   - title: Contact
     url: /contact
 footer:
-  - title: Home
-    url: /homepage
-  - title: About
-    url: /about  
+  - title: Practice
+    url: /
+  - title: Projects
+    url: /  
+  - title: Invest
+    url: /
+  - title: Careers
+    url: /
+  - title: Journal
+    url: /  
   - title: Contact
-    url: /contact
+    url: /
