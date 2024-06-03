@@ -523,6 +523,15 @@ p:last-child {
 .mt-auto {
   margin-top: auto;
 }
+.ml-12 {
+  margin-left: 3rem;
+}
+.ml-16 {
+  margin-left: 4rem;
+}
+.mr-16 {
+  margin-right: 4rem;
+}
 .block {
   display: block;
 }
