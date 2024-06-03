@@ -10,15 +10,7 @@
 <body>
 
     <!-- Header -->
-    <header class="fixed top-0 z-10 w-full flex items-center justify-between pt-4 px-4 border-b border-dark">
-        <a href="#" class="uppercase">Swatch Architects</a>
-        <div class="flex-grow flex justify-center">
-            <a href="/index.html" class="text-center">
-                <img src="/images/temporary/logo-temp.png" class="inline-block">
-            </a>
-        </div>
-        <a href="#" class="uppercase">Menu</a>
-    </header>
+    {% include navigation/site-header.html %}
 
     {{content}}
 
@@ -37,38 +29,7 @@
 
     {% endif %}
 
-    <footer class="pt-5p mx-8">
-
-        <!-- Logo -->
-        <div class="border-b border-dark">
-            <a href="/index.html">
-                <img src="/images/temporary/logo-temp.png">
-            </a>
-        </div>
-
-        <div class="grid grid-cols-12 gap-12 mt-8">
-
-            <!-- Left Column -->
-            <div class="col-span-9">
-                <p class="w-[30%] mb-8">Crafting unique spaces through meaningful collaborations</p>
-
-                <!-- Social Links -->
-                <div class="flex gap-8">
-                    <a href="#" class="uppercase">Instagram</a>
-                    <a href="#" class="uppercase">LinkedIn</a>
-                </div>
-            </div>
-
-            <!-- Right Column -->
-            <nav class="col-span-3 columns-2 text-right">
-                {% for item in site.data.navigation.footer %}
-                <a href="{{ item.nav_link }}" class="block uppercase mb-4">{{ item.nav_title }}</a>
-                {% endfor %}
-            </nav>
-
-        </div>
-        <p class="text-right text-[0.7] mt-8">Copyright Swatch architects 2004. Website by Klioh Studio</p>
-    </footer>
+    {% include navigation/site-footer.html %}
 
 </body>
 

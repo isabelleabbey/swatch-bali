@@ -1,0 +1,146 @@
+<section id="cookie-notice" class="grid grid-rows-2">
+    <div>
+        <p class="mb-4">I value your privacy and to deliver the best experience possible, my website uses cookies. By
+            accepting this agreement, you automatically consent to the use of cookies. Click <a href="/cookie-policy"
+                class="border-black border-b">here</a> to find out what for.</p>
+    </div>
+    <div class="mt-2 cookie-buttons-container">
+        <a id="cookie-notice-accept" class="button-cookie-solid">I accept</a>
+        <a id="close-cookie-banner" class="button-cookie">Reject</a>
+        <!-- <a href="/privacy-policy" class="button-cookie">Read cookie policy</a> -->
+    </div>
+</section>
+<div id="cookie-overlay"
+    style="display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5); z-index: 2000;">
+</div>
+<script>
+    function createCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name, "", -1);
+    }
+    function runTrackingScripts() {
+        // Add tracking scripts here 
+        // Start Google Analytics
+
+
+        { { site.data.site - settings.technical.google - analytics_embed } }
+
+
+        // End Google Analytics
+        // End tracking scripts 
+    }
+    if (readCookie('cookie-notice-agreed') == 'true') {
+
+        runTrackingScripts()
+
+    } else if (readCookie('cookie-notice-rejected') == 'true') {
+        console.log('cookie pop up was rejected')
+    } else {
+        document.getElementById('cookie-notice').style.display = 'block';
+        document.getElementById('cookie-overlay').style.display = 'block';
+    }
+    document.getElementById('cookie-notice-accept').addEventListener("click", function () {
+        createCookie('cookie-notice-agreed', 'true', 31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        document.getElementById('cookie-overlay').style.display = 'none';
+        runTrackingScripts()
+    });
+    document.querySelector("#close-cookie-banner").addEventListener("click", (e) => {
+        createCookie('cookie-notice-rejected', 'true', 7);
+        document.querySelector("#cookie-notice").style.display = 'none';
+        document.querySelector("#cookie-overlay").style.display = 'none';
+    });
+</script>
+
+<style>
+    #cookie-notice {
+        /* change overall cookie banner background & text colors below */
+        background: #EFECE3;
+        color: black;
+        padding: 1rem;
+        display: none;
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        width: 33%;
+        z-index: 10000;
+    }
+
+    .button-cookie {
+        /* change cookie button font style and size below */
+        font-family: sans-serif;
+        font-size: 12px;
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        margin-right: 1rem;
+        padding: 0.3rem 1rem 0.3rem 1rem;
+        display: inline-block;
+        /* font-weight: 600; */
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        -webkit-appearance: none;
+    }
+
+    .button-cookie-solid {
+        /* change the accept button  font, size, color and background color below */
+        font-family: sans-serif;
+        font-size: 0.75rem;
+        border: 1px solid #000;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        margin-right: 1rem;
+        padding: 0.3rem 1rem 0.3rem 1rem;
+        display: inline-block;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        -webkit-appearance: none;
+    }
+
+    .cookie-buttons-container {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    /* Medium breakpoint */
+    @media (max-width: 64em) {
+
+        #cookie-notice {
+            width: 60%;
+        }
+
+        .button-cookie,
+        .button-cookie-solid {
+            font-size: 12px;
+        }
+    }
+
+    /* Small breakpoint */
+    @media (max-width: 48em) {
+        #cookie-notice {
+            width: 95%;
+        }
+    }
+</style>

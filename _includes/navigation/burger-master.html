@@ -1,0 +1,261 @@
+<header class="absolute left-0 right-0 top-0">
+
+    <div class="opacity-layer"></div>
+
+    <nav class="relative overflow-hidden">
+
+        <!-- Burger button three lines, comment out this or below and also in styles -->
+        <div class="burger-button">
+            <span class="burger-top"></span>
+            <span class="burger-middle"></span>
+            <span class="burger-bottom"></span>
+        </div>
+
+
+        <!-- Burger button with icon. comment out this or above and also in styles -->
+        <!-- <div class="burger-button">
+            <img src="/images/burger-icon.png" alt="" class="object-center object-cover h-10 fixed lg:right-4 md:top-4 md:right-4 top-2 right-2">
+
+            <span class="burger-top"></span>
+            <span class="burger-middle"></span>
+            <span class="burger-bottom"></span>
+        </div> -->
+
+
+        <!-- Burger menu start -->
+        <div class="burger-menu">
+
+
+            <!-- This is where you can adjust the styling of the links -->
+            <div class="flex flex-col justify-center md:px-10 px-5 my-10">
+                {% for item in site.data.navigation.header limit: 6 %}
+                <a href="{{item.nav_link}}" class="md:p-[1rem_0] p-[0.6rem_0] text-2xl">{{item.nav_title}}</a>
+                {% endfor %}
+            </div>
+
+            <!-- Bottom row -->
+            <div class="grid grid-cols-2 mt-8 border-t border-light py-8">
+                {% for item in site.data.navigation.header offset: 6 %}
+                <a href="{{item.nav_link}}" class="mb-4">{{item.nav_title}}</a>
+                {% endfor %}
+            </div>
+            <!-- End styling of links -->
+
+        </div>
+        <!-- End burger menu -->
+    </nav>
+</header>
+
+
+<style>
+    /* ---------------- USE THIS IF USING STANDARD BURGER, COMMENT OUT BELOW ------------------ */
+    .burger-button span {
+        width: 55px;
+        border: 0.005rem solid black;
+        background-color: black;
+        display: block;
+        border-radius: 10px;
+        transition-duration: 0.5s;
+    }
+
+    .burger-button.active span {
+        border-color: black;
+        background-color: black;
+    }
+
+    /* ---------------- END STANDARD BURGER STYLES ------------------ */
+
+
+
+    /* ---------------- USE THIS IF USING AN ICON, COMMENT OUT ABOVE ------------------ */
+    /* .burger-button span {
+display: block;
+transition: 1s;
+z-index: 300;
+}
+
+.burger-button.active span {
+width: 55px;
+border: 0.005rem solid black;
+}
+
+.burger-button.active img {
+transition: all 2s;
+opacity: 0;
+} */
+    /* ---------------- END ICON STYLES ------------------ */
+
+
+
+
+    /* Change burger button position on mobile, keep padding at 8px */
+    .burger-button {
+        position: fixed;
+        top: 1.2rem;
+        right: 0.5rem;
+        z-index: 1000;
+        padding: 8px;
+    }
+
+    /* Burger menu, background colour and slide in location */
+    .burger-menu {
+        background-color: var(--primary);
+        right: -100vh;
+        height: 100vh;
+        width: 100vw;
+        bottom: 0;
+        position: fixed;
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+        z-index: 900;
+        transition: 1.2s;
+        overflow: hidden;
+    }
+
+    /* Active slide in location */
+    .burger-menu.active {
+        right: 0;
+        overflow: hidden;
+    }
+
+    /* Burger menu link styles */
+    .burger-menu a,
+    .burger-menu span {
+        color: var(--light);
+        font-family: serif;
+        /* text-transform: uppercase; */
+        text-decoration: none;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.5s linear 1s, color 0.1s;
+    }
+
+    .burger-menu a:hover {
+        color: white;
+    }
+
+
+
+    /* ---------------- TRANSITIONS, LEAVE AS IS ------------------ */
+
+    /* Keep padding at 8px - needs to match burger-button */
+    .burger-button.active .burger-top {
+        position: absolute;
+        top: 8px;
+        transform: rotateZ(45deg);
+    }
+
+    /* Keep padding at 8px - needs to match burger-button */
+    .burger-button.active .burger-bottom {
+        position: absolute;
+        bottom: 8px;
+        transform: rotateZ(-45deg);
+    }
+
+    /* Hides the middle burger icon span on click */
+    .burger-button.active .burger-middle {
+        border-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .burger-top,
+    .burger-bottom {
+        position: absolute;
+    }
+
+    .burger-top {
+        top: -02px;
+    }
+
+    .burger-bottom {
+        bottom: -02px;
+    }
+
+    .burger-menu div {
+        opacity: 0;
+        transition: opacity 0.5s linear 1s, color 0.1s;
+        overflow: hidden;
+    }
+
+    .burger-menu.active a,
+    .burger-menu.active span,
+    .burger-menu.active div {
+        transition: opacity 1s linear 1s, color 0.1s;
+        opacity: 1;
+    }
+
+
+    /*  ----------------  iPad screens  ----------------  */
+    @media (min-width: 768px) {
+
+        /* Change position of burger button */
+        .burger-button {
+            top: 1.5rem;
+            right: 0;
+        }
+
+
+        /* Change position of burger menu, slides from left */
+        .burger-menu {
+            left: -70vw;
+            width: 70vw;
+            height: 100vh;
+            height: 100svh;
+            bottom: 0;
+        }
+
+        .burger-menu.active {
+            left: 0;
+        }
+    }
+
+    /* ---------------- Desktop screens ---------------- */
+    @media (min-width: 1024px) {
+
+        /* Remove position classes and add display none if no burger on desktop */
+        .burger-button {
+            top: 1.5rem;
+            right: 0;
+            /* display: none; */
+        }
+
+        /* Change position and width of burger menu, slides from left */
+        .burger-menu {
+            left: -65vw;
+            width: 65vw;
+            height: 100vh;
+            height: 100svh;
+            overflow: hidden;
+        }
+
+        .burger-menu.active {
+            left: 0;
+            overflow: hidden;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const burgerButton = document.querySelector(".burger-button");
+        const burgerMenu = document.querySelector(".burger-menu");
+        const opacityLayer = document.querySelector(".opacity-layer");
+
+        burgerButton.addEventListener("click", function () {
+            burgerButton.classList.toggle("active");
+            burgerMenu.classList.toggle("active");
+            opacityLayer.classList.toggle("active");
+        });
+
+        opacityLayer.addEventListener("click", function () {
+            burgerButton.classList.remove("active");
+            burgerMenu.classList.remove("active");
+            opacityLayer.classList.remove("active");
+        });
+
+        burgerMenu.addEventListener("click", function () {
+            burgerButton.classList.toggle("active");
+            burgerMenu.classList.toggle("active");
+            opacityLayer.classList.toggle("active");
+        });
+    });
+</script>
