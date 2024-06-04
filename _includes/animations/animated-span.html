@@ -1,0 +1,58 @@
+<style>
+  .animated-line-container {
+    position: relative;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .animated-line {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Change this to your desired color */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.5s ease;
+  }
+
+  .animated-line.visible {
+    transform: scaleX(1);
+  }
+</style>
+
+<div class="animated-line-container">
+  <div class="animated-line"></div>
+</div>
+
+<script>
+  // Waits until the DOM is fully loaded
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Options for the IntersectionObserver
+    const observerOptions = {
+      root: null, // Uses the viewport as the root
+      rootMargin: "0px", // No margin around the root
+      threshold: 0.2, // Triggers when 10% of the target is visible
+    };
+
+    // Creates a new IntersectionObserver instance
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        // Checks if the target is intersecting (visible)
+        if (entry.isIntersecting) {
+          // Adds the 'visible' class to trigger the animation
+          entry.target.querySelector(".animated-line").classList.add("visible");
+          // Stops observing the current target since the animation has been triggered
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Selects all elements with the class 'animated-line-container' and observes them
+    document
+      .querySelectorAll(".animated-line-container")
+      .forEach((container) => {
+        observer.observe(container);
+      });
+  });
+</script>

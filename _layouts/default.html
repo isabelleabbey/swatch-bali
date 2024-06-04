@@ -11,9 +11,12 @@
 
     <!-- Header -->
     {% include navigation/site-header.html %}
-
+ 
+    <div class="px-4">
+    {% include animations/animated-span.html %}
+    </div>
     {{content}}
-
+   
     <!--------------------- Instagram Embed Widget ----------------------->
 
     {% if site.data.site-settings.technical.instagram_widget_embed %}

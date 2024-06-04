@@ -1,148 +1,193 @@
 ---
 layout: default
 title: Page Title
-header: 
-  image-left: 
+header:
+  image-left:
     image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-    image_focus: 
-  image-right: 
+    image_focus:
+  image-right:
     image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-    image_focus: 
-about: 
-  image: 
+    image_focus:
+about:
+  image:
     image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-    image_focus: 
-philosophy: 
-  image: 
+    image_focus:
+philosophy:
+  image:
     image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-    image_focus: 
-banner: 
-  image: 
+    image_focus:
+banner:
+  image:
     image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-    image_focus: 
-work: 
-  gallery: 
-   - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-     name: Casa Padang Padang
-     location: 40.753N, 73.963W
-   - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-     name: Casa Padang Padang
-     location: 40.753N, 73.963W
-   - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-     name: Casa Padang Padang
-     location: 40.753N, 73.963W
+    image_focus:
+work:
+  gallery:
+    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+      name: Casa Padang Padang
+      location: 40.753N, 73.963W
+    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+      name: Casa Padang Padang
+      location: 40.753N, 73.963W
+    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+      name: Casa Padang Padang
+      location: 40.753N, 73.963W
 seo:
- meta-description: 
- keywords:
- social_image:
- twitter_card:
- twitter_description:
- type: website
- hide-from-google: false
+  meta-description:
+  keywords:
+  social_image:
+  twitter_card:
+  twitter_description:
+  type: website
+  hide-from-google: false
 ---
 
 <!-- Hero Banner -->
 <section class="grid grid-cols-2">
+  <!-- Left Column -->
+  <div
+    class="bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] mx-[25%] max-h-[100vh]"
+    style="background-image: url('{{ page.header.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};"
+  ></div>
 
-    <!-- Left Column -->
-    <div class="bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] mx-[25%] max-h-[100vh]" style="background-image: url('{{ page.header.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};"></div>
-
-    <!-- Right Column -->
-    <div class="bg-image-style h-[100vh]" style="background-image: url('{{ page.header.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"></div>
+  <!-- Right Column -->
+  <div
+    class="bg-image-style h-[100vh]"
+    style="background-image: url('{{ page.header.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"
+  ></div>
 </section>
-
 
 <!-- About Section -->
 <section class="pb-5p">
-  <div class="py-5p mx-8 border-t border-dark">
-    <h2 class="w-[40%] serif-lg">Crafting <em>unique</em> spaces through meaningful collaborations, <em>we lead with</em> innovation, <em>intelligence</em> and vision.</h2>
+  <div class="px-4">{% include animations/animated-span.html %}</div>
+  <div class="py-5p mx-8">
+    <h2 class="w-[40%] serif-lg">
+      Crafting <em>unique</em> spaces through meaningful collaborations,
+      <em>we lead with</em> innovation, <em>intelligence</em> and vision.
+    </h2>
   </div>
 
   <!-- Image and Text Container -->
   <div class="grid grid-cols-2">
-
     <!-- Image -->
-    <div class="bg-image-style flex-1 min-h-[70vh]" style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"></div>
+    <div
+      class="bg-image-style flex-1 min-h-[70vh]"
+      style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"
+    ></div>
 
     <!-- Text -->
-    <div class="flex-1 flex flex-col justify-between ml-24 mr-8 border-t border-dark">
+
+    <div class="flex-1 flex flex-col justify-between ml-24 mr-8">
+      {% include animations/animated-span.html %}
       <p class="pt-5p text-right subtitle">Design / enrich / inspire</p>
       <div class="flex justify-start self-end">
         <div class="w-[60%]">
-          <p>As a practice, we strive to deliver finely crafted projects that maximise value and wellbeing. We believe in architecture having the power to enrich our lives and the city we live in.</p>
-          <p>Swatch Architects brings this belief to every project— a commitment to consistency and purity of intent, to ambitious and intelligent design, and to delivering well-crafted architecture through meaningful collaborations with clients.</p>
+          <p>
+            As a practice, we strive to deliver finely crafted projects that
+            maximise value and wellbeing. We believe in architecture having the
+            power to enrich our lives and the city we live in.
+          </p>
+          <p>
+            Swatch Architects brings this belief to every project— a commitment
+            to consistency and purity of intent, to ambitious and intelligent
+            design, and to delivering well-crafted architecture through
+            meaningful collaborations with clients.
+          </p>
           <p>As designers, we lead with innovation, intelligence and vision.</p>
           <a href="#" class="link">Our practice</a>
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 
 <!-- Philosophy Section -->
 <section class="py-5p">
-
   <!-- Image and Text Container -->
   <div class="grid grid-cols-2">
-
     <!-- Text -->
-    <div class="flex-1 flex flex-col justify-between ml-8 mr-24 border-b border-dark">
+    <div class="flex-1 flex flex-col justify-between ml-8 mr-24">
       <div class="flex justify-start mt-auto">
         <div class="w-[70%] pb-12">
-          <h2 class="serif-lg margin-heading">At Swatch Architects, <em>innovation</em> and <em>creativity</em> are <em>at the core</em> of our design <em>philosophy</em>.</h2>
-          <p>London born and Bali based, our approach is a harmonious dance of natural beauty and functional form. Our experienced architectural team blends purpose with expertise to transform your architectural dreams into a tangible reality.</p>
-          <p>As a boutique firm, we respond to our client' needs by designing projects in an intimate and hands on way, collaborating and creating with people that we know and trust. We love what we do and invest great time and passion in delivering projects which are beautifully conceived and finely crafted.</p>
+          <h2 class="serif-lg margin-heading">
+            At Swatch Architects, <em>innovation</em> and
+            <em>creativity</em> are <em>at the core</em> of our design
+            <em>philosophy</em>.
+          </h2>
+          <p>
+            London born and Bali based, our approach is a harmonious dance of
+            natural beauty and functional form. Our experienced architectural
+            team blends purpose with expertise to transform your architectural
+            dreams into a tangible reality.
+          </p>
+          <p>
+            As a boutique firm, we respond to our client' needs by designing
+            projects in an intimate and hands on way, collaborating and creating
+            with people that we know and trust. We love what we do and invest
+            great time and passion in delivering projects which are beautifully
+            conceived and finely crafted.
+          </p>
           <a href="#" class="link">Our work</a>
         </div>
       </div>
+      {% include animations/animated-span.html %}
     </div>
 
     <!-- Image -->
-    <div class="bg-image-style flex-1 min-h-[70vh]" style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"></div>
-
+    <div
+      class="bg-image-style flex-1 min-h-[70vh]"
+      style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"
+    ></div>
   </div>
 </section>
 
-
 <!-- Banner -->
-<section class="bg-image-style min-h-[70vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
+<section
+  class="bg-image-style min-h-[70vh]"
+  style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"
+></section>
 
 <!-- Past Work -->
 <section class="pt-5p px-8">
   <div class="grid grid-cols-2 pb-10p">
-
     <!-- Left Column -->
-    <h2 class="w-[70%] serif-lg editable">Each project reflects our <em>commitment</em> to creating <em>beautiful, functional spaces</em> that seamlessly blend <em>contemporary aesthetics</em> with <em>Balinesian craftsmanship</em></h2>
+    <h2 class="w-[70%] serif-lg editable">
+      Each project reflects our <em>commitment</em> to creating
+      <em>beautiful, functional spaces</em> that seamlessly blend
+      <em>contemporary aesthetics</em> with <em>Balinesian craftsmanship</em>
+    </h2>
 
     <!-- Right Column -->
     <div class="pl-10p">
       <ul>
-
         <!-- 1st Work -->
-        <li class="border-y border-dark py-4 flex justify-between">
+        {% include animations/animated-span.html %}
+        <li class="py-4 flex justify-between">
           <span class="uppercase">Padang Villas</span>
           <span class="text-main uppercase">2 Bed Villa Studio</span>
         </li>
+        {% include animations/animated-span.html %}
 
         <!-- 2nd Work -->
-        <li class="border-b border-dark py-4 flex justify-between">
+
+        <li class="py-4 flex justify-between">
           <span class="uppercase">Amari Villas</span>
           <span class="text-main uppercase">2 Bed Villa / Studio</span>
         </li>
+        {% include animations/animated-span.html %}
 
         <!-- 3rd Work -->
-        <li class="border-b border-dark py-4 flex justify-between">
+        <li class="py-4 flex justify-between">
           <span class="uppercase">Makalu Villas</span>
           <span class="text-main uppercase">X Bed Villa</span>
         </li>
+        {% include animations/animated-span.html %}
 
         <!-- 4th Work -->
-        <li class="border-b border-dark py-4 flex justify-between">
+        <li class="py-4 flex justify-between">
           <span class="uppercase">Nyala Villas</span>
           <span class="text-main uppercase">X Bed Villa / Detail</span>
         </li>
+        {% include animations/animated-span.html %}
       </ul>
     </div>
   </div>
@@ -152,13 +197,17 @@ seo:
     {% for item in page.work.gallery %}
     <!-- Image -->
     <div>
-      <div class="bg-image-style aspect-portrait border-[16px] {% cycle 'border-accent', 'border-main' %}" style="background-image: url('{{ item.image_path }}');"></div>
-      <div class="{% cycle 'bg-accent', 'bg-main' %} pt-16 pb-8 px-4 flex justify-between">
+      <div
+        class="bg-image-style aspect-portrait border-[16px] {% cycle 'border-accent', 'border-main' %}"
+        style="background-image: url('{{ item.image_path }}');"
+      ></div>
+      <div
+        class="{% cycle 'bg-accent', 'bg-main' %} pt-16 pb-8 px-4 flex justify-between"
+      >
         <h3 class="subtitle text-light">{{ item.name }}</h3>
         <span class="subtitle text-light">{{ item.location }}</span>
       </div>
     </div>
     {% endfor %}
   </div>
-
 </section>
