@@ -147,8 +147,8 @@ seo:
 ></section>
 
 <!-- Past Work -->
-<section class="pt-5p px-8">
-  <div class="grid lg:grid-cols-2 pb-10p">
+<section class="pt-12 pb-12 lg:pb-0 lg:pt-5p px-8">
+  <div class="grid lg:grid-cols-2 lg:pb-10p">
     <!-- Left Column -->
     <h2 class="lg:w-[70%] serif-lg editable margin-heading lg:mb-0">
       Each project reflects our <em>commitment</em> to creating
@@ -157,7 +157,7 @@ seo:
     </h2>
 
     <!-- Right Column -->
-    <div class="lg:pl-10p">
+    <div class="pb-12 lg:pb-0 lg:pl-10p">
       <ul>
         <!-- 1st Work -->
         {% include animations/animated-span.html %}
@@ -204,7 +204,7 @@ seo:
       <div
         class="{% cycle 'bg-accent', 'bg-main' %} pt-16 pb-8 px-4 lg:flex justify-between"
       >
-        <h3 class="subtitle text-light">{{ item.name }}</h3>
+        <h3 class="subtitle text-light mb-2">{{ item.name }}</h3>
         <span class="subtitle text-light">{{ item.location }}</span>
       </div>
     </div>

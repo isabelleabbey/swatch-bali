@@ -686,6 +686,9 @@ p:last-child {
 .mb-12 {
   margin-bottom: 3rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .block {
   display: block;
 }
@@ -1154,6 +1157,12 @@ p:last-child {
   }
   .lg\:pt-5p {
     padding-top: 5%;
+  }
+  .lg\:pb-10p {
+    padding-bottom: 10%;
+  }
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
   .lg\:text-right {
     text-align: right;
