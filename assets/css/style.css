@@ -1063,8 +1063,14 @@ p:last-child {
   .md\:hidden {
     display: none;
   }
+  .md\:aspect-\[3\/4\] {
+    aspect-ratio: 3/4;
+  }
   .md\:h-\[65vh\] {
     height: 65vh;
+  }
+  .md\:min-h-\[50vh\] {
+    min-height: 50vh;
   }
   .md\:w-\[40\%\] {
     width: 40%;
@@ -1099,6 +1105,12 @@ p:last-child {
   .lg\:order-last {
     order: 9999;
   }
+  .lg\:col-span-9 {
+    grid-column: span 9 / span 9;
+  }
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
   .lg\:ml-24 {
     margin-left: 6rem;
   }
@@ -1128,6 +1140,9 @@ p:last-child {
   }
   .lg\:w-\[60\%\] {
     width: 60%;
+  }
+  .lg\:w-\[30\%\] {
+    width: 30%;
   }
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
