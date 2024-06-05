@@ -985,6 +985,9 @@ p:last-child {
 .pt-8 {
   padding-top: 2rem;
 }
+.pb-4 {
+  padding-bottom: 1rem;
+}
 .text-center {
   text-align: center;
 }

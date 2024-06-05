@@ -1,22 +1,30 @@
 header:
   - nav_title: Home
-    nav_link: /
+    nav_link: /index
   - nav_title: About
-    nav_link: /about    
-  - nav_title: Services
-    nav_link: /services
+    nav_link: /about  
+  - nav_title: Projects
+    nav_link: /projects
+  - nav_title: Internal Project
+    nav_link: /internal-project
+  - nav_title: Careers
+    nav_link: /careers  
+  - nav_title: Invest
+    nav_link: /invest
   - nav_title: Contact
     nav_link: /contact
 footer:
-  - nav_title: Practice
-    nav_link: /
+  - nav_title: Home
+    nav_link: /index
+  - nav_title: About
+    nav_link: /about  
   - nav_title: Projects
-    nav_link: /    
-  - nav_title: Invest
-    nav_link: /
+    nav_link: /projects
+  - nav_title: Internal Project
+    nav_link: /internal-project
   - nav_title: Careers
-    nav_link: /
-  - nav_title: Journal
-    nav_link: /
+    nav_link: /careers  
+  - nav_title: Invest
+    nav_link: /invest
   - nav_title: Contact
-    nav_link: /
+    nav_link: /contact
