@@ -45,7 +45,7 @@ seo:
 <section class="grid lg:grid-cols-2">
   <!-- Left Column -->
   <div
-    class="order-last lg:order-first bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] mx-[25%] max-h-[100vh] min-h-[35vh] aspect-portrait"
+    class="order-last lg:order-first bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] mx-[25%] max-h-[100vh] min-h-[35vh]"
     style="background-image: url('{{ page.header.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};"
   ></div>
 
@@ -57,10 +57,10 @@ seo:
 </section>
 
 <!-- About Section -->
-<section class="pb-5p">
+<section class="lg:pb-5p">
   <div class="px-4">{% include animations/animated-span.html %}</div>
-  <div class="py-5p mx-8">
-    <h2 class="lg:w-[40%] serif-lg">
+  <div class="pt-12 lg:pt-5p lg:pb-5p mx-8">
+    <h2 class="lg:w-[40%] serif-lg mb-12 lg:mb-0">
       Crafting <em>unique</em> spaces through meaningful collaborations,
       <em>we lead with</em> innovation, <em>intelligence</em> and vision.
     </h2>
@@ -76,9 +76,9 @@ seo:
 
     <!-- Text -->
 
-    <div class="flex-1 flex flex-col justify-between ml-8 lg:ml-24 mr-8">
+    <div class="py-12 lg:py-0 flex-1 flex flex-col justify-between ml-8 lg:ml-24 mr-8">
       {% include animations/animated-span.html %}
-      <p class="pt-5p lg:text-right subtitle">Design / enrich / inspire</p>
+      <p class="pt-8 lg:pt-5p lg:text-right subtitle">Design / enrich / inspire</p>
       <div class="flex justify-start self-end">
         <div class="lg:w-[60%]">
           <p>
@@ -101,11 +101,11 @@ seo:
 </section>
 
 <!-- Philosophy Section -->
-<section class="py-5p">
+<section class="lg:py-5p">
   <!-- Image and Text Container -->
   <div class="grid lg:grid-cols-2">
     <!-- Text -->
-    <div class="flex-1 flex flex-col justify-between ml-8 mr-8 lg:mr-24">
+    <div class="py-12 lg:py-0 flex-1 flex flex-col justify-between ml-8 mr-8 lg:mr-24">
       <div class="flex justify-start mt-auto">
         <div class="lg:w-[70%] pb-12">
           <h2 class="serif-lg margin-heading">
@@ -134,7 +134,7 @@ seo:
 
     <!-- Image -->
     <div
-      class="bg-image-style flex-1 min-h-[70vh]"
+      class="order-first lg:order-last bg-image-style flex-1 min-h-[70vh]"
       style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"
     ></div>
   </div>
