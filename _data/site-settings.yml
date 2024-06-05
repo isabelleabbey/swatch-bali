@@ -21,8 +21,8 @@ brand:
   light_color: '#F1EDE6'
   dark_color: '#231F20'
   bright_color: '#C98665'
-  primary_logo_path: /images/brand_logo.png
-  secondary_logo_path:
+  primary_logo_path: /images/temporary/logo-temp.png
+  secondary_logo_path: 
   submark_logo_path:
 technical:
   google-analytics_embed:

@@ -1,4 +1,9 @@
 header:
+ - nav_title: Swatch Architects
+   nav_link: 
+ - nav_title: Menu 
+   nav_link:
+header-menu: 
   - nav_title: Home
     nav_link: /index
   - nav_title: About
