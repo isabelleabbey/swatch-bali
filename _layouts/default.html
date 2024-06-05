@@ -5,6 +5,11 @@
 
     {% include head.html %}
 
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
 </head>
 
 <body>
@@ -48,5 +53,21 @@
 
 <!-- Custom javascript style -->
 <script src="/javascript/scripts.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialize AOS on page load in the root of the application so its available across the whole page.
+    AOS.init({
+      // This settings apply for all elements that will use AOS if you want to change individual settings for some elements applyit directly to the div. I have left an example on the image element in fade-animation.html
+      easing: "cubic-bezier(0.68, -0.55, 0.27, 1.55)", // Custom cubic bezier easing, can edit to your own preference
+      duration: 1100, // Duration of the animation, play around to achieve the desired speed
+      offset: 50, // Change the offset to desired effect
+      delay: 0.3, // Delay values from 0 to 3000, with step 50ms
+      once: true, // The animation only to appear once, set to false if you want it to appear everytime the user scrolls to the section.
+    });
+  });
+</script>
 
 </html>
