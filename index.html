@@ -42,10 +42,10 @@ seo:
 ---
 
 <!-- Hero Banner -->
-<section class="grid grid-cols-2">
+<section class="grid lg:grid-cols-2">
   <!-- Left Column -->
   <div
-    class="bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] mx-[25%] max-h-[100vh]"
+    class="order-last lg:order-first bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] mx-[25%] max-h-[100vh] min-h-[35vh] aspect-portrait"
     style="background-image: url('{{ page.header.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};"
   ></div>
 
@@ -60,14 +60,14 @@ seo:
 <section class="pb-5p">
   <div class="px-4">{% include animations/animated-span.html %}</div>
   <div class="py-5p mx-8">
-    <h2 class="w-[40%] serif-lg">
+    <h2 class="lg:w-[40%] serif-lg">
       Crafting <em>unique</em> spaces through meaningful collaborations,
       <em>we lead with</em> innovation, <em>intelligence</em> and vision.
     </h2>
   </div>
 
   <!-- Image and Text Container -->
-  <div class="grid grid-cols-2">
+  <div class="grid lg:grid-cols-2">
     <!-- Image -->
     <div
       class="bg-image-style flex-1 min-h-[70vh]"
@@ -76,11 +76,11 @@ seo:
 
     <!-- Text -->
 
-    <div class="flex-1 flex flex-col justify-between ml-24 mr-8">
+    <div class="flex-1 flex flex-col justify-between ml-8 lg:ml-24 mr-8">
       {% include animations/animated-span.html %}
-      <p class="pt-5p text-right subtitle">Design / enrich / inspire</p>
+      <p class="pt-5p lg:text-right subtitle">Design / enrich / inspire</p>
       <div class="flex justify-start self-end">
-        <div class="w-[60%]">
+        <div class="lg:w-[60%]">
           <p>
             As a practice, we strive to deliver finely crafted projects that
             maximise value and wellbeing. We believe in architecture having the
@@ -103,11 +103,11 @@ seo:
 <!-- Philosophy Section -->
 <section class="py-5p">
   <!-- Image and Text Container -->
-  <div class="grid grid-cols-2">
+  <div class="grid lg:grid-cols-2">
     <!-- Text -->
-    <div class="flex-1 flex flex-col justify-between ml-8 mr-24">
+    <div class="flex-1 flex flex-col justify-between ml-8 mr-8 lg:mr-24">
       <div class="flex justify-start mt-auto">
-        <div class="w-[70%] pb-12">
+        <div class="lg:w-[70%] pb-12">
           <h2 class="serif-lg margin-heading">
             At Swatch Architects, <em>innovation</em> and
             <em>creativity</em> are <em>at the core</em> of our design
@@ -148,16 +148,16 @@ seo:
 
 <!-- Past Work -->
 <section class="pt-5p px-8">
-  <div class="grid grid-cols-2 pb-10p">
+  <div class="grid lg:grid-cols-2 pb-10p">
     <!-- Left Column -->
-    <h2 class="w-[70%] serif-lg editable">
+    <h2 class="lg:w-[70%] serif-lg editable margin-heading lg:mb-0">
       Each project reflects our <em>commitment</em> to creating
       <em>beautiful, functional spaces</em> that seamlessly blend
       <em>contemporary aesthetics</em> with <em>Balinesian craftsmanship</em>
     </h2>
 
     <!-- Right Column -->
-    <div class="pl-10p">
+    <div class="lg:pl-10p">
       <ul>
         <!-- 1st Work -->
         {% include animations/animated-span.html %}
@@ -193,7 +193,7 @@ seo:
   </div>
 
   <!-- Gallery -->
-  <div class="grid grid-cols-3 gap-8">
+  <div class="grid lg:grid-cols-3 gap-8">
     {% for item in page.work.gallery %}
     <!-- Image -->
     <div>
@@ -202,7 +202,7 @@ seo:
         style="background-image: url('{{ item.image_path }}');"
       ></div>
       <div
-        class="{% cycle 'bg-accent', 'bg-main' %} pt-16 pb-8 px-4 flex justify-between"
+        class="{% cycle 'bg-accent', 'bg-main' %} pt-16 pb-8 px-4 lg:flex justify-between"
       >
         <h3 class="subtitle text-light">{{ item.name }}</h3>
         <span class="subtitle text-light">{{ item.location }}</span>
