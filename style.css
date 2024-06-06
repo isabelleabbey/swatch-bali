@@ -17,6 +17,8 @@
         @apply font-sans font-light text-dark bg-light antialiased leading-[1em]
     }
 
+    h1 span, h2 span {@apply italic }
+
     p {
         @apply mb-4
     }
@@ -75,9 +77,32 @@
 
 @layer components {
 
+    .text-primary {color:var(--primary); }
+    .text-secondary {color:var(--secondary); }
+    .text-light {color:var(--light); }
+    .text-dark {color:var(--dark); }
+    .text-bright {color:var(--bright); }
+  
+  
+    .bg-primary { background-color: var(--primary); }
+    .bg-secondary { background-color: var(--secondary); }
+    .bg-light { background-color: var(--light); }
+    .bg-dark { background-color: var(--dark); }
+    .bg-bright { background-color: var(--bright); }
+  
+    .border-primary{ border-color: var(--primary); }
+    .border-secondary { border-color: var(--secondary); }
+    .border-light { border-color: var(--light); }
+    .border-dark { border-color: var(--dark); }
+    .border-bright { border-color: var(--bright); }
+
     /* Buttons */
     .link {
         @apply font-serif italic underline text-[1.1rem] lowercase mt-8 block
+    }
+
+    .link-project {
+        @apply font-serif italic underline text-[1.1rem] lowercase block
     }
 
     .list-project {
@@ -100,8 +125,14 @@
         @apply uppercase text-[1.3rem]
     }
 
+    .subtitle-sm { @apply uppercase text-[1rem] }
+
     .serif-lg {
-        @apply font-serif text-[2.5rem] leading-[1em]
+        @apply font-serif text-[2.3rem] leading-[1em]
+    }
+
+    .serif-md {
+        @apply font-serif text-[1.9rem] leading-[1em]
     }
 
     /* Spacing */
@@ -115,3 +146,5 @@
 .tk-brandon-grotesque { font-family: "brandon-grotesque", sans-serif; }
 .tk-meno-banner { font-family: "meno-banner", serif; }
 .tk-monotype-grotesque { font-family: "monotype-grotesque", sans-serif; }
+
+.careers h2 { @apply subtitle-sm mb-4 }

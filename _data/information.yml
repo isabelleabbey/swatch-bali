@@ -5,3 +5,14 @@ press:
 - image: images/brand_logo.png
 - image: images/brand_logo.png
 - image: images/brand_logo.png
+work:
+  gallery:
+    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+      name: Casa Padang Padang
+      location: 40.753N, 73.963W
+    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+      name: Casa Padang Padang
+      location: 40.753N, 73.963W
+    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+      name: Casa Padang Padang
+      location: 40.753N, 73.963W

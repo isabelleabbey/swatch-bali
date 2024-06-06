@@ -1,0 +1,130 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<style>
+/* Mobile styles first */
+/* Accordian slides */
+.accordion dt a {
+  display:block;
+  position: relative;
+  text-decoration: none;
+  font-family: 'meno-banner', sans-serif;
+  font-style: italic;
+  border-bottom: 1px solid black;
+}
+
+.accordion dt a:first {
+  padding: 0;
+}
+
+/* Inside accordion */
+.accordion dd {
+    padding: 2rem 5rem 2rem 0;
+}
+
+/* Plus icon */
+.accordion dt a::after {
+  content: "+";
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  margin: 2rem;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  display: block;
+  line-height: 1;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+/* Icon rotation to cross */
+.open::after {
+  transform: rotateZ(45deg);
+}
+
+
+/* iPad and larger screens */
+@media (max-width: 768px) {
+/* Accordion slide */
+.accordion dt a {
+  padding: 2rem 1.25rem;
+  display:block;
+  position: relative;
+  text-decoration: none;
+  border-top: 1px solid black;
+}
+
+/* Inside accordion */
+  .accordion dd {
+    padding: 0 1.25rem 2rem 1.25rem;
+  }
+
+  /* Icon position */
+  .accordion dt a::after {
+    font-size: 2rem;
+    margin: 1.4rem;
+  }
+}
+</style>
+
+
+
+<div>
+    <dl class="accordion">
+        {% for item in page.accordion %}
+
+        <dt><a href=""><p class="serif-lg md:mr-12 mr-8">{{item.heading}}</p></a></dt>
+        <dd class="mb-6">
+            <div class="mb-12">{{item.description_html}}</div>
+
+            <div class="grid grid-cols-2">
+                <div>
+                    <div>
+                        <h3 class="mb-12 subtitle">Do you have?</h3>
+                        <div>{{item.do_you_have_html}}</div>
+                    </div>
+
+                    <div class="pt-12">
+                        <h3 class="mb-12 subtitle">Qualifications</h3>
+                        <div>{{item.qualifications_html}}</div>
+                    </div>
+
+                    <div class="pt-12">
+                        <h3 class="mb-12 subtitle">How to apply</h3>
+                        <div>{{item.how_to_apply_html}}</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3 class="mb-12 subtitle">Key responsibilities</h3>
+                        <div>{{item.responsibilities_html}}</div>
+                    </div>
+                </div>
+
+        </dd>
+
+        {% endfor %}
+    </dl>
+</div>
+
+
+
+<script>
+  $(document).ready(function(){
+  
+    var allPanels = $('.accordion > dd').hide();
+  
+    $('.accordion > dt > a').click(function() {
+    
+    allPanels.slideUp();
+    
+    $(this).filter('.open').removeClass('open').addClass('closing')
+    $('.accordion > dt > a').removeClass('open');
+    $(this).not(".closing").addClass('open').parent().next().slideDown();
+    $('.accordion > dt > a').removeClass('closing');
+    
+    return false;
+    });
+  });
+</script>

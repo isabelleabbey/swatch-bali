@@ -1,4 +1,38 @@
 ---
 layout: default
 title: Projects
+seo:
+  meta-description:
+  keywords:
+  social_image:
+  twitter_card:
+  twitter_description:
+  type: website
+  hide-from-google: false
 ---
+
+<section class="grid md:grid-cols-2 grid-cols-1">
+  {% for item in site.projects %}
+    <div>
+      {% for image in item.gallery limit:1 %}
+      <img src="{{image.image}}" alt="" class="h-screen object-cover object-center">
+      {% endfor %}
+    </div>
+
+    <div class="p-20 flex justify-center items-center">
+      {% for image in item.gallery limit:1 offset:1 %}
+      <img src="{{image.image}}" alt="" class="h-[60vh] w-[60%] object-cover object-center">
+      {% endfor %}
+    </div>
+
+    <div class="col-span-full mt-6 mx-8">
+      {% include animations/animated-span.html %}
+
+      <div class="flex justify-between mt-6">
+        <h1 class="subtitle">{{item.title}}</h1>
+        <a href="{{item.url}}" class="link-project">view project</a>
+
+    </div>
+
+    {% endfor %}
+</section>

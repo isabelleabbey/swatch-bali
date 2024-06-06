@@ -528,6 +528,14 @@ p:last-child {
   font-style: italic;
   text-decoration-line: underline;
 }
+.link-project {
+  display: block;
+  font-family: meno-banner, serif;
+  font-size: 1.1rem;
+  text-transform: lowercase;
+  font-style: italic;
+  text-decoration-line: underline;
+}
 /* Images */
 .bg-image-style {
   background-size: cover;
@@ -547,6 +555,11 @@ p:last-child {
 .serif-lg {
   font-family: meno-banner, serif;
   font-size: 2.3rem;
+  line-height: 1em;
+}
+.serif-md {
+  font-family: meno-banner, serif;
+  font-size: 1.9rem;
   line-height: 1em;
 }
 /* Spacing */
@@ -730,14 +743,23 @@ p:last-child {
 .h-\[45vh\] {
   height: 45vh;
 }
+.h-\[60vh\] {
+  height: 60vh;
+}
 .h-\[70vh\] {
   height: 70vh;
+}
+.h-\[90vh\] {
+  height: 90vh;
 }
 .h-full {
   height: 100%;
 }
 .h-screen {
   height: 100vh;
+}
+.h-\[95vh\] {
+  height: 95vh;
 }
 .max-h-\[100vh\] {
   max-height: 100vh;
@@ -750,6 +772,9 @@ p:last-child {
 }
 .min-h-\[70vh\] {
   min-height: 70vh;
+}
+.w-\[60\%\] {
+  width: 60%;
 }
 .w-\[65vw\] {
   width: 65vw;
@@ -932,6 +957,9 @@ p:last-child {
 .object-center {
   -o-object-position: center;
      object-position: center;
+}
+.p-12 {
+  padding: 3rem;
 }
 .p-2 {
   padding: 0.5rem;

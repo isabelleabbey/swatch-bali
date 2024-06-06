@@ -20,17 +20,6 @@ banner:
   image:
     image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
     image_focus:
-work:
-  gallery:
-    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-      name: Casa Padang Padang
-      location: 40.753N, 73.963W
-    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-      name: Casa Padang Padang
-      location: 40.753N, 73.963W
-    - image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-      name: Casa Padang Padang
-      location: 40.753N, 73.963W
 seo:
   meta-description:
   keywords:
@@ -175,7 +164,7 @@ seo:
         {% include animations/animated-span.html %}
         <li class="py-4 flex justify-between">
           <span class="uppercase" data-aos="fade-in">Padang Villas</span>
-          <span class="text-main uppercase" data-aos="fade-in">2 Bed Villa Studio</span>
+          <span class="text-accent text-sm uppercase" data-aos="fade-in">2 Bed Villa Studio</span>
         </li>
         {% include animations/animated-span.html %}
 
@@ -183,21 +172,21 @@ seo:
 
         <li class="py-4 flex justify-between">
           <span class="uppercase" data-aos="fade-in">Amari Villas</span>
-          <span class="text-main uppercase" data-aos="fade-in">2 Bed Villa / Studio</span>
+          <span class="text-accent text-sm uppercase" data-aos="fade-in">2 Bed Villa / Studio</span>
         </li>
         {% include animations/animated-span.html %}
 
         <!-- 3rd Work -->
         <li class="py-4 flex justify-between">
           <span class="uppercase" data-aos="fade-in">Makalu Villas</span>
-          <span class="text-main uppercase" data-aos="fade-in">X Bed Villa</span>
+          <span class="text-accent text-sm uppercase" data-aos="fade-in">X Bed Villa</span>
         </li>
         {% include animations/animated-span.html %}
 
         <!-- 4th Work -->
         <li class="py-4 flex justify-between">
           <span class="uppercase" data-aos="fade-in">Nyala Villas</span>
-          <span class="text-main uppercase" data-aos="fade-in">X Bed Villa / Detail</span>
+          <span class="text-accent text-sm uppercase" data-aos="fade-in">X Bed Villa / Detail</span>
         </li>
         {% include animations/animated-span.html %}
       </ul>
@@ -205,23 +194,6 @@ seo:
   </div>
 
   <!-- Gallery -->
-  <div class="grid lg:grid-cols-3 gap-8">
-    {% for item in page.work.gallery %}
-    <!-- Image -->
-    <div>
-      <div
-        class="bg-image-style aspect-portrait border-[16px] {% cycle 'border-accent', 'border-main' %}"
-        style="background-image: url('{{ item.image_path }}');"
-        data-aos="fade-in"
-        data-aos-delay="300"
-      ></div>
-      <div
-        class="{% cycle 'bg-accent', 'bg-main' %} pt-16 pb-8 px-4 lg:flex justify-between"
-      >
-        <h3 class="subtitle text-light mb-2" data-aos="fade-in">{{ item.name }}</h3>
-        <span class="subtitle text-light" data-aos="fade-in">{{ item.location }}</span>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
+   {% include gallery.html %}
+
 </section>
