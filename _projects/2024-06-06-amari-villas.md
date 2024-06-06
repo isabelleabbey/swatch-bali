@@ -2,7 +2,7 @@
 layout: project
 title: Amari Villas
 location: Ubud, Bali
-description_html: 
+description_html: Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis? Velit, iure quaerat accusantium illum quasi praesentium, dicta animi fuga sunt, nesciunt autem nemo omnis dolorum explicabo quia ea ratione?
 project_type: Five 2-bed villas and two studio villas
 project_status: Under construction
 property:

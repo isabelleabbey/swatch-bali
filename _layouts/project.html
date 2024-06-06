@@ -2,24 +2,26 @@
 layout: default
 ---
 
-<section class="grid grid-cols-2">
-    <div class="flex flex-col items-start justify-end sticky top-0 h-[95vh] p-12">
-        <h1 class="serif-lg margin-heading">{{page.title}}</h1>
-        <h2 clas="serif-md margin-heading">{{page.location}}</h2>
-        <p class="mb-16">{{page.description_html}}</p>
-        <p class="subtitle mb-4">{{page.project_type}}</p>
-        <p class="subtitle mb-20">Status: {{page.project_status}}</p>
+<section class="grid md:grid-cols-2 grid-cols-1">
+    <div class="flex flex-col items-start justify-end md:sticky md:top-0 md:h-[95vh] md:p-12 px-8 py-12">
+        <h1 class="serif-lg mb-6">{{page.title}}</h1>
+        <h2 class="serif-md margin-heading">{{page.location}}</h2>
+        <div class="mb-16 lg:w-3/4">{{page.description_html}}</div>
+        <p class="subtitle-md mb-4">{{page.project_type}}</p>
+        <p class="subtitle-md mb-20">Status: {{page.project_status}}</p>
 
-        <div class="grid grid-cols-4 w-full border-black border-y">
+        <div class="grid items-center w-full border-black border-t">
             {% for item in page.property %}
+            <div class="col-span-full grid grid-cols-4 md:gap-0 gap-2 border-gray-700 border-b py-3">
             <div class="col-span-2">
-                <p>{{item.title}}</p>
+                <p class="subtitle-md">{{item.title}}</p>
             </div>
             <div>
-                <p class="uppercase text-sm">Building size: {{item.building_size}}</p>
+                <p class="uppercase subtitle-sm">Building size: {{item.building_size}}</p>
             </div>
             <div>
-                <p class="uppercase text-sm">Land plot: {{item.land_plot}}</p>
+                <p class="uppercase subtitle-sm">Land plot: {{item.land_plot}}</p>
+            </div>
             </div>
             {% endfor %}
         </div>

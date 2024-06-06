@@ -121,19 +121,13 @@
 
     /* Typography */
 
-    .subtitle {
-        @apply uppercase text-[1.3rem]
-    }
+    .subtitle-lg { @apply uppercase text-[1.3rem] }
+    .subtitle-md { @apply uppercase text-[1rem] }
+    .subtitle-sm { @apply uppercase text-[0.7rem] }
 
-    .subtitle-sm { @apply uppercase text-[1rem] }
+    .serif-lg { @apply font-serif text-[2.3rem] leading-[1em]  }
 
-    .serif-lg {
-        @apply font-serif text-[2.3rem] leading-[1em]
-    }
-
-    .serif-md {
-        @apply font-serif text-[1.9rem] leading-[1em]
-    }
+    .serif-md {  @apply font-serif text-[1.4rem] leading-[1em] }
 
     /* Spacing */
     .margin-heading {
