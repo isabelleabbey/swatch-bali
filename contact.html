@@ -1,28 +1,37 @@
 ---
 layout: default
-title: Contact
+banner_image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
 seo:
-meta-description:
-keywords:
-social_image:
-twitter_card:
-twitter_description:
-type: website
-hide-from-google: false
+ meta-description: Contact Terre Interiors and inquire abouto our luxury interior design services in London and Marbella.
+ keywords:
+ social_image:
+ twitter_card:
+ twitter_description:
+ type: website
+ hide-from-google: true
 ---
+<!-- Header -->
+<section class="grid md:grid-cols-2 grid-cols-1 bg-light">
 
-<section class="grid md:grid-cols-2 grid-cols-1">
-    <div class="lg:p-20 p-8">
-        <img src="/images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg" alt=""
-            class="lg:h-[80vh] md:h-[65vh] h-[45vh] w-full object-center object-cover mx-auto editable">
-    </div>
+  <!-- Left Column -->
+  <div class="bg-image-style h-[100vh]" style="background-image: url('{{ page.banner_image }}');">
+     
+  </div>
 
-    <div class="lg:p-20 md:p-8 px-8 flex flex-col justify-center">
-        <h2 class="editable mb-8 mt-2">Contact</h2>
-        <p class="mb-10 editable">Get in Touch </p>
+  <!-- Right Column -->
+  <div class="flex flex-col justify-end p-10">
 
-        {% include form-contact.html %}
+      <h2 class="editable mb-8 mt-2  serif-lg">Let's <em> collaborate</em> </h2>
+      <p class="mb-4 editable font-sans uppercase"> General Inquries: info@swatcharchitects.co.uk </p> 
+      <p class="mb-4 editable font-sans uppercase"> Careers: careers@swatcharchitects.co.uk </p> 
+      <p class="mb-4 editable font-sans uppercase"> Whatsapp: +62823-4023-0730 </p> 
 
-    </div>
+      {% include default/social-icons.html %}
+      {% include contact-form.html %}
+    
+  </div>
 
 </section>
+
+
+

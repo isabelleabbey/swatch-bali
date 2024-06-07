@@ -1,0 +1,94 @@
+<form class="grid grid-cols-2" action="https://formspree.io/f/xbjnkvpe" method="POST">
+    <div class="md:col-span-1 col-span-full">
+    <input type="text" name="name" placeholder="First Name*" required />
+    </div>
+    <div class="md:col-span-1 col-span-full">
+    <input type="text" name="surname" placeholder="Surname*" required />
+    </div>
+    <div class="md:col-span-1 col-span-full">
+    <input type="email" name="_replyto" placeholder="Email*" required />
+    </div>
+    <div class="md:col-span-1 col-span-full">
+    <input type="tel" name="phone" placeholder="Phone" />
+    </div>
+    <div class="md:col-span-1 col-span-full">
+      <input type="text" name="project location" placeholder="Subject" />
+      </div>
+      <div class="md:col-span-1 col-span-full">
+        <input type="text" name="project start date" placeholder="How did you hear about us?" />
+        </div>
+    <div class="col-span-2 row-span-2">
+    <textarea type="text" name="Message" placeholder="Your Message*" required></textarea>
+    <input type="submit" value="SUBMIT" class="submit-button mt-2 font-serif" />
+    </div>
+</form>
+
+
+
+
+
+
+
+<style>
+
+    /* add custom font and size below for input and text area */
+    input,
+    textarea {
+      font-family: "brandon-grotesque",sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      border-style: solid;
+      border-bottom: 1px solid black;
+      color: black;
+      padding: 0.9rem 0rem;
+      display: block;
+      width: 100%;
+      background-color: rgba(265,265,265,0);
+     }
+    
+     /* add custom font for placeholder text below */
+     input [type="placeholder"]  {
+      font-family: sans-serif;
+      color: black;
+
+    }
+
+    input [type="submit"]  {
+      font-family: 'brandon-grotesque', serif!important;
+      color: black;
+      text-transform: uppercase;
+      border-bottom: 0px solid black!important;
+
+    }
+
+ .submit-button {
+  font-family: 'brandon-grotesque', 'serif';
+  text-transform: uppercase;
+ 
+  font-size: 1rem;
+ }
+
+    ::placeholder {
+      color: black!important;
+    }
+    
+    
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-bottom: 1px solid white;
+      background-color: rgba(265,265,265,0);
+    }
+    
+    textarea { min-height: 7rem; }
+    
+    input[type="submit"] {
+      width: 100%;
+      display: block;
+      -webkit-appearance: none;
+      background-color: rgba(265,265,265,0);
+    }
+    
+    form [class*=col-] { padding: 5px; }
+    
+</style>

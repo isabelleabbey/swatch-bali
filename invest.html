@@ -49,6 +49,32 @@ opportunities:
     - title: Architectural significance
     - title: Medium to long-term
     link:  
+why_invest:
+  - title: A GLOBAL TOURISM BRAND
+    description: Bali is a globally acclaimed tourist destination, attracting millions annually, ensuring a robust rental market for investors.
+  - title: STEADY RENTAL INCOME
+    description: Bali's global and crisis-proof tourism-driven market ensures a steady stream of rental income for property investors.
+  - title: PROPERTY APPRECIATION
+    description: The island's limited land availability in key areas combined with growing demand consistently drives property values upwards.
+  - title: FAVOURABLE REGULATIONS
+    description: Indonesia’s government promotes foreign investment, offering favorable regulations and taxation for property investments.
+  - title: CULTURAL APPEAL
+    description: Bali's open-minded culture and international vibes sustain its allure, making it a desirable destination for foreign property investment.
+  - title: TROPICAL LIFESTYLE PARADISE
+    description: Many investors are drawn to Bali for its lifestyle appeal, making it an ideal destination for second-home investments.
+process:
+  - number_text: >-
+      01
+    title: BOOK A CALL​
+    description: Connect with the SWATCH Real Estate concierge by booking a personalised call. Discover all the details of the available projects and fully understand the investment potential of Bali.
+  - number_text: >-
+      02    
+    title: RESERVE YOUR PROJECT
+    description: Reserve your unit by paying a fully refundable reservation fee of USD 5,000. We will take your property off the market and give you time to consider and prepare.
+  - number_text: >-
+      03  
+    title: ENJOY YOUR PROPERTY
+    description: Welcome aboard the exciting journey as an investor at SWATCH. As the project unfolds you will benefit from stable returns and exclusive owner benefits. 
 ---
 
 <!-- Header -->
@@ -171,5 +197,68 @@ opportunities:
 
 
   {% endfor %}
+
+</section>
+
+
+
+<!-- why invest in bali -->
+<section class="grid md:grid-cols-2 grid-cols-1 lg:pr-20 md:pr-10 md:pr-0 md:py-10 py-12 px-8 bg-primary">
+  <!-- Left Column -->
+  <div class="bg-image-style min-h-[90vh]" style="background-image: url('{{ page.images.fourth_image }}');"></div>
+  <!-- Right Column -->
+  <div class="md:pl-10 ">
+      {% include animations/animated-span.html %}
+      <div class="min-h-[90vh] flex flex-col items-start justify-center">
+        <div class="flex justify-between w-full" >
+          <h2 class="editable serif-lg mt-6 mb-12">Why <span>invest</span> in Bali</h2>
+          <a href="/contact.html" class="editable link mb-4">book a free consultation</a>
+        </div>
+        <div class="editable grid grid-cols-2 gap-8">
+          {% for item in page.why_invest %}
+          <div class="my-4">
+            <h4 class="subtitle uppercase mb-4"> {{item.title}}</h4>
+            <p> {{item.description}}</p>
+          </div>
+          {% endfor %}
+            
+        </div>
+
+
+        </div>
+      {% include animations/animated-span.html %}
+
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="px-20 py-32">
+  <p class="uppercase text-md"> How does it work? </p>
+  <div class="flex justify-between">
+    <h3 class="editable serif-lg mt-4 mb-12">Invest from <em>anywhere</em></h3>
+    <a href="/contact.html" class="editable link mb-4">book a free consultation</a>
+  </div>
+  <div class="grid grid-cols-3 gap-12">
+    {% for item in page.process %}
+      <div>
+        <div class="flex justify-between items-end border-b border-black">
+            <span class="editable mb-1 text-lg">{{item.number_text}}</span>
+            <h4 class="editable uppercase text-lg mt-6 "><span>{{item.title}}</span></h4>
+          
+        </div>
+     
+        <p class="mt-4">{{item.description}}</p>  
+      </div>
+    {% endfor %}
+
+  </div>
 
 </section>

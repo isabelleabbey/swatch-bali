@@ -619,6 +619,12 @@ p:last-child {
 .col-span-full {
   grid-column: 1 / -1;
 }
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
 .row-start-1 {
   grid-row-start: 1;
 }
@@ -657,6 +663,18 @@ p:last-child {
 .my-\[20\%\] {
   margin-top: 20%;
   margin-bottom: 20%;
+}
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -902,6 +920,12 @@ p:last-child {
 .gap-\[5px\] {
   gap: 5px;
 }
+.gap-5 {
+  gap: 1.25rem;
+}
+.gap-10 {
+  gap: 2.5rem;
+}
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -1027,6 +1051,9 @@ p:last-child {
 .p-\[0\.6rem_0\] {
   padding: 0.6rem 0;
 }
+.p-10 {
+  padding: 2.5rem;
+}
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1071,6 +1098,10 @@ p:last-child {
   padding-top: 5%;
   padding-bottom: 5%;
 }
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1104,6 +1135,12 @@ p:last-child {
 .text-right {
   text-align: right;
 }
+.font-serif {
+  font-family: meno-banner, serif;
+}
+.font-sans {
+  font-family: brandon-grotesque, sans-serif;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1127,6 +1164,9 @@ p:last-child {
 .uppercase {
   text-transform: uppercase;
 }
+.lowercase {
+  text-transform: lowercase;
+}
 .italic {
   font-style: italic;
 }
@@ -1141,6 +1181,10 @@ p:last-child {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .outline {
   outline-style: solid;
@@ -1222,6 +1266,9 @@ p:last-child {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
   .md\:gap-0 {
     gap: 0px;
   }
@@ -1290,14 +1337,23 @@ p:last-child {
   .lg\:mr-24 {
     margin-right: 6rem;
   }
+  .lg\:mt-20 {
+    margin-top: 5rem;
+  }
   .lg\:flex {
     display: flex;
+  }
+  .lg\:hidden {
+    display: none;
   }
   .lg\:h-\[40vh\] {
     height: 40vh;
   }
   .lg\:h-\[80vh\] {
     height: 80vh;
+  }
+  .lg\:min-h-screen {
+    min-height: 100vh;
   }
   .lg\:w-3\/4 {
     width: 75%;
@@ -1338,6 +1394,9 @@ p:last-child {
   .lg\:p-20 {
     padding: 5rem;
   }
+  .lg\:p-8 {
+    padding: 2rem;
+  }
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -1366,6 +1425,12 @@ p:last-child {
   }
   .lg\:pt-5p {
     padding-top: 5%;
+  }
+  .lg\:pl-24 {
+    padding-left: 6rem;
+  }
+  .lg\:pr-20 {
+    padding-right: 5rem;
   }
   .lg\:text-right {
     text-align: right;
