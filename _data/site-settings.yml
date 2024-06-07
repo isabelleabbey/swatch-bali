@@ -23,7 +23,7 @@ brand:
   bright_color: '#C98665'
   primary_logo_path: /images/swatch-architects-bali-logo-primary.png
   secondary_logo_path: 
-  submark_logo_path:
+  submark_logo_path: images/swatch-architects-sublogo.png
 technical:
   google-analytics_embed:
   instagram_widget_embed:

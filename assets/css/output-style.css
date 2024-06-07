@@ -516,6 +516,7 @@ p:last-child {
 }
 .text-light {color:var(--light); }
 .bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
 .bg-light { background-color: var(--light); }
 .border-primary{ border-color: var(--primary); }
 .border-light { border-color: var(--light); }
@@ -670,6 +671,10 @@ p:last-child {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -736,6 +741,9 @@ p:last-child {
 .mt-12 {
   margin-top: 3rem;
 }
+.mb-\[-15px\] {
+  margin-bottom: -15px;
+}
 .block {
   display: block;
 }
@@ -795,6 +803,9 @@ p:last-child {
 }
 .h-\[85vh\] {
   height: 85vh;
+}
+.h-\[0\.5px\] {
+  height: 0.5px;
 }
 .max-h-\[100vh\] {
   max-height: 100vh;
@@ -953,6 +964,12 @@ p:last-child {
 .border-t-\[24px\] {
   border-top-width: 24px;
 }
+.border-b-\[0\.5px\] {
+  border-bottom-width: 0.5px;
+}
+.border-t-\[0\.5px\] {
+  border-top-width: 0.5px;
+}
 .border-accent {
   --tw-border-opacity: 1;
   border-color: rgb(153 163 151 / var(--tw-border-opacity));
@@ -972,6 +989,10 @@ p:last-child {
 .border-main {
   --tw-border-opacity: 1;
   border-color: rgb(199 185 163 / var(--tw-border-opacity));
+}
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 .bg-accent {
   --tw-bg-opacity: 1;
@@ -1111,6 +1132,21 @@ p:last-child {
 .pt-8 {
   padding-top: 2rem;
 }
+.pl-3 {
+  padding-left: 0.75rem;
+}
+.pb-\[-5px\] {
+  padding-bottom: -5px;
+}
+.pb-\[-15px\] {
+  padding-bottom: -15px;
+}
+.pl-6 {
+  padding-left: 1.5rem;
+}
+.text-left {
+  text-align: left;
+}
 .text-center {
   text-align: center;
 }
@@ -1122,6 +1158,9 @@ p:last-child {
 }
 .font-serif {
   font-family: meno-banner, serif;
+}
+.font-body {
+  font-family: monotype-grotesque, sans-serif;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1143,8 +1182,15 @@ p:last-child {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .uppercase {
   text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .italic {
   font-style: italic;
@@ -1160,6 +1206,10 @@ p:last-child {
 .text-light {
   --tw-text-opacity: 1;
   color: rgb(241 237 230 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .outline {
   outline-style: solid;
