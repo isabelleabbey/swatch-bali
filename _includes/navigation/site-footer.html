@@ -2,7 +2,7 @@
   <!-- Logo -->
   <div class="">
     <a href="/index.html" data-aos="fade-in">
-      <img src="/images/temporary/logo-temp.png" />
+      <img class="h-10" src="{{site.data.site-settings.brand.primary_logo_path}}" />
     </a>
   </div>
   {% include animations/animated-span.html %}
@@ -18,13 +18,13 @@
       <div class="lg:flex gap-8">
         <a
           href="{{ site.data.site-settings.social.instagram_username }}"
-          class="uppercase block mb-4 lg:mb-0"
+          class="uppercase block mb-4 lg:mb-0 text-xs"
           data-aos="fade-in"
           >Instagram</a
         >
         <a
           href="{{ site.data.site-settings.social.linkedin_username }}"
-          class="uppercase block"
+          class="uppercase block text-xs"
           data-aos="fade-in"
           >LinkedIn</a
         >
@@ -36,14 +36,14 @@
       {% for item in site.data.navigation.footer %}
       <a
         href="{{ item.nav_link }}"
-        class="block uppercase mb-4"
+        class="block uppercase mb-4 text-xs"
         data-aos="fade-in"
         >{{ item.nav_title }}</a
       >
       {% endfor %}
     </nav>
   </div>
-  <p class="lg:text-right text-[0.7] mt-8" data-aos="fade-in">
-    Copyright Swatch architects 2004. Website by Klioh Studio
+  <p class="lg:text-right text-xs mt-8" data-aos="fade-in">
+    Copyright Swatch architects 2024. Website by Klioh Studio
   </p>
 </footer>

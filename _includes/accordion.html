@@ -9,12 +9,14 @@
   text-decoration: none;
   font-family: 'meno-banner', sans-serif;
   font-style: italic;
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid black;
 }
 
 .accordion dt a:first {
   padding: 0;
 }
+
+
 
 /* Inside accordion */
 .accordion dd {
@@ -23,13 +25,15 @@
 
 /* Plus icon */
 .accordion dt a::after {
-  content: "+";
-  font-family: sans-serif;
-  font-size: 2.5rem;
-  margin: 2rem;
+  content: "more";
+  font-family: 'brandon-grotesque', sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0rem;
   position: absolute;
-  top: 0.4rem;
-  right: 0.4rem;
+  top: 0rem;
+  right: 0rem;
   display: block;
   line-height: 1;
   -webkit-transition: all .35s;
@@ -73,37 +77,43 @@
     <dl class="accordion">
         {% for item in page.accordion %}
 
-        <dt><a href=""><p class="serif-lg md:mr-12 mr-8">{{item.heading}}</p></a></dt>
+        <dt><a href=""><p class="serif-lg md:mr-12 mr-8">{{item.heading}}</p></a>
+        
+          <div class="mb-4 w-[75%] mt-4">{{item.description_html}}</div>
+        </dt>
         <dd class="mb-6">
-            <div class="mb-12">{{item.description_html}}</div>
+     
 
-            <div class="grid grid-cols-2">
-                <div>
+            <div class="grid grid-cols-2 gap-8">
+                <div >
                     <div>
-                        <h3 class="mb-12 subtitle">Do you have?</h3>
+                        <h3 class="mb-12 subtitle uppercase">Do you have?</h3>
                         <div>{{item.do_you_have_html}}</div>
                     </div>
 
                     <div class="pt-12">
-                        <h3 class="mb-12 subtitle">Qualifications</h3>
+                        <h3 class="mb-12 subtitle uppercase">Qualifications</h3>
                         <div>{{item.qualifications_html}}</div>
                     </div>
 
                     <div class="pt-12">
-                        <h3 class="mb-12 subtitle">How to apply</h3>
-                        <div>{{item.how_to_apply_html}}</div>
+                        <h3 class="mb-12 subtitle uppercase">How to apply</h3>
+                        <div class="mb-8">{{item.how_to_apply_html}}</div>
+
+
+                        <a class="border-black border-[0.5px] px-8 py-2 uppercase " href="{{item.apply_link}}"> Apply now </a>
                     </div>
                 </div>
 
                 <div>
                     <div>
-                        <h3 class="mb-12 subtitle">Key responsibilities</h3>
+                        <h3 class="mb-12 subtitle uppercase">Key responsibilities</h3>
                         <div>{{item.responsibilities_html}}</div>
                     </div>
                 </div>
 
         </dd>
-
+        <div class="p-4"></div>
         {% endfor %}
     </dl>
 </div>

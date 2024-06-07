@@ -6,13 +6,14 @@ layout: default
     <div class="flex flex-col items-start justify-end md:sticky md:top-0 md:h-[95vh] md:p-12 px-8 py-12">
         <h1 class="serif-lg mb-6">{{page.title}}</h1>
         <h2 class="serif-md margin-heading">{{page.location}}</h2>
-        <div class="mb-16 lg:w-3/4">{{page.description_html}}</div>
+        <div class="mb-8 lg:w-3/4">{{page.description_html}}</div>
         <p class="subtitle-md mb-4">{{page.project_type}}</p>
         <p class="subtitle-md mb-20">Status: {{page.project_status}}</p>
 
-        <div class="grid items-center w-full border-black border-t">
+        <div class="grid items-center w-full ">
+         
             {% for item in page.property %}
-            <div class="col-span-full grid grid-cols-4 md:gap-0 gap-2 border-gray-700 border-b py-3">
+            <div class="col-span-full grid grid-cols-4 md:gap-0 gap-2 py-3">
             <div class="col-span-2">
                 <p class="subtitle-md">{{item.title}}</p>
             </div>
@@ -22,6 +23,9 @@ layout: default
             <div>
                 <p class="uppercase subtitle-sm">Land plot: {{item.land_plot}}</p>
             </div>
+            <div class="col-span-full">
+            {% include animations/animated-span.html %}
+            </div>
             </div>
             {% endfor %}
         </div>
@@ -30,7 +34,7 @@ layout: default
 
     <div>
         {% for item in page.gallery %}
-        <img src="{{item.image}}" alt="" class="h-screen w-full object-cover object-center">
+        <img src="{{item.image}}" alt="" class="h-screen mb-4 w-full object-cover object-center">
         {% endfor %}
     </div>
 </section>

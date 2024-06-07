@@ -16,7 +16,7 @@ property:
    building_size: XX
    land_plot: XX
 gallery:
- - image: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
- - image: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
- - image: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+ - image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+ - image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+ - image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
 ---

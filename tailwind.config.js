@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         sans: ['brandon-grotesque', 'sans-serif'],
         serif: ['meno-banner', 'serif'],
+        body: ['monotype-grotesque', 'sans-serif'],
       },
       extend: {
         spacing: {

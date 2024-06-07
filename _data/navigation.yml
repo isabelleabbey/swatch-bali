@@ -10,8 +10,6 @@ header-menu:
     nav_link: /about  
   - nav_title: Projects
     nav_link: /projects
-  - nav_title: Internal Project
-    nav_link: /internal-project
   - nav_title: Careers
     nav_link: /careers  
   - nav_title: Invest
@@ -25,8 +23,6 @@ footer:
     nav_link: /about  
   - nav_title: Projects
     nav_link: /projects
-  - nav_title: Internal Project
-    nav_link: /internal-project
   - nav_title: Careers
     nav_link: /careers  
   - nav_title: Invest

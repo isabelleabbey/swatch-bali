@@ -10,10 +10,10 @@ seo:
   type: website
   hide-from-google: false
 images: 
-  first_image: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-  second_image: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-  third_image: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-  fourth_image: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+  first_image: /images/swatch-architects-bali-villa-house-architecture-design-studio-9.jpg
+  second_image: /images/swatch-architects-bali-architecture-design-studio-villa-house-3.jpg
+  third_image: /images/swatch-architects-bali-architecture-makalu-villa-house-2.jpg
+  fourth_image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
 process:
  - number_text: >-
     01
@@ -37,14 +37,14 @@ process:
 <section class="grid md:grid-cols-2 grid-cols-1 bg-light">
 
     <!-- Left Column -->
-    <div class="md:row-start-auto row-start-2">
-        <div class="bg-image-style h-[30vh] mb-10" style="background-image: url('{{ page.images.first_image }}');"></div>
-        <div class="bg-image-style h-[70vh]" style="background-image: url('{{ page.images.second_image }}');"></div>
+    <div class="md:row-start-auto row-start-2 grid gap-8">
+        <div class="bg-image-style h-[40vh] bg-bottom" style="background-image: url('{{ page.images.first_image }}');"></div>
+        <div class="bg-image-style h-[54vh]" style="background-image: url('{{ page.images.second_image }}');"></div>
     </div>
 
     <!-- Right Column -->
-    <div class="md:row-start-auto row-start-1 lg:p-20 md:p-10 md:pb-0 py-12 px-8 flex flex-col justify-end items-start">
-        <h1 class="editable serif-lg margin-heading">At Swatch Architects, <em>innovation</em> and creativity <em>are at the</em> core of our <em>design</em> philosphy.</h1>
+    <div class="md:row-start-auto row-start-1 lg:p-20 md:p-10 md:pb-0 lg:pb-0 py-12 px-8 flex flex-col justify-end items-start">
+        <h1 class="editable serif-lg margin-heading lg:w-3/4">At Swatch Architects, <em>innovation</em> and creativity <em>are at the</em> core of our <em>design</em> philosphy.</h1>
         <div class="editable lg:w-3/4">
             <p>London born and Bali based, our approach is a harmonious dance of natural beauty and functional form. Our experienced architectural team blends purpose with expertise to transform your architectural dreams into a tangible reality.</p>
             <p>As a boutique firm, we respond to our clients’ needs by designing projects in an intimate and hands-on way, collaborating and creating with people that we know and trust.  We love what we do and invest great time and passion in delivering projects which are beautifully conceived and finely crafted.</p>
@@ -63,17 +63,20 @@ process:
     </div>
 
         <!-- Left Column -->
-        <div class="bg-image-style h-full w-[85%]" style="background-image: url('{{ page.images.third_image }}');"></div>
+        <div class="bg-image-style h-[75vh] w-[85%]" style="background-image: url('{{ page.images.third_image }}');"></div>
 
         <!-- Right Column -->
-        <div class="-mt-8">
+        <div class="mt-24">
             {% for item in page.process %}
-            <div class="flex justify-between items-end border-black border-b mb-8">
+            <div class="flex justify-between items-end">
                 <span class="editable mb-1">{{item.number_text}}</span>
-                <h2 class="editable serif-lg mt-8"><span>{{item.heading}}</span></h2>
+                <h2 class="editable serif-lg mt-6 mb-[-5px]"><span>{{item.heading}}</span></h2>
+        
             </div>
-                <p>{{item.description}}</p>
+            {% include animations/animated-span.html %}
+            <p class="mt-4">{{item.description}}</p>
             {% endfor %}
+
         </div>
 
 </section>
@@ -82,8 +85,9 @@ process:
 <section class="grid md:grid-cols-2 grid-cols-1 lg:pl-20 md:pl-10 md:pr-0 md:py-10 py-12 px-8 bg-primary">
 
     <!-- Left Column -->
-    <div class="md:pr-10">
+    <div class="md:pr-10 ">
         {% include animations/animated-span.html %}
+        <div class="min-h-[90vh] flex flex-col items-start justify-end lg:pr-24">
 
         <h2 class="editable serif-lg mb-6 md:pt-20 pt-10">Meet <span>the founder</span></h2>
         <p class="editable uppercase margin-heading">Sam Whitehead</p>
@@ -96,12 +100,14 @@ process:
             <p>Breaking away from the corporate nine-to-nine grind of a disoriented industry, Sam combined his passion for travel with an unwavering drive to explore cultural identity in architecture. After traveling the world and experiencing diverse architectural styles and cultural influences, he found his true calling in Bali, where he felt an undeniable connection to the island's rich heritage and natural beauty, prompting him to establish his studio and weave his global experiences into locally inspired designs.</p>
         </div>
         <a href="/contact.html" class="editable link mb-10">Get in touch</a>
+
+          </div>
         {% include animations/animated-span.html %}
 
     </div>
 
     <!-- Right Column -->
-    <div class="bg-image-style" style="background-image: url('{{ page.images.fourth_image }}');"></div>
+    <div class="bg-image-style min-h-[90vh]" style="background-image: url('{{ page.images.fourth_image }}');"></div>
 </section>
 
 

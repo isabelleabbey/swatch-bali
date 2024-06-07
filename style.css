@@ -13,8 +13,10 @@
         @apply scroll-smooth
     }
 
+    /* * { @apply border border-black } */
+
     body {
-        @apply font-sans font-light text-dark bg-light antialiased leading-[1em]
+        @apply font-body font-light text-dark bg-light antialiased leading-[1em] text-sm
     }
 
     h1 span, h2 span {@apply italic }
@@ -121,17 +123,17 @@
 
     /* Typography */
 
-    .subtitle-lg { @apply uppercase text-[1.3rem] }
+    .subtitle-lg { @apply uppercase text-[1.1rem] }
     .subtitle-md { @apply uppercase text-[1rem] }
     .subtitle-sm { @apply uppercase text-[0.7rem] }
 
-    .serif-lg { @apply font-serif text-[2.3rem] leading-[1em]  }
+    .serif-lg { @apply font-serif text-[1.8rem] leading-[1em]  }
 
     .serif-md {  @apply font-serif text-[1.4rem] leading-[1em] }
 
     /* Spacing */
     .margin-heading {
-        @apply mb-12
+        @apply mb-8
     }
 
 }

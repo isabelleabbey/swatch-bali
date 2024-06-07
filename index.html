@@ -1,25 +1,18 @@
 ---
 layout: default
 title: Swatch
-header:
+banner:
   image-left:
-    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+    image_path: /images/swatch-architects-bali-architecture-design-studio-villa-house-9.jpg
     image_focus:
   image-right:
-    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+    image_path: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
     image_focus:
-about:
-  image:
-    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-    image_focus:
-philosophy:
-  image:
-    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-    image_focus:
-banner:
-  image:
-    image_path: /images/temporary/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
-    image_focus:
+images:
+  second_image: /images/swatch-architects-bali-architecture-design-studio-villa-house-2.jpg
+  third_image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+  fourth_image: /images/swatch-architects-bali-architecture-design-studio-villa-house-6.jpg
+  fifth_image:
 seo:
   meta-description:
   keywords:
@@ -35,14 +28,14 @@ seo:
   <!-- Left Column -->
   <div
     class="order-last lg:order-first bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] mx-[25%] max-h-[100vh] min-h-[35vh] md:min-h-[50vh]"
-    style="background-image: url('{{ page.header.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};"
+    style="background-image: url('{{ page.banner.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};"
     data-aos="fade-in"
   ></div>
 
   <!-- Right Column -->
   <div
     class="bg-image-style h-[100vh]"
-    style="background-image: url('{{ page.header.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"
+    style="background-image: url('{{ page.banner.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"
     data-aos="fade-in"
     data-aos-delay="300"
   ></div>
@@ -63,17 +56,16 @@ seo:
     <!-- Image -->
     <div
       class="bg-image-style flex-1 min-h-[70vh]"
-      style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"
+      style="background-image: url('{{ page.images.second_image }}');"
       data-aos="fade-in"
     ></div>
 
     <!-- Text -->
 
     <div
-      class="py-12 lg:py-0 flex-1 flex flex-col justify-between ml-8 lg:ml-24 mr-8"
-    >
+      class="py-12 lg:py-0 flex-1 flex flex-col justify-between ml-8 lg:ml-24 mr-8 relative ">
       {% include animations/animated-span.html %}
-      <p class="pt-8 lg:pt-5p lg:text-right subtitle-lg" data-aos="fade-in">
+      <p class="absolute top-0 right-0 lg:text-right subtitle-lg mt-4" data-aos="fade-in">
         Design / enrich / inspire
       </p>
       <div class="flex justify-start self-end">
@@ -98,7 +90,7 @@ seo:
 </section>
 
 <!-- Philosophy Section -->
-<section class="lg:py-5p">
+<section class="lg:pb-5p">
   <!-- Image and Text Container -->
   <div class="grid lg:grid-cols-2">
     <!-- Text -->
@@ -133,8 +125,8 @@ seo:
 
     <!-- Image -->
     <div
-      class="order-first lg:order-last bg-image-style flex-1 min-h-[70vh]"
-      style="background-image: url('{{ page.about.image.image_path }}'); background-position: {{ page.about.image.image_focus }};"
+      class="order-first lg:order-last bg-image-style flex-1 min-h-[80vh]"
+      style="background-image: url('{{ page.images.third_image }}');"
       data-aos="fade-in"
     ></div>
   </div>
@@ -143,7 +135,7 @@ seo:
 <!-- Banner -->
 <section
   class="bg-image-style min-h-[70vh]"
-  style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"
+  style="background-image: url('{{ page.images.fourth_image }}');"
   data-aos="fade-in"
 ></section>
 
