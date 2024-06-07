@@ -1,0 +1,313 @@
+<div class="opacity-layer"></div>
+  
+    <nav class="relative">
+      <!-- Home Icon -->
+
+
+    <!-- Start burger -->
+    <div class="burger-button">
+      <span class=" burger-top"></span>
+      <span class="burger-middle"></span>
+      <!-- <span class="burger-bottom"></span> -->
+    </div>
+  
+        <div class="burger-menu overflow-y-scroll">   
+          
+          
+          <div class="absolute top-0 left-0">
+            <img class="object-contain object-center h-16 mt-4" src="{{site.data.site-settings.brand.primary_logo_path}}">
+          </div>
+  
+            <div class="flex h-[70vh] lg:h-[90vh]">
+            <!-- Contact links -->
+              <div class="flex flex-col w-full justify-center items-center text-right">
+                  {% for item in site.data.navigation.main_menu %}
+                  <a href="{{item.nav_link}}" class="my-6 font-serif text-2xl  text-light uppercase">{{item.nav_title}}</a>
+                  {% endfor %} 
+
+                  <!-- <div class="mt-12">
+                    <a href="mailto:{{site.data.site-settings.general.contact_email}}" class="subtitle mb-2">Email</a>
+                    <a href="mailto:{{site.data.site-settings.social.instagram_username}}" class="subtitle mb-2">Instagram</a>
+                    <a href="mailto:{{site.data.site-settings.social.linkedin_username}}" class="subtitle">LinkedIn</a>
+                  </div> -->
+              </div>
+
+              <!-- Descriptive text -->
+              <!-- <div class="mt-12 md:mt-0">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat sunt, asperiores fuga hic necessitatibus perspiciatis magni optio neque.</p>
+              </div> -->
+
+            </div>
+
+            <div class="">
+            
+                
+                <div class="py-8 border-primary  border-t border-b">
+              
+          <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/82c09b497a235bedb3e4c577d8d40cc7.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+                  
+                </div>
+         
+
+                
+
+            </div>
+
+            <div class="flex justify-between my-4 px-5">
+              <h4 class="text-xs text-light"> <a target="_blank" href="https://www.instagram.com/{{site.data.site-settings.social.instagram_username}}"> @{{ site.data.site-settings.social.instagram_username }} </a>
+               <h4 class="text-xs text-light"><a href="mailto:accounts@terreinteriors.co.uk"> accounts@terreinteriors.co.uk  </a></h4>
+            </div>
+
+              
+              <!-- Featured links, two main images with link below -->
+              <!-- <div class="grid grid-cols-2 md:gap-8 gap-4 md:py-12 pt-12">
+                {% comment %}
+                {% for item in site.data.navigation.burger %}
+                {% for link in item.featured-links %}
+
+                <a href="{{link.nav_link}}" class="mb-4">
+                    <img src="{{link.image}}" alt="" class="md:h-30 h-20 object-center object-cover w-full mb-2">
+                    <p class="subtitle">{{link.link_title}}</p>
+                </a>
+                {% endfor %}
+                {% endfor %} 
+                {% endcomment %}
+              </div> -->
+  
+
+        </div>
+    </nav>
+  
+  
+  <style>
+  .opacity-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    z-index: 1;
+    transition: all 1s;
+  }
+  
+  .opacity-layer.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: visible;
+  }
+  
+  .burger-button {
+  position:fixed;
+  top: 1.2rem;
+  right: 0.5rem;
+  z-index: 1000;
+  padding: 8px;
+  }
+  
+  /* Use this option if using an icon */
+  /* .burger-button span {
+  display: block;
+  transition: 1s;
+  z-index: 300;
+  } */
+  
+
+/*change the colour of the burger lines*/
+.burger-button span {
+  width: 60px;
+border: 0.005rem solid black;
+  background-color: black;
+  display: block;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+
+.burger-button.active span{
+  border-color: white;
+  background-color: white;
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: -02px;
+}
+
+.burger-bottom{
+  bottom: -02px;
+}
+/* make sure this has the same 'top' as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  /* transform: rotateZ(45deg); */
+}
+
+.burger-button.active .burger-middle{
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same 'bottom' as the burger button has padding*/
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+  
+  .burger-menu {
+    /* Change background colour, leave the rest */
+    background-color: var(--secondary);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    right: -100vh;
+    bottom: 0;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 900;
+    transition:1s;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+  }
+  
+  .burger-menu a, .burger-menu span {
+    text-decoration: none;
+    display:block;
+    white-space:nowrap;
+    opacity: 0;
+    transition: opacity 0.5s linear 1s, color 0.1s;
+  }
+   
+  .burger-menu a:hover {
+    color: white;
+  }
+  
+  .burger-menu div {
+    opacity: 0;
+    transition: opacity 0.5s linear 1s, color 0.1s;
+    /* overflow: hidden; */
+  }
+  
+  .burger-menu.active{
+    top:0;
+    right:0;
+    bottom:0;
+    /* left: 0; */
+    /* overflow: hidden; */
+  }
+  
+  .burger-menu.active a, .burger-menu.active span, .burger-menu.active div {
+    transition: opacity 1s linear 1s, color 0.1s;
+    opacity: 1;
+  }
+  
+ /* Fades out the custom burger icon image */
+ .burger-button.active img {
+    transition: all 2s;
+    opacity: 0;
+  }
+  
+  /* ipad screens */
+  @media (min-width: 768px) {
+  /* Change position of burger button */
+  .burger-button {
+    top: 2.3rem;
+    right: 1.8rem;
+  }
+  
+  
+  /* Change position of burger menu, slides from left */
+  .burger-menu {
+    height: 100vh;
+    height: 100svh;
+    width: 80vw;
+    right: -100vh;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .burger-menu.active {
+    right: 0;
+  }
+  
+  .burger-button .burger-top .burger-cross {
+    width: 30px;
+    border-radius: 2px;
+    height: 1px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1000!important;
+  }
+  }
+
+
+  @media (max-width: 768px){
+    /*change the colour of the burger lines*/
+.burger-button span {
+  width: 55px;
+border: 0.005rem solid black;
+  background-color: black;
+  display: block;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+.burger-button {
+  position:fixed;
+  top: 2.25rem;
+  right: 0.5rem;
+  z-index: 1000;
+  padding: 8px;
+  }
+  }
+  
+  /* desktop screens */
+  @media (min-width: 1024px) {
+  
+  /* .burger-button {
+    display: none;
+  } */
+  
+  /* Change position of burger menu, slides from right */
+  .burger-menu {
+    right: -70vw;
+    width: 40vw;
+    height: 100vh;
+    height: 100svh;
+    /* overflow: hidden; */
+  }
+  
+  .burger-menu.active {
+    right: 0;
+    /* overflow: hidden; */
+  }
+  
+  
+  }
+  </style>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const burgerButton = document.querySelector(".burger-button");
+      const burgerMenu = document.querySelector(".burger-menu");
+      const opacityLayer = document.querySelector(".opacity-layer");
+  
+      burgerButton.addEventListener("click", function () {
+          burgerButton.classList.toggle("active");
+          burgerMenu.classList.toggle("active");
+          opacityLayer.classList.toggle("active");
+      });
+  
+      opacityLayer.addEventListener("click", function () {
+          burgerButton.classList.remove("active");
+          burgerMenu.classList.remove("active");
+          opacityLayer.classList.remove("active");
+      });
+  });
+  </script>

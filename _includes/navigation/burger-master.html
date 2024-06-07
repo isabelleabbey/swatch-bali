@@ -5,21 +5,21 @@
     <nav class="relative overflow-hidden">
 
         <!-- Burger button three lines, comment out this or below and also in styles -->
-        <div class="burger-button">
-            <span class="burger-top"></span>
-            <span class="burger-middle"></span>
-            <span class="burger-bottom"></span>
-        </div>
-
-
-        <!-- Burger button with icon. comment out this or above and also in styles -->
         <!-- <div class="burger-button">
-            <img src="/images/burger-icon.png" alt="" class="object-center object-cover h-10 fixed lg:right-4 md:top-4 md:right-4 top-2 right-2">
-
             <span class="burger-top"></span>
             <span class="burger-middle"></span>
             <span class="burger-bottom"></span>
         </div> -->
+
+
+        <!-- Burger button with icon. comment out this or above and also in styles -->
+        <div class="burger-button">
+            <p alt="" class="fixed lg:right-4 md:top-4 md:right-4 top-2 right-2"> MENU </p>
+
+            <span class="burger-top"></span>
+            <span class="burger-middle"></span>
+            <span class="burger-bottom"></span>
+        </div>
 
 
         <!-- Burger menu start -->
@@ -49,7 +49,7 @@
 
 <style>
     /* ---------------- USE THIS IF USING STANDARD BURGER, COMMENT OUT BELOW ------------------ */
-    .burger-button span {
+    /* .burger-button span {
         width: 55px;
         border: 0.005rem solid black;
         background-color: black;
@@ -61,14 +61,14 @@
     .burger-button.active span {
         border-color: black;
         background-color: black;
-    }
+    } */
 
     /* ---------------- END STANDARD BURGER STYLES ------------------ */
 
 
 
     /* ---------------- USE THIS IF USING AN ICON, COMMENT OUT ABOVE ------------------ */
-    /* .burger-button span {
+    .burger-button span {
 display: block;
 transition: 1s;
 z-index: 300;
@@ -82,7 +82,7 @@ border: 0.005rem solid black;
 .burger-button.active img {
 transition: all 2s;
 opacity: 0;
-} */
+}
     /* ---------------- END ICON STYLES ------------------ */
 
 
@@ -100,10 +100,7 @@ opacity: 0;
     /* Burger menu, background colour and slide in location */
     .burger-menu {
         background-color: var(--primary);
-        right: -100vh;
-        height: 100vh;
-        width: 100vw;
-        bottom: 0;
+    
         position: fixed;
         box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
         z-index: 900;
@@ -196,10 +193,10 @@ opacity: 0;
 
         /* Change position of burger menu, slides from left */
         .burger-menu {
-            left: -70vw;
-            width: 70vw;
-            height: 100vh;
-            height: 100svh;
+          height: 100vh;
+    height: 100svh;
+    width: 80vw;
+    right: -100vh;
             bottom: 0;
         }
 
@@ -220,15 +217,16 @@ opacity: 0;
 
         /* Change position and width of burger menu, slides from left */
         .burger-menu {
-            left: -65vw;
-            width: 65vw;
-            height: 100vh;
-            height: 100svh;
+          right: -70vw;
+    width: 40vw;
+    height: 100vh;
+    height: 100svh;
+       
             overflow: hidden;
         }
 
         .burger-menu.active {
-            left: 0;
+            right: 0;
             overflow: hidden;
         }
     }

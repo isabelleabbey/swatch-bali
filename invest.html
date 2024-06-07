@@ -123,11 +123,11 @@ process:
   <!-- Image and Text Container -->
   <div class="grid lg:grid-cols-2">
     <!-- Text -->
-    <div class="py-12 lg:py-0 flex-1 flex flex-col items-end justify-end h-[75vh]">
+    <div class="py-12 lg:py-0 flex-1 flex flex-col items-end justify-end h-[85vh]">
       <div class="flex justify-start mt-auto pl-20 relative ">
         <div>
           <h2 class="serif-lg margin-heading lg:w-[75%]" data-aos="fade-in">
-            SWATCH Living presents <em>an array </em>of exclusive <em>investment opportunities </em>in Bali.
+            Swatch Living presents <em>an array </em>of exclusive <em>investment opportunities </em>in Bali.
           </h2>
           <p data-aos="fade-in" class="lg:w-[75%] mb-12">
             Our commitment to integrity and transparency ensures a solid offer for investors seeking sophisticated and rewarding investments in this vibrant market.
@@ -136,7 +136,7 @@ process:
             {% for item in page.benefits %}
             <div>
               
-                <p class="editable uppercase text-lg mt-6 "><span>{{item.title}}</span></p>
+                <p class="editable uppercase text-md mt-6 "><span>{{item.title}}</span></p>
         
             </div>
             {% include animations/animated-span.html %}
@@ -151,7 +151,7 @@ process:
     </div>
 
     <!-- Image -->
-    <div class="order-first lg:order-last bg-image-style flex-1 min-h-[75vh]" style="background-image: url('{{ page.images.second_image }}');" data-aos="fade-in"></div>
+    <div class="order-first lg:order-last bg-image-style flex-1 min-h-[85vh]" style="background-image: url('{{ page.images.second_image }}');" data-aos="fade-in"></div>
   </div>
 </section>
 
