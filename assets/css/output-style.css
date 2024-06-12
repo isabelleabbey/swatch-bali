@@ -588,6 +588,9 @@ p:last-child {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
 .bottom-0 {
   bottom: 0px;
 }
@@ -1065,10 +1068,6 @@ p:last-child {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1251,6 +1250,9 @@ p:last-child {
   .md\:mb-12 {
     margin-bottom: 3rem;
   }
+  .md\:mb-8 {
+    margin-bottom: 2rem;
+  }
   .md\:ml-8 {
     margin-left: 2rem;
   }
@@ -1290,9 +1292,6 @@ p:last-child {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -1308,11 +1307,17 @@ p:last-child {
   .md\:gap-8 {
     gap: 2rem;
   }
+  .md\:bg-none {
+    background-image: none;
+  }
   .md\:p-10 {
     padding: 2.5rem;
   }
   .md\:p-12 {
     padding: 3rem;
+  }
+  .md\:p-4 {
+    padding: 1rem;
   }
   .md\:p-8 {
     padding: 2rem;
@@ -1322,9 +1327,6 @@ p:last-child {
   }
   .md\:p-\[1rem_3rem\] {
     padding: 1rem 3rem;
-  }
-  .md\:p-4 {
-    padding: 1rem;
   }
   .md\:px-10 {
     padding-left: 2.5rem;
@@ -1349,6 +1351,9 @@ p:last-child {
   }
   .md\:pr-10 {
     padding-right: 2.5rem;
+  }
+  .md\:pt-12 {
+    padding-top: 3rem;
   }
   .md\:pt-20 {
     padding-top: 5rem;
@@ -1388,6 +1393,9 @@ p:last-child {
   }
   .lg\:flex {
     display: flex;
+  }
+  .lg\:hidden {
+    display: none;
   }
   .lg\:h-\[40vh\] {
     height: 40vh;
@@ -1430,6 +1438,9 @@ p:last-child {
   }
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .lg\:gap-8 {
+    gap: 2rem;
   }
   .lg\:p-20 {
     padding: 5rem;
