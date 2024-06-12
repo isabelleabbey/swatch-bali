@@ -63,10 +63,10 @@ process:
     </div>
 
         <!-- Left Column -->
-        <div class="bg-image-style h-[75vh] w-[85%]" style="background-image: url('{{ page.images.third_image }}');" data-aos="fade-in"></div>
+        <div class="bg-image-style h-[75vh] md:w-[85%]" style="background-image: url('{{ page.images.third_image }}');" data-aos="fade-in"></div>
 
         <!-- Right Column -->
-        <div class="mt-24">
+        <div class="md:mt-24 mt-4">
             {% for item in page.process %}
             <div class="flex justify-between items-end" data-aos="fade-in" data-aos-delay="300">
                 <span class="editable mb-1">{{item.number_text}}</span>
@@ -107,7 +107,7 @@ process:
     </div>
 
     <!-- Right Column -->
-    <div class="bg-image-style min-h-[90vh]" style="background-image: url('{{ page.images.fourth_image }}');"></div>
+    <div class="bg-image-style md:min-h-[90vh] min-h-[50vh]" style="background-image: url('{{ page.images.fourth_image }}');"></div>
 </section>
 
 

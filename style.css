@@ -124,7 +124,7 @@
     /* Typography */
 
     .subtitle-lg { @apply uppercase text-[1.1rem] }
-    .subtitle-md { @apply uppercase text-[1rem] }
+    .subtitle-md { @apply uppercase lg:text-[1rem] text-[0.9rem] }
     .subtitle-sm { @apply uppercase text-[0.7rem] }
 
     .serif-lg { @apply font-serif text-[1.8rem] leading-[1em]  }

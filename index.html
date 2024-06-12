@@ -26,7 +26,7 @@ seo:
 <!-- Hero Banner -->
 <section class="grid lg:grid-cols-2">
   <!-- Left Column -->
-  <div class="order-last lg:order-first bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] mx-[25%] max-h-[100vh] min-h-[35vh] md:min-h-[50vh]" style="background-image: url('{{ page.banner.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};" data-aos="fade-in"></div>
+  <div class="order-last lg:order-first bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] md:mx-[25%] mx-[20%] max-h-[100vh] min-h-[35vh] md:min-h-[50vh]" style="background-image: url('{{ page.banner.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};" data-aos="fade-in"></div>
 
   <!-- Right Column -->
   <div class="bg-image-style h-[100vh]" style="background-image: url('{{ page.banner.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};" data-aos="fade-in" data-aos-delay="300"></div>
@@ -51,7 +51,7 @@ seo:
 
     <div class="py-12 lg:py-0 flex-1 flex flex-col justify-between ml-8 lg:ml-24 mr-8 relative ">
       {% include animations/animated-span.html %}
-      <p class="absolute top-0 right-0 lg:text-right subtitle-lg mt-4" data-aos="fade-in">
+      <p class="md:absolute top-0 right-0 text-right subtitle-lg mt-4 md:mb-0 mb-40" data-aos="fade-in">
         Design / enrich / inspire
       </p>
       <div class="flex justify-start self-end">

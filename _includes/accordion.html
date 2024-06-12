@@ -51,22 +51,24 @@
 @media (max-width: 768px) {
 /* Accordion slide */
 .accordion dt a {
-  padding: 2rem 1.25rem;
+  padding: 2rem 0rem 0.2rem 0;
   display:block;
   position: relative;
   text-decoration: none;
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
 }
 
 /* Inside accordion */
   .accordion dd {
-    padding: 0 1.25rem 2rem 1.25rem;
+    padding: 0 0 2rem 0;
   }
 
   /* Icon position */
   .accordion dt a::after {
-    font-size: 2rem;
-    margin: 1.4rem;
+    font-size: 0.8rem;
+    margin: 0;
+    top: auto;
+    bottom: 0.6rem;
   }
 }
 </style>
@@ -74,7 +76,7 @@
 
 
 <div>
-    <dl class="accordion">
+    <dl class="accordion md:pb-0 pb-12">
         {% for item in page.accordion %}
 
         <dt><a href=""><p class="serif-lg md:mr-12 mr-8">{{item.heading}}</p></a>
@@ -84,36 +86,44 @@
         <dd class="mb-6">
      
 
-            <div class="grid grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 grid-cols-1 pt-8 lg:pt-0 gap-8">
                 <div >
                     <div>
-                        <h3 class="mb-12 subtitle uppercase">Do you have?</h3>
+                        <h3 class="lg:mb-12 mb-4 subtitle uppercase">Do you have?</h3>
                         <div>{{item.do_you_have_html}}</div>
                     </div>
 
                     <div class="pt-12">
-                        <h3 class="mb-12 subtitle uppercase">Qualifications</h3>
+                        <h3 class="lg:mb-12 mb-4 subtitle uppercase">Qualifications</h3>
                         <div>{{item.qualifications_html}}</div>
                     </div>
 
-                    <div class="pt-12">
-                        <h3 class="mb-12 subtitle uppercase">How to apply</h3>
-                        <div class="mb-8">{{item.how_to_apply_html}}</div>
+                    <!-- mobile only -->
+                    <div class="md:hidden flex pt-12">
+                      <div>
+                          <h3 class="lg:mb-12 mb-4 subtitle uppercase">Key responsibilities</h3>
+                          <div>{{item.responsibilities_html}}</div>
+                      </div>
+                  </div>
+                  <!-- end -->
 
+                    <div class="pt-12">
+                        <h3 class="lg:mb-12 mb-4 subtitle uppercase">How to apply</h3>
+                        <div class="mb-8">{{item.how_to_apply_html}}</div>
 
                         <a class="border-black border-[0.5px] px-8 py-2 uppercase " href="{{item.apply_link}}"> Apply now </a>
                     </div>
                 </div>
 
-                <div>
+                <div class="hidden md:flex">
                     <div>
-                        <h3 class="mb-12 subtitle uppercase">Key responsibilities</h3>
+                        <h3 class="lg:mb-12 mb-8 subtitle uppercase">Key responsibilities</h3>
                         <div>{{item.responsibilities_html}}</div>
                     </div>
                 </div>
 
         </dd>
-        <div class="p-4"></div>
+        <div class="md:p-4"></div>
         {% endfor %}
     </dl>
 </div>

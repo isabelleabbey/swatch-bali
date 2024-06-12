@@ -1,6 +1,6 @@
 <header class="absolute top-0 z-10 w-full grid grid-cols-3 px-4">
   <!-- Left Column -->
-  <div class="flex items-center pb-1">
+  <div class="md:flex items-center pb-1 hidden">
     {% for item in site.data.navigation.header limit:1 %}
     <a
       href="{{ item.nav_link }}"
@@ -22,7 +22,7 @@
     >
       <img
         src="{{ site.data.site-settings.brand.primary_logo_path }}"
-        class="inline-block h-14"
+        class="inline-block h-14 object-contain"
       />
     </a>
   </div>
