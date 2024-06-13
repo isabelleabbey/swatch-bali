@@ -24,17 +24,26 @@ property:
       land_plot: XX
 featured_images:
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-1.jpg
+      image: >-
+         /images/swatch-architects-bali-design-studio-casa-padang-padang-villas-two-bed-10.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-10.jpg
+      image: >-
+         /images/swatch-architects-bali-design-studio-casa-padang-padang-villas-two-bed-13.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-4.jpg
+      image: >-
+         /images/swatch-architects-bali-design-studio-casa-padang-padang-villas-two-bed-12.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-6.jpg
+      image: >-
+         /images/swatch-architects-bali-design-studio-casa-padang-padang-villas-two-bed-18.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-8.jpg
+      image: >-
+         /images/swatch-architects-bali-architecture-casa-padang-padang-villas-two-bed-1.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-3.jpg
+      image: >-
+         /images/swatch-architects-bali-design-studio-house-casa-padang-padang-villas-three-bed9.jpg
+   -
+      image: >-
+         /images/swatch-architects-bali-design-studio-house-casa-padang-padang-villas-three-bed10.jpg
 project_gallery:
    -
       image: /images/swatch-architects-bali-design-studio-amari-two-bed-1.jpg
