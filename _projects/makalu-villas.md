@@ -24,40 +24,36 @@ property:
       land_plot: XX
 featured_images:
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-1.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-1.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-10.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-4.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-4.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-5.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-6.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-6.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-8.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-7.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-3.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-8.jpg
 project_gallery:
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-1.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-1.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-10.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-4.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-4.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-5.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-6.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-6.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-8.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-7.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-2.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-8.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-9.jpg
    -
-      image: /images/swatch-architects-bali-architecture-amari-studio-1.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-11.jpg
    -
-      image: /images/swatch-architects-bali-architecture-amari-studio-8.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-10.jpg
    -
-      image: /images/swatch-architects-bali-design-studio-amari-11.jpg
-   -
-      image: /images/swatch-architects-bali-design-studio-amari-12.jpg
-   -
-      image: /images/swatch-architects-bali-design-studio-amari-13.jpg
+      image: /images/swatch-architects-bali-architecture-makalu-villa-house-3.jpg
 ---
