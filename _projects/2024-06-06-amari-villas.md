@@ -2,7 +2,7 @@
 layout: project
 title: Amari Villas
 location: Ubud, Bali
-project_colour:
+project_colour: '#a3a98a'
 description_html: >-
    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis? Velit,
    iure quaerat accusantium illum quasi praesentium, dicta animi fuga sunt,
