@@ -1,0 +1,15 @@
+
+
+
+
+
+
+<div class="slider-container ">
+      {% for item in item.featured_images offset:1 %}
+          <div class="slider-item lg:p-16 p-0">
+              <img src="{{item.image}}" alt="" class=" object-center object-cover  w-full h-[60vh]">
+          </div>
+      {% endfor %}
+  
+</div>
+

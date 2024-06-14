@@ -12,6 +12,7 @@ seo:
 images: 
   first_image: /images/swatch-architects-bali-villa-house-architecture-design-studio-9.jpg
   second_image: /images/swatch-architects-bali-architecture-design-studio-villa-house-3.jpg
+  additional_mobile_image: /images/swatch-architects-bali-architecture-design-studio-villa-house-3.jpg
   third_image: /images/swatch-architects-bali-architecture-makalu-villa-house-2.jpg
   fourth_image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
 process:
@@ -43,19 +44,29 @@ process:
     </div>
 
     <!-- Right Column -->
-    <div class="lg:p-20 md:p-10 md:pb-0 lg:pb-0 py-12 px-8 flex flex-col justify-end items-start" data-aos="fade-in">
+    <div class="lg:p-20 md:p-10 md:pb-0 lg:pb-0 py-12 lg:px-8 px-[5%] flex flex-col justify-end items-start" data-aos="fade-in">
         <h1 class="editable serif-lg margin-heading lg:w-3/4">At Swatch Architects, <em>innovation</em> and creativity <em>are at the</em> core of our <em>design</em> philosphy.</h1>
         <div class="editable lg:w-3/4">
             <p>London born and Bali based, our approach is a harmonious dance of natural beauty and functional form. Our experienced architectural team blends purpose with expertise to transform your architectural dreams into a tangible reality.</p>
             <p>As a boutique firm, we respond to our clients’ needs by designing projects in an intimate and hands-on way, collaborating and creating with people that we know and trust.  We love what we do and invest great time and passion in delivering projects which are beautifully conceived and finely crafted.</p>
         </div>
         <a href="#" class="editable link">Explore</a>
+       
     </div>
+
+    <div class="lg:hidden px-[5%] pb-12">
+      {% include animations/animated-span.html %}
+      </div>
+
+    <div class=" grid gap-8 lg:hidden">
+      
+      <div class="bg-image-style h-[54vh]" style="background-image: url('{{ page.images.additional_mobile_image }}');" data-aos="fade-in" data-aos-delay="300"></div>
+  </div>
 
 </section>
 
 <!-- Process Section -->
-<section class="lg:p-20 md:p-10 py-12 px-8 grid md:grid-cols-2 grid-cols-1">
+<section class="lg:p-20 md:p-10 py-12 lg:px-8 px-[5%] grid md:grid-cols-2 grid-cols-1">
     <div class="col-span-full lg:w-3/4 mb-10" data-aos="fade-in">
         <h2 class="editable serif-lg margin-heading lg:w-[60%]">Our <em>design</em> process is <em>a journey</em> of inspiration, <em>creativity,</em> and collaboration.</h2>
         <p class="editable lg:w-[60%]">We draw inspiration from unique surroundings, learned building culture, and our clients' vision; referencing architectural history and setting the stage for innovation.</p>
@@ -81,8 +92,10 @@ process:
 
 </section>
 
+
+
 <!-- Founder Section -->
-<section class="grid md:grid-cols-2 grid-cols-1 lg:pl-20 md:pl-10 md:pr-0 md:py-10 py-12 px-8 bg-primary" data-aos="fade-in" data-aos-delay="300">
+<section class="grid md:grid-cols-2 grid-cols-1 lg:pl-20 md:pl-10 md:pr-0 md:py-10 py-12  px-[5%] bg-primary" data-aos="fade-in" data-aos-delay="300">
 
     <!-- Left Column -->
     <div class="md:pr-10 ">
@@ -111,7 +124,7 @@ process:
 </section>
 
 
-<section class="lg:pt-5p py-12 px-8">
+<section class="lg:pt-5p py-12 lg:px-8 px-[5%]">
   <!-- Gallery -->
   {% include gallery.html %}
 </section>
