@@ -224,10 +224,16 @@ seo:
       return window.matchMedia("(max-width: 940px)").matches;
     }
 
+    function getVerticalCenter() {
+      var windowHeight = window.innerHeight; // Get the viewport height
+      var elementHeight = document.querySelector(".tween").clientHeight; // Get the element's height
+      return (windowHeight - elementHeight) / 2; // Calculate the center position
+    }
+
     if (isMobile()) {
       // Mobile-specific animation: animate from the center, scale down, and fade out
       TweenMax.from(".tween", 1.5, {
-        y: "300", // Vertical translation
+        y: getVerticalCenter(), // Vertical translation
         scale: 1, // Starts fully scaled
         opacity: 1, // Starts fully opaque
         ease: Expo.easeInOut,
@@ -244,8 +250,8 @@ seo:
     } else {
       // Non-mobile-specific animation: translate vertically
       TweenMax.from(".tween", 3, {
-        y: "250", // Vertical translation
-        scale: 2,
+        y: getVerticalCenter(), // Vertical translation
+        scale: 3,
         ease: Expo.easeInOut,
       });
     }
