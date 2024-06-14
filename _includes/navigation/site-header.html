@@ -1,25 +1,18 @@
-<header class="md:absolute sticky md:bg-none bg-light top-0 z-10 w-full grid grid-cols-3 px-4">
+<header
+  class="nav md:absolute sticky md:bg-none bg-light top-0 z-10 w-full grid grid-cols-3 px-4"
+>
   <!-- Left Column -->
-  <div class="md:flex items-center pb-1 hidden">
+  <div class="left md:flex items-center pb-1 hidden">
     {% for item in site.data.navigation.header limit:1 %}
-    <a
-      href="{{ item.nav_link }}"
-      class="uppercase text-sm"
-      data-aos="fade-in"
-      data-aos-delay="300"
+    <a href="{{ item.nav_link }}" class="uppercase text-sm"
       >{{ item.nav_title }}</a
     >
     {% endfor %}
   </div>
 
   <!-- Logo -->
-  <div class="flex-grow flex justify-center">
-    <a
-      href="/index.html"
-      class="text-center"
-      data-aos="fade-in"
-      data-aos-delay="500"
-    >
+  <div class="logo flex-grow flex justify-center">
+    <a href="/index.html" class="text-center">
       <img
         src="{{ site.data.site-settings.brand.primary_logo_path }}"
         class="inline-block h-14 object-contain"
@@ -28,7 +21,7 @@
   </div>
 
   <!-- Right Column -->
-  <div class="flex items-center justify-end pb-1">
+  <div class="right flex items-center justify-end pb-1">
     <!-- {% for item in site.data.navigation.header limit:1 offset:1 %}
     <a
       href="{{ item.nav_link }}"
@@ -39,13 +32,33 @@
     >
     {% endfor %} -->
   </div>
-  <div class="col-span-full">
+
+  <div class="line col-span-full">
     {% include animations/animated-span.html %}
-    </div>
+  </div>
 
+  {% include navigation/burger-menu.html %}
+</header>
 
-{% include navigation/burger-menu.html %}
+<!-- GSAP TWEEN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
-  </header>
+<script>
+  TweenMax.from(".line", 1.5, {
+    display: "none",
+    delay: 2.5,
+  });
 
-
+  TweenMax.from(".logo", 1.5, {
+    display: "none",
+    delay: 2.8,
+  });
+  TweenMax.from(".left", 1.5, {
+    opacity: 0,
+    delay: 2.6,
+  });
+  TweenMax.from(".right", 1.5, {
+    opacity: 0,
+    delay: 2.6,
+  });
+</script>
