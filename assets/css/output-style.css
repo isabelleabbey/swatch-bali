@@ -642,9 +642,6 @@ p:last-child {
 .m-auto {
   margin: auto;
 }
-.m-\[10\%\] {
-  margin: 10%;
-}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -656,6 +653,10 @@ p:last-child {
 .mx-\[20\%\] {
   margin-left: 20%;
   margin-right: 20%;
+}
+.mx-\[5\%\] {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .mx-auto {
   margin-left: auto;
@@ -673,21 +674,17 @@ p:last-child {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.my-\[20\%\] {
-  margin-top: 20%;
-  margin-bottom: 20%;
-}
 .my-\[10\%\] {
   margin-top: 10%;
   margin-bottom: 10%;
 }
-.my-\[5\%\] {
-  margin-top: 5%;
-  margin-bottom: 5%;
+.my-\[20\%\] {
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
-.mx-\[5\%\] {
-  margin-left: 5%;
-  margin-right: 5%;
+.mx-\[10\%\] {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -754,6 +751,12 @@ p:last-child {
 }
 .mt-auto {
   margin-top: auto;
+}
+.ml-\[5\%\] {
+  margin-left: 5%;
+}
+.mr-\[5\%\] {
+  margin-right: 5%;
 }
 .block {
   display: block;
@@ -827,6 +830,9 @@ p:last-child {
 .min-h-\[50vh\] {
   min-height: 50vh;
 }
+.min-h-\[55vh\] {
+  min-height: 55vh;
+}
 .min-h-\[70vh\] {
   min-height: 70vh;
 }
@@ -838,9 +844,6 @@ p:last-child {
 }
 .min-h-\[90vh\] {
   min-height: 90vh;
-}
-.min-h-\[55vh\] {
-  min-height: 55vh;
 }
 .w-\[65vw\] {
   width: 65vw;
@@ -1081,6 +1084,10 @@ p:last-child {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.px-\[5\%\] {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1104,10 +1111,6 @@ p:last-child {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.px-\[5\%\] {
-  padding-left: 5%;
-  padding-right: 5%;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -1417,6 +1420,10 @@ p:last-child {
   .lg\:col-span-9 {
     grid-column: span 9 / span 9;
   }
+  .lg\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   .lg\:my-\[20\%\] {
     margin-top: 20%;
     margin-bottom: 20%;
@@ -1432,6 +1439,12 @@ p:last-child {
   }
   .lg\:mr-24 {
     margin-right: 6rem;
+  }
+  .lg\:ml-8 {
+    margin-left: 2rem;
+  }
+  .lg\:mr-8 {
+    margin-right: 2rem;
   }
   .lg\:flex {
     display: flex;
@@ -1495,6 +1508,10 @@ p:last-child {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -1507,9 +1524,9 @@ p:last-child {
     padding-top: 5%;
     padding-bottom: 5%;
   }
-  .lg\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .lg\:pb-0 {
     padding-bottom: 0px;
