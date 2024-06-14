@@ -597,6 +597,9 @@ p:last-child {
 .left-0 {
   left: 0px;
 }
+.left-20 {
+  left: 5rem;
+}
 .right-0 {
   right: 0px;
 }
@@ -639,6 +642,9 @@ p:last-child {
 .m-auto {
   margin: auto;
 }
+.m-\[10\%\] {
+  margin: 10%;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -650,10 +656,6 @@ p:last-child {
 .mx-\[20\%\] {
   margin-left: 20%;
   margin-right: 20%;
-}
-.mx-\[25\%\] {
-  margin-left: 25%;
-  margin-right: 25%;
 }
 .mx-auto {
   margin-left: auto;
@@ -674,6 +676,18 @@ p:last-child {
 .my-\[20\%\] {
   margin-top: 20%;
   margin-bottom: 20%;
+}
+.my-\[10\%\] {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.my-\[5\%\] {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.mx-\[5\%\] {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -728,9 +742,6 @@ p:last-child {
 }
 .mt-2 {
   margin-top: 0.5rem;
-}
-.mt-24 {
-  margin-top: 6rem;
 }
 .mt-4 {
   margin-top: 1rem;
@@ -801,9 +812,6 @@ p:last-child {
 .h-\[75vh\] {
   height: 75vh;
 }
-.h-\[85vh\] {
-  height: 85vh;
-}
 .h-screen {
   height: 100vh;
 }
@@ -831,6 +839,9 @@ p:last-child {
 .min-h-\[90vh\] {
   min-height: 90vh;
 }
+.min-h-\[55vh\] {
+  min-height: 55vh;
+}
 .w-\[65vw\] {
   width: 65vw;
 }
@@ -839,9 +850,6 @@ p:last-child {
 }
 .w-\[75vw\] {
   width: 75vw;
-}
-.w-\[85\%\] {
-  width: 85%;
 }
 .w-\[90\%\] {
   width: 90%;
@@ -909,9 +917,6 @@ p:last-child {
 }
 .gap-12 {
   gap: 3rem;
-}
-.gap-16 {
-  gap: 4rem;
 }
 .gap-2 {
   gap: 0.5rem;
@@ -1064,10 +1069,6 @@ p:last-child {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1092,10 +1093,6 @@ p:last-child {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1107,6 +1104,10 @@ p:last-child {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.px-\[5\%\] {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -1120,9 +1121,6 @@ p:last-child {
 .pb-8 {
   padding-bottom: 2rem;
 }
-.pl-20 {
-  padding-left: 5rem;
-}
 .pl-6 {
   padding-left: 1.5rem;
 }
@@ -1134,9 +1132,6 @@ p:last-child {
 }
 .pt-12 {
   padding-top: 3rem;
-}
-.pt-20 {
-  padding-top: 5rem;
 }
 .pt-4 {
   padding-top: 1rem;
@@ -1267,6 +1262,9 @@ p:last-child {
   .md\:top-4 {
     top: 1rem;
   }
+  .md\:z-20 {
+    z-index: 20;
+  }
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1319,6 +1317,9 @@ p:last-child {
   .md\:w-\[85\%\] {
     width: 85%;
   }
+  .md\:w-full {
+    width: 100%;
+  }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1358,6 +1359,10 @@ p:last-child {
   .md\:p-\[1rem_3rem\] {
     padding: 1rem 3rem;
   }
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -1372,9 +1377,6 @@ p:last-child {
   }
   .md\:pb-0 {
     padding-bottom: 0px;
-  }
-  .md\:pb-10 {
-    padding-bottom: 2.5rem;
   }
   .md\:pl-10 {
     padding-left: 2.5rem;
@@ -1394,6 +1396,9 @@ p:last-child {
   .md\:text-left {
     text-align: left;
   }
+  .md\:text-center {
+    text-align: center;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1411,6 +1416,10 @@ p:last-child {
   }
   .lg\:col-span-9 {
     grid-column: span 9 / span 9;
+  }
+  .lg\:my-\[20\%\] {
+    margin-top: 20%;
+    margin-bottom: 20%;
   }
   .lg\:mb-0 {
     margin-bottom: 0px;
@@ -1498,11 +1507,12 @@ p:last-child {
     padding-top: 5%;
     padding-bottom: 5%;
   }
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .lg\:pb-0 {
     padding-bottom: 0px;
-  }
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
   }
   .lg\:pb-10p {
     padding-bottom: 10%;
