@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: alternative-layout
 title: About
 seo:
   meta-description:
@@ -9,120 +9,201 @@ seo:
   twitter_description:
   type: website
   hide-from-google: false
-images: 
+images:
   first_image: /images/swatch-architects-bali-villa-house-architecture-design-studio-9.jpg
   second_image: /images/swatch-architects-bali-architecture-design-studio-villa-house-3.jpg
   additional_mobile_image: /images/swatch-architects-bali-architecture-design-studio-villa-house-3.jpg
   third_image: /images/swatch-architects-bali-architecture-makalu-villa-house-2.jpg
   fourth_image: /images/swatch-architects-bali-design-studio-amari-two-bed-7.jpg
 process:
- - number_text: >-
-    01
-   heading: Define
-   description: First, we define the project’s brief, outline its constraints and opportunities, envision it’s future, and gather inspiration. It’s the foundation of our design journey at Swatch. 
- - number_text: >-
-    02
-   heading: Design
-   description: Next comes the exciting phase of conceptualisation. Here, we transform ideas and inspirations to life through sketching, preliminary designs and spatial coordination; shaping the project’s initial form and function.
- - number_text: >-
-    03
-   heading: Refine
-   description: Through a collaborative and intimate approach, we refine our vision with meticulous attention to detail. This stage involves detailed designs, drawings, visualisation, material selection, and specifications to enhance every aspect of the project and exceed client expectations.
- - number_text: >-
-    04
-   heading: Deliver
-   description: Finally, it’s time to deliver. We oversee the tender process, appoint contractors, finalise construction drawings, and ensure a seamless handover. At Swatch, we turn concepts into reality; delivering projects that are beautifully conceived, finely crafted and seamlessly fused with Bali’s stunning local landscapes. 
+  - number_text: >-
+      01
+    heading: Define
+    description: First, we define the project’s brief, outline its constraints and opportunities, envision it’s future, and gather inspiration. It’s the foundation of our design journey at Swatch.
+  - number_text: >-
+      02
+    heading: Design
+    description: Next comes the exciting phase of conceptualisation. Here, we transform ideas and inspirations to life through sketching, preliminary designs and spatial coordination; shaping the project’s initial form and function.
+  - number_text: >-
+      03
+    heading: Refine
+    description: Through a collaborative and intimate approach, we refine our vision with meticulous attention to detail. This stage involves detailed designs, drawings, visualisation, material selection, and specifications to enhance every aspect of the project and exceed client expectations.
+  - number_text: >-
+      04
+    heading: Deliver
+    description: Finally, it’s time to deliver. We oversee the tender process, appoint contractors, finalise construction drawings, and ensure a seamless handover. At Swatch, we turn concepts into reality; delivering projects that are beautifully conceived, finely crafted and seamlessly fused with Bali’s stunning local landscapes.
 ---
 
 <!-- Header -->
 <section class="grid md:grid-cols-2 grid-cols-1 bg-light">
-
-    <!-- Left Column -->
-    <div class=" grid gap-8">
-        <div class="bg-image-style h-[40vh] bg-bottom" style="background-image: url('{{ page.images.first_image }}');"data-aos="fade-in" data-aos-delay="300"></div>
-        <div class="bg-image-style h-[54vh]" style="background-image: url('{{ page.images.second_image }}');" data-aos="fade-in" data-aos-delay="300"></div>
-    </div>
-
-    <!-- Right Column -->
-    <div class="lg:p-20 md:p-10 md:pb-0 lg:pb-0 py-12 lg:px-8 px-[5%] flex flex-col justify-end items-start" data-aos="fade-in">
-        <h1 class="editable serif-lg margin-heading lg:w-3/4">At Swatch Architects, <em>innovation</em> and creativity <em>are at the</em> core of our <em>design</em> philosphy.</h1>
-        <div class="editable lg:w-3/4">
-            <p>London born and Bali based, our approach is a harmonious dance of natural beauty and functional form. Our experienced architectural team blends purpose with expertise to transform your architectural dreams into a tangible reality.</p>
-            <p>As a boutique firm, we respond to our clients’ needs by designing projects in an intimate and hands-on way, collaborating and creating with people that we know and trust.  We love what we do and invest great time and passion in delivering projects which are beautifully conceived and finely crafted.</p>
-        </div>
-        <a href="#" class="editable link">Explore</a>
-       
-    </div>
-
-    <div class="lg:hidden px-[5%] pb-12">
-      {% include animations/animated-span.html %}
-      </div>
-
-    <div class=" grid gap-8 lg:hidden">
-      
-      <div class="bg-image-style h-[54vh]" style="background-image: url('{{ page.images.additional_mobile_image }}');" data-aos="fade-in" data-aos-delay="300"></div>
+  <!-- Left Column -->
+  <div class="grid gap-8">
+    <div
+      class="bg-image-style h-[40vh] bg-bottom"
+      style="background-image: url('{{ page.images.first_image }}');"
+      data-aos="fade-in"
+      data-aos-delay="300"
+    ></div>
+    <div
+      class="bg-image-style h-[54vh]"
+      style="background-image: url('{{ page.images.second_image }}');"
+      data-aos="fade-in"
+      data-aos-delay="300"
+    ></div>
   </div>
 
+  <!-- Right Column -->
+  <div
+    class="lg:p-20 md:p-10 md:pb-0 lg:pb-0 py-12 lg:px-8 px-[5%] flex flex-col justify-end items-start"
+    data-aos="fade-in"
+  >
+    <h1 class="editable serif-lg margin-heading lg:w-3/4">
+      At Swatch Architects, <em>innovation</em> and creativity
+      <em>are at the</em> core of our <em>design</em> philosphy.
+    </h1>
+    <div class="editable lg:w-3/4">
+      <p>
+        London born and Bali based, our approach is a harmonious dance of
+        natural beauty and functional form. Our experienced architectural team
+        blends purpose with expertise to transform your architectural dreams
+        into a tangible reality.
+      </p>
+      <p>
+        As a boutique firm, we respond to our clients’ needs by designing
+        projects in an intimate and hands-on way, collaborating and creating
+        with people that we know and trust. We love what we do and invest great
+        time and passion in delivering projects which are beautifully conceived
+        and finely crafted.
+      </p>
+    </div>
+    <a href="#" class="editable link">Explore</a>
+  </div>
+
+  <div class="lg:hidden px-[5%] pb-12">
+    {% include animations/animated-span.html %}
+  </div>
+
+  <div class="grid gap-8 lg:hidden">
+    <div
+      class="bg-image-style h-[54vh]"
+      style="background-image: url('{{ page.images.additional_mobile_image }}');"
+      data-aos="fade-in"
+      data-aos-delay="300"
+    ></div>
+  </div>
 </section>
 
 <!-- Process Section -->
-<section class="lg:p-20 md:p-10 py-12 lg:px-8 px-[5%] grid md:grid-cols-2 grid-cols-1">
-    <div class="col-span-full lg:w-3/4 mb-10" data-aos="fade-in">
-        <h2 class="editable serif-lg margin-heading lg:w-[60%]">Our <em>design</em> process is <em>a journey</em> of inspiration, <em>creativity,</em> and collaboration.</h2>
-        <p class="editable lg:w-[60%]">We draw inspiration from unique surroundings, learned building culture, and our clients' vision; referencing architectural history and setting the stage for innovation.</p>
-        <a href="#" class="editable link">Work with us</a>
+<section
+  class="lg:p-20 md:p-10 py-12 lg:px-8 px-[5%] grid md:grid-cols-2 grid-cols-1"
+>
+  <div class="col-span-full lg:w-3/4 mb-10" data-aos="fade-in">
+    <h2 class="editable serif-lg margin-heading lg:w-[60%]">
+      Our <em>design</em> process is <em>a journey</em> of inspiration,
+      <em>creativity,</em> and collaboration.
+    </h2>
+    <p class="editable lg:w-[60%]">
+      We draw inspiration from unique surroundings, learned building culture,
+      and our clients' vision; referencing architectural history and setting the
+      stage for innovation.
+    </p>
+    <a href="#" class="editable link">Work with us</a>
+  </div>
+
+  <!-- Left Column -->
+  <div
+    class="bg-image-style h-[75vh] md:w-[85%]"
+    style="background-image: url('{{ page.images.third_image }}');"
+    data-aos="fade-in"
+  ></div>
+
+  <!-- Right Column -->
+  <div class="md:mt-24 mt-4">
+    {% for item in page.process %}
+    <div
+      class="flex justify-between items-end"
+      data-aos="fade-in"
+      data-aos-delay="300"
+    >
+      <span class="editable mb-1">{{item.number_text}}</span>
+      <h2 class="editable serif-lg mt-6 mb-[-5px]">
+        <span>{{item.heading}}</span>
+      </h2>
     </div>
-
-        <!-- Left Column -->
-        <div class="bg-image-style h-[75vh] md:w-[85%]" style="background-image: url('{{ page.images.third_image }}');" data-aos="fade-in"></div>
-
-        <!-- Right Column -->
-        <div class="md:mt-24 mt-4">
-            {% for item in page.process %}
-            <div class="flex justify-between items-end" data-aos="fade-in" data-aos-delay="300">
-                <span class="editable mb-1">{{item.number_text}}</span>
-                <h2 class="editable serif-lg mt-6 mb-[-5px]"><span>{{item.heading}}</span></h2>
-        
-            </div>
-            {% include animations/animated-span.html %}
-            <p class="mt-4">{{item.description}}</p>
-            {% endfor %}
-
-        </div>
-
+    {% include animations/animated-span.html %}
+    <p class="mt-4">{{item.description}}</p>
+    {% endfor %}
+  </div>
 </section>
-
-
 
 <!-- Founder Section -->
-<section class="grid md:grid-cols-2 grid-cols-1 lg:pl-20 md:pl-10 md:pr-0 md:py-10 py-12  px-[5%] bg-primary" data-aos="fade-in" data-aos-delay="300">
+<section
+  class="grid md:grid-cols-2 grid-cols-1 lg:pl-20 md:pl-10 md:pr-0 md:py-10 py-12 px-[5%] bg-primary"
+  data-aos="fade-in"
+  data-aos-delay="300"
+>
+  <!-- Left Column -->
+  <div class="md:pr-10">
+    {% include animations/animated-span.html %}
+    <div class="min-h-[90vh] flex flex-col items-start justify-end lg:pr-24">
+      <h2 class="editable serif-lg mb-6 md:pt-20 pt-10">
+        Meet <span>the founder</span>
+      </h2>
+      <p class="editable uppercase margin-heading">Sam Whitehead</p>
 
-    <!-- Left Column -->
-    <div class="md:pr-10 ">
-        {% include animations/animated-span.html %}
-        <div class="min-h-[90vh] flex flex-col items-start justify-end lg:pr-24">
-
-        <h2 class="editable serif-lg mb-6 md:pt-20 pt-10">Meet <span>the founder</span></h2>
-        <p class="editable uppercase margin-heading">Sam Whitehead</p>
-
-        <div class="editable">
-            <p>Born in Northern England in 1995, Sam Whitehead was raised amidst the enduring influence of the built environment. His working class perspective of architecture embodied a profound connection between individuals and the spaces they inhabit.</p>
-            <p>Sam’s passion for architecture encompasses the idea of designing places in which people’s lives and stories take place. Perhaps influenced by a childhood surrounded by theatre and a family of actors, he is inspired by a building’s ability to become the stage for human interaction and connection. Architects have a crucial role to design our city as a theatre of experience, and Sam adeptly applies this principle to champion positive social change.</p>
-            <p>Sam studied architecture at the University of Nottingham and a Masters at the University of Westminster. His experience both privately and with world renowned practices such as Foster + Partners, Grimshaw, and Marek Wojciechowski Architects,  demonstrates his ability and passion. Sam prides himself on designing well-detailed buildings within the budget and programme.</p>
-            <p>Sam found that studying architecture soon became a lifestyle; an ongoing development in approaches and outlooks which, in turn, developed a strong sense of self. Sam constantly strives to compliment design with experience, and continues to travel; providing great insight into the parallel notions of place, culture and identity.</p>
-            <p>Breaking away from the corporate nine-to-nine grind of a disoriented industry, Sam combined his passion for travel with an unwavering drive to explore cultural identity in architecture. After traveling the world and experiencing diverse architectural styles and cultural influences, he found his true calling in Bali, where he felt an undeniable connection to the island's rich heritage and natural beauty, prompting him to establish his studio and weave his global experiences into locally inspired designs.</p>
-        </div>
-        <a href="/contact.html" class="editable link mb-10">Get in touch</a>
-
-          </div>
-        {% include animations/animated-span.html %}
-
+      <div class="editable">
+        <p>
+          Born in Northern England in 1995, Sam Whitehead was raised amidst the
+          enduring influence of the built environment. His working class
+          perspective of architecture embodied a profound connection between
+          individuals and the spaces they inhabit.
+        </p>
+        <p>
+          Sam’s passion for architecture encompasses the idea of designing
+          places in which people’s lives and stories take place. Perhaps
+          influenced by a childhood surrounded by theatre and a family of
+          actors, he is inspired by a building’s ability to become the stage for
+          human interaction and connection. Architects have a crucial role to
+          design our city as a theatre of experience, and Sam adeptly applies
+          this principle to champion positive social change.
+        </p>
+        <p>
+          Sam studied architecture at the University of Nottingham and a Masters
+          at the University of Westminster. His experience both privately and
+          with world renowned practices such as Foster + Partners, Grimshaw, and
+          Marek Wojciechowski Architects, demonstrates his ability and passion.
+          Sam prides himself on designing well-detailed buildings within the
+          budget and programme.
+        </p>
+        <p>
+          Sam found that studying architecture soon became a lifestyle; an
+          ongoing development in approaches and outlooks which, in turn,
+          developed a strong sense of self. Sam constantly strives to compliment
+          design with experience, and continues to travel; providing great
+          insight into the parallel notions of place, culture and identity.
+        </p>
+        <p>
+          Breaking away from the corporate nine-to-nine grind of a disoriented
+          industry, Sam combined his passion for travel with an unwavering drive
+          to explore cultural identity in architecture. After traveling the
+          world and experiencing diverse architectural styles and cultural
+          influences, he found his true calling in Bali, where he felt an
+          undeniable connection to the island's rich heritage and natural
+          beauty, prompting him to establish his studio and weave his global
+          experiences into locally inspired designs.
+        </p>
+      </div>
+      <a href="/contact.html" class="editable link mb-10">Get in touch</a>
     </div>
+    {% include animations/animated-span.html %}
+  </div>
 
-    <!-- Right Column -->
-    <div class="bg-image-style md:min-h-[90vh] min-h-[50vh]" style="background-image: url('{{ page.images.fourth_image }}');"></div>
+  <!-- Right Column -->
+  <div
+    class="bg-image-style md:min-h-[90vh] min-h-[50vh]"
+    style="background-image: url('{{ page.images.fourth_image }}');"
+  ></div>
 </section>
-
 
 <section class="lg:pt-5p py-12 lg:px-8 px-[5%]">
   <!-- Gallery -->

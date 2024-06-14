@@ -28,7 +28,7 @@ seo:
 
 <section class="grid lg:grid-cols-2">
   <div
-    class="tween absolute top-0 md:top-150 left-20% md:w-full md:text-center md:z-20 px-4 md:px-0"
+    class="tween absolute top-150 left-20% w-full text-center z-20 px-4 md:px-0"
   >
     <a href="/index.html" class="inline-block">
       <img
@@ -219,18 +219,47 @@ seo:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
 <script>
-  TweenMax.from(".tween", 3, {
-    y: "250",
-    ease: Expo.easeInOut,
-  });
-  TweenMax.from(".left-column", 1.8, {
-    opacity: 0,
-    ease: "cubic-bezier(0.68, -0.55, 0.27, 1.55)",
-    delay: 2.5,
-  });
-  TweenMax.from(".right-column", 2, {
-    opacity: 0,
-    ease: "cubic-bezier(0.68, -0.55, 0.27, 1.55)",
-    delay: 2.8,
+  document.addEventListener("DOMContentLoaded", function () {
+    // Function to check if the device is mobile
+    function isMobile() {
+      return window.matchMedia("(max-width: 940px)").matches;
+    }
+
+    if (isMobile()) {
+      // Mobile-specific animation: animate from the center, scale down, and fade out
+      TweenMax.from(".tween", 1.5, {
+        y: "450", // Vertical translation
+        scale: 1, // Starts fully scaled
+        opacity: 1, // Starts fully opaque
+        ease: Expo.easeInOut,
+        onComplete: function () {
+          TweenMax.to(".tween", 1.5, {
+            scale: 0.5, // Scale down
+            y: "0", // Vertical translation
+            opacity: 0, // Fade to invisible
+            ease: Expo.easeInOut,
+          });
+        },
+      });
+    } else {
+      // Non-mobile-specific animation: translate vertically
+      TweenMax.from(".tween", 3, {
+        y: "250", // Vertical translation
+        ease: Expo.easeInOut,
+      });
+    }
+
+    // Common animations for both mobile and desktop
+    TweenMax.from(".left-column", 1.8, {
+      opacity: 0,
+      ease: "cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+      delay: 2.5,
+    });
+
+    TweenMax.from(".right-column", 2, {
+      opacity: 0,
+      ease: "cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+      delay: 2.8,
+    });
   });
 </script>

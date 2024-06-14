@@ -1,10 +1,14 @@
 <header
-  class="nav md:absolute sticky md:bg-none bg-light top-0 z-10 w-full grid grid-cols-3 px-4"
+  class="md:absolute sticky md:bg-none bg-light top-0 z-10 w-full grid grid-cols-3 px-4"
 >
   <!-- Left Column -->
-  <div class="left md:flex items-center pb-1 hidden">
+  <div class="md:flex items-center pb-1 hidden">
     {% for item in site.data.navigation.header limit:1 %}
-    <a href="{{ item.nav_link }}" class="uppercase text-sm"
+    <a
+      href="{{ item.nav_link }}"
+      class="uppercase text-sm"
+      data-aos="fade-in"
+      data-aos-delay="300"
       >{{ item.nav_title }}</a
     >
     {% endfor %}
@@ -12,7 +16,12 @@
 
   <!-- Logo -->
   <div class="logo flex-grow flex justify-center">
-    <a href="/index.html" class="text-center">
+    <a
+      href="/index.html"
+      class="text-center"
+      data-aos="fade-in"
+      data-aos-delay="500"
+    >
       <img
         src="{{ site.data.site-settings.brand.primary_logo_path }}"
         class="inline-block h-14 object-contain"
@@ -33,32 +42,9 @@
     {% endfor %} -->
   </div>
 
-  <div class="line col-span-full">
+  <div class="line col-span-full" data-aos="fade-in" data-aos-delay="300">
     {% include animations/animated-span.html %}
   </div>
 
-  <div class="right">{% include navigation/burger-menu.html %}</div>
+  {% include navigation/burger-menu.html %}
 </header>
-
-<!-- GSAP TWEEN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-
-<script>
-  TweenMax.from(".line", 1.5, {
-    display: "none",
-    delay: 2.9,
-  });
-
-  TweenMax.from(".logo", 1.5, {
-    display: "none",
-    delay: 2.8,
-  });
-  TweenMax.from(".left", 1.5, {
-    opacity: 0,
-    delay: 2.9,
-  });
-  TweenMax.from(".right", 1.5, {
-    opacity: 0,
-    delay: 2.9,
-  });
-</script>
