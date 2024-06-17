@@ -228,15 +228,18 @@ seo:
     if (isMobile()) {
       // Mobile-specific animation: animate from the center, scale down, and fade out
       TweenMax.from(".tween", 1.5, {
-        y: "450", // Vertical translation
+        y: getVerticalCenter(), // Vertical translation
         scale: 1, // Starts fully scaled
         opacity: 1, // Starts fully opaque
         ease: Expo.easeInOut,
         onComplete: function () {
           TweenMax.to(".tween", 1.5, {
-            scale: 0.5, // Scale down
             y: "0", // Vertical translation
-            opacity: 0, // Fade to invisible
+            x: "0",
+            width: "auto",
+            scale: 0.4, // Scale down
+
+            zIndex: 0,
             ease: Expo.easeInOut,
           });
         },

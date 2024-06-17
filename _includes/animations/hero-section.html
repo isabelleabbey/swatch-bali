@@ -1,6 +1,6 @@
 <section class="grid lg:grid-cols-2">
   <div
-    class="tween absolute top-150 left-20% w-full text-center z-20 px-4 md:px-0"
+    class="tween absolute top-0 w-[150px] md:w-full text-center z-20 px-4 md:px-0 opacity-0"
   >
     <a href="/index.html" class="inline-block">
       <img
@@ -10,27 +10,39 @@
       />
     </a>
   </div>
+
   <!-- Left Column -->
   <div
-    class="left-column order-last lg:order-first bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] md:mx-[25%] mx-[20%] max-h-[100vh] min-h-[35vh] md:min-h-[50vh]"
+    class="left-column order-last lg:order-first bg-image-style border-t-[24px] border-b-[48px] border-x-[24px] border-main my-[20%] md:mx-[25%] mx-[20%] max-h-[100vh] min-h-[35vh] md:min-h-[50vh] opacity-0"
     style="background-image: url('{{ page.banner.image-left.image_path }}'); background-position: {{ page.header.image.image_focus }};"
   ></div>
 
   <!-- Right Column -->
   <div
-    class="right-column bg-image-style h-[100vh]"
+    class="right-column bg-image-style h-[100vh] opacity-0"
     style="background-image: url('{{ page.banner.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"
   ></div>
 </section>
 
+<style>
+  .tween,
+  .left-column,
+  .right-column {
+    opacity: 0;
+  }
+
+  @media (max-width: 768px) {
+    .tween {
+      width: 165px;
+    }
+  }
+</style>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  window.onload = function () {
     // Function to check if the device is mobile
-    TweenMax.set(".left-column", { opacity: 0 });
-    TweenMax.set(".right-column", { opacity: 0 });
-
     function isMobile() {
       return window.matchMedia("(max-width: 940px)").matches;
     }
@@ -38,35 +50,58 @@
     function getVerticalCenter() {
       var windowHeight = window.innerHeight; // Get the viewport height
       var elementHeight = document.querySelector(".tween").clientHeight; // Get the element's height
-
       return (windowHeight - elementHeight) / 2; // Calculate the center position
+    }
+
+    // Set initial opacity for left and right columns using GSAP's set method
+    TweenMax.set(".left-column", { opacity: 0 });
+    TweenMax.set(".right-column", { opacity: 0 });
+
+    function getHorizontalCenter() {
+      var windowWidth = window.innerWidth; // Get the viewport width
+      var elementWidth = document.querySelector(".tween").clientWidth; // Get the element's width
+      return (windowWidth - elementWidth) / 2; // Calculate the center position
     }
 
     if (isMobile()) {
       // Mobile-specific animation: animate from the center, scale down, and fade out
-      TweenMax.from(".tween", 1.5, {
-        y: getVerticalCenter(), // Vertical translation
-        scale: 1, // Starts fully scaled
-        opacity: 1, // Starts fully opaque
-        ease: Expo.easeInOut,
-        onComplete: function () {
-          TweenMax.to(".tween", 1.5, {
-            scale: 0.5, // Scale down
-            y: "0", // Vertical translation
-            opacity: 0, // Fade to invisible
-            zIndex: 0,
-            ease: Expo.easeInOut,
-          });
+
+      TweenMax.fromTo(
+        ".tween",
+        2.9,
+        {
+          y: getVerticalCenter(), // Vertical translation
+          x: getHorizontalCenter(),
+          scale: 2,
+          opacity: 1,
+          textAlign: "center",
+          ease: Expo.easeInOut,
         },
-      });
+        {
+          y: 0, // End at the original position
+          x: 0,
+          scale: 1,
+          ease: Expo.easeInOut,
+        }
+      );
     } else {
       // Non-mobile-specific animation: translate vertically
-
-      TweenMax.from(".tween", 3, {
-        y: getVerticalCenter(), // Vertical translation
-        scale: 3,
-        ease: Expo.easeInOut,
-      });
+      TweenMax.fromTo(
+        ".tween",
+        3,
+        {
+          y: getVerticalCenter(), // Vertical translation
+          scale: 3,
+          opacity: 1,
+          ease: Expo.easeInOut,
+        },
+        {
+          y: 0,
+          scale: 1,
+          opacity: 1,
+          ease: Expo.easeInOut,
+        }
+      );
     }
 
     // Common animations for both mobile and desktop
@@ -81,5 +116,5 @@
       ease: "cubic-bezier(0.68, -0.55, 0.27, 1.55)",
       delay: 2.8,
     });
-  });
+  };
 </script>

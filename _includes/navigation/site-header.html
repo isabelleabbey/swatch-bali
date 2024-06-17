@@ -1,5 +1,5 @@
 <header
-  class="nav md:absolute sticky md:bg-none bg-light top-0 z-10 w-full grid grid-cols-3 px-4"
+  class="nav absolute md:bg-none bg-light top-0 z-10 w-full grid grid-cols-3 px-4"
 >
   <!-- Left Column -->
   <div class="left md:flex items-center pb-1 hidden">
@@ -11,7 +11,7 @@
   </div>
 
   <!-- Logo -->
-  <div class="logo flex-grow flex justify-center">
+  <div class="logo flex-grow flex justify-center opacity-0">
     <a href="/index.html" class="text-center">
       <img
         src="{{ site.data.site-settings.brand.primary_logo_path }}"
@@ -40,19 +40,19 @@
   <div class="right">{% include navigation/burger-menu.html %}</div>
 </header>
 
+<style></style>
+
 <!-- GSAP TWEEN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
 <script>
+  TweenMax.set(".logo", { opacity: 0 });
+
   TweenMax.from(".line", 1.5, {
     display: "none",
     delay: 2.9,
   });
 
-  TweenMax.from(".logo", 1.5, {
-    display: "none",
-    delay: 2.8,
-  });
   TweenMax.from(".left", 1.5, {
     opacity: 0,
     delay: 2.9,
