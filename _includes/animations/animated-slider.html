@@ -1,0 +1,143 @@
+<div
+  id="image-track"
+  class="grid lg:grid-cols-3 gap-6"
+  data-mouse-down-at="0"
+  data-prev-percentage="0"
+>
+  {% for item in site.data.information.work.gallery %}
+  <div class="image-card">
+    <div
+      class="bg-image-style aspect-portrait border-[16px] {% cycle 'border-accent', 'border-main' %}"
+      style="background-image: url('{{ item.image_path }}');"
+      data-aos="fade-in"
+      data-aos-delay="300"
+      draggable="false"
+    ></div>
+    <div
+      class="{% cycle 'bg-accent', 'bg-main' %} pt-8 pb-8 px-4 lg:flex justify-between"
+    >
+      <h3 class="subtitle text-light mb-2 uppercase" data-aos="fade-in">
+        {{ item.name }}
+      </h3>
+      <span class="subtitle text-light" data-aos="fade-in">
+        {{ item.location }}
+      </span>
+    </div>
+  </div>
+  <div class="image-card">
+    <div
+      class="bg-image-style aspect-portrait border-[16px] {% cycle 'border-accent', 'border-main' %}"
+      style="background-image: url('{{ item.image_path }}');"
+      data-aos="fade-in"
+      data-aos-delay="300"
+      draggable="false"
+    ></div>
+    <div
+      class="{% cycle 'bg-accent', 'bg-main' %} pt-8 pb-8 px-4 lg:flex justify-between"
+    >
+      <h3 class="subtitle text-light mb-2 uppercase" data-aos="fade-in">
+        {{ item.name }}
+      </h3>
+      <span class="subtitle text-light" data-aos="fade-in">
+        {{ item.location }}
+      </span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+  #image-track {
+    display: flex;
+    gap: 4vmin;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+
+  #image-track::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+
+  .image-card {
+    flex: 0 0 33.333%; /* Adjust based on your design */ /* Ensure each card takes up one-third of the track width */
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0.8); /* Default smaller scale for non-centered cards */
+  }
+
+  .image-card.center {
+    transform: scale(0.9);
+  }
+
+  /* Mobile-specific styles */
+  @media (max-width: 767px) {
+    .image-card {
+      flex: 0 0 80%; /* Adjust this value to show one full and part of the next image */
+      width: 80%; /* This width allows one card to be fully visible and the next card to peek */
+    }
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+<script>
+  const track = document.getElementById("image-track");
+  const cards = document.querySelectorAll(".image-card");
+  let isDragging = false;
+  let startPos = 0;
+  let startScrollLeft = 0;
+
+  const handleOnDown = (e) => {
+    startPos = e.clientX;
+    startScrollLeft = track.scrollLeft;
+    isDragging = true;
+    track.style.scrollBehavior = "auto"; // Temporarily disable smooth scrolling for direct control
+  };
+
+  const handleOnMove = (e) => {
+    if (!isDragging) return;
+
+    const mouseDelta = startPos - e.clientX;
+    track.scrollLeft = startScrollLeft + mouseDelta;
+    updateScale();
+  };
+
+  const handleOnUp = () => {
+    isDragging = false;
+    track.style.scrollBehavior = "smooth"; // Re-enable smooth scrolling
+
+    updateScale();
+  };
+
+  const updateScale = () => {
+    const trackRect = track.getBoundingClientRect();
+    const centerPosition = trackRect.left + trackRect.width / 2;
+
+    cards.forEach((card) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const dist = Math.abs(centerPosition - cardCenter);
+
+      if (dist < cardRect.width / 2) {
+        card.classList.add("center");
+      } else {
+        card.classList.remove("center");
+      }
+    });
+  };
+
+  // Initialize the scale for the center card on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    updateScale();
+  });
+
+  window.addEventListener("mousedown", handleOnDown);
+  window.addEventListener("mouseup", handleOnUp);
+  window.addEventListener("mousemove", handleOnMove);
+  window.addEventListener("touchstart", (e) => handleOnDown(e.touches[0]));
+  window.addEventListener("touchend", (e) => handleOnUp(e.touches[0]));
+  window.addEventListener("touchmove", (e) => handleOnMove(e.touches[0]));
+</script>
