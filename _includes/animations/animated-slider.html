@@ -66,18 +66,7 @@
 
 <section class="wrapper w-full h-screen">
   <div class="cursor">
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M5.52734 12.9375L15.5273 12.9375L11.5273 16.9375C11.332 17.1328 11.332 17.4492 11.5273 17.6445C11.6211 17.7383 11.7539 17.7852 11.8867 17.7852C12.0195 17.7852 12.1523 17.7383 12.2461 17.6445L17.7148 12.1758C17.9102 11.9805 17.9102 11.6641 17.7148 11.4688L12.2461 6.00001C12.1523 5.90626 12.0195 5.85938 11.8867 5.85938C11.7539 5.85938 11.6211 5.90626 11.5273 6.00001C11.332 6.19532 11.332 6.5117 11.5273 6.70701L15.5273 10.707C15.7187 10.8985 15.7187 11.234 15.5273 11.4256L5.52734 11.4256C5.33203 11.6251 5.33203 11.9571 5.52734 12.1566C5.72396 12.3519 6.03612 12.3519 6.23274 12.1566Z"
-        fill="currentColor"
-      />
-    </svg>
+    <i class="fas fa-arrow-left"></i>
   </div>
   <div
     id="image-track"
@@ -196,6 +185,7 @@
       track.scrollLeft += velocity * 0.9; // Apply velocity to scroll position
       velocity *= 0.98; // Apply damping to reduce velocity
       requestAnimationFrame(animateDeceleration); // Continue animation
+      updateScale();
     } else {
       updateScale(); // Final update to scale when stopping
     }
@@ -246,11 +236,23 @@
     },
   });
 
-  // Update mouse position on mousemove
+  // Update cursor style based on its position on the screen
   document.addEventListener("mousemove", function (e) {
     mouseX = e.pageX;
     mouseY = e.pageY;
+
+    const cursorIcon = cursor.querySelector("i");
+
+    // Check if the cursor is on the left or right half of the screen
+    if (mouseX < window.innerWidth / 2) {
+      cursorIcon.classList.remove("fa-arrow-right"); // Remove right arrow class
+      cursorIcon.classList.add("fa-arrow-left"); // Add left arrow class
+    } else {
+      cursorIcon.classList.remove("fa-arrow-left"); // Remove left arrow class
+      cursorIcon.classList.add("fa-arrow-right"); // Add right arrow class
+    }
   });
+
   // Add active class to cursor on slider hover
 
   track.addEventListener("mouseenter", () => {
