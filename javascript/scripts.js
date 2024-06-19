@@ -1,6 +1,12 @@
-
-
-
+$('.magic-text').click(function(){
+  var $this = $(this);
+  $this.toggleClass('magic-text');
+  if($this.hasClass('magic-text')){
+      $this.text('More');         
+  } else {
+      $this.text('Less');
+  }
+});
 
 
 // image slideshow slick

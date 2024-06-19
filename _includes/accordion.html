@@ -24,8 +24,8 @@
 }
 
 /* Plus icon */
-.accordion dt a::after {
-  content: "more";
+.accordion dt a span {
+  content: "";
   font-family: 'brandon-grotesque', sans-serif;
   font-style: normal;
   text-transform: uppercase;
@@ -79,10 +79,15 @@
     <dl class="accordion md:pb-0 pb-12">
         {% for item in page.accordion %}
 
-        <dt><a href=""><p class="serif-lg md:mr-12 mr-8">{{item.heading}}</p></a>
+        <dt>
+          <a href="flex justify-between">
+            <span class="magic-text">More</span>
+            <p class="serif-lg md:mr-12 mr-8">{{item.heading}}</p>
+          </a>
         
           <div class="mb-4 w-[75%] mt-4">{{item.description_html}}</div>
         </dt>
+
         <dd class="mb-6">
      
 
