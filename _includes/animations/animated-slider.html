@@ -192,7 +192,7 @@
 
   // Function to animate the deceleration of the scroll
   const animateDeceleration = () => {
-    if (Math.abs(velocity) > 10) {
+    if (Math.abs(velocity) > 1) {
       track.scrollLeft += velocity * 0.9; // Apply velocity to scroll position
       velocity *= 0.98; // Apply damping to reduce velocity
       requestAnimationFrame(animateDeceleration); // Continue animation
@@ -227,12 +227,6 @@
   // Attach event handlers for dragging
   track.onmousedown = handleOnDown;
   track.ontouchstart = (e) => handleOnDown(e.touches[0]);
-
-  // Attach event handlers for stopping drag on the window to ensure it stops even if the cursor leaves the track
-  window.onmouseup = handleOnUp;
-  window.ontouchend = (e) => handleOnUp(e.touches[0]);
-  window.onmousemove = handleOnMove;
-  window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
   // Animate the cursor movement
   TweenMax.to({}, 0.016, {
