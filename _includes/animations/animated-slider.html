@@ -143,6 +143,7 @@
     track.style.scrollBehavior = "auto"; // Disable smooth scrolling for direct control
     velocity = 0; // Reset velocity
     lastTime = performance.now(); // Record the current time
+
     // Add event listeners for mouse move and mouse up
     document.addEventListener("mousemove", handleOnMove);
     document.addEventListener("mouseup", handleOnUp);
@@ -255,6 +256,37 @@
       cursorIcon.classList.add("fa-arrow-right"); // Add right arrow class
     }
   });
+
+  document.addEventListener("click", function (e) {
+    const screenWidth = window.innerWidth;
+    const clickX = e.clientX; // Get the horizontal coordinate of the click
+
+    if (clickX > screenWidth / 2) {
+      // Click on the right side of the screen
+      moveNextCard();
+    } else {
+      // Click on the left side of the screen
+      movePreviousCard();
+    }
+  });
+
+  function moveNextCard() {
+    const cardWidth = cards[0].offsetWidth;
+    const gap = parseInt(window.getComputedStyle(track).gap); // Get the computed gap size
+
+    // Move to the next card, including the gap
+    track.scrollLeft += cardWidth + gap;
+    updateScale(); // Update the scale of the cards
+  }
+
+  function movePreviousCard() {
+    const cardWidth = cards[0].offsetWidth;
+    const gap = parseInt(window.getComputedStyle(track).gap); // Get the computed gap size
+
+    // Move to the previous card, including the gap
+    track.scrollLeft -= cardWidth + gap;
+    updateScale(); // Update the scale of the cards
+  }
 
   // Add active class to cursor on slider hover
 
