@@ -1,4 +1,84 @@
-<section class="w-full h-screen">
+<style>
+  #image-track {
+    display: flex;
+    gap: 2vmin;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    user-select: none;
+  }
+
+  #image-track::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+
+  .image-card {
+    flex: 0 0 33.333%; /* Adjust based on your design */ /* Ensure each card takes up one-third of the track width */
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0.8); /* Default smaller scale for non-centered cards */
+  }
+
+  .image-card.center {
+    transform: scale(0.9);
+  }
+
+  .wrapper {
+    cursor: none;
+  }
+
+  .cursor {
+    position: absolute;
+    z-index: 999;
+    transition: 0.3s linear transform, 0.2s linear opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(0.8);
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.6);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cursor.active {
+    opacity: 1;
+    transform: scale(2);
+  }
+
+  /* Mobile-specific styles */
+  @media (max-width: 767px) {
+    .image-card {
+      flex: 0 0 80%; /* Adjust this value to show one full and part of the next image */
+      width: 80%; /* This width allows one card to be fully visible and the next card to peek */
+    }
+
+    .cursor {
+      display: none;
+    }
+  }
+</style>
+
+<section class="wrapper w-full h-screen">
+  <div class="cursor">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.52734 12.9375L15.5273 12.9375L11.5273 16.9375C11.332 17.1328 11.332 17.4492 11.5273 17.6445C11.6211 17.7383 11.7539 17.7852 11.8867 17.7852C12.0195 17.7852 12.1523 17.7383 12.2461 17.6445L17.7148 12.1758C17.9102 11.9805 17.9102 11.6641 17.7148 11.4688L12.2461 6.00001C12.1523 5.90626 12.0195 5.85938 11.8867 5.85938C11.7539 5.85938 11.6211 5.90626 11.5273 6.00001C11.332 6.19532 11.332 6.5117 11.5273 6.70701L15.5273 10.707C15.7187 10.8985 15.7187 11.234 15.5273 11.4256L5.52734 11.4256C5.33203 11.6251 5.33203 11.9571 5.52734 12.1566C5.72396 12.3519 6.03612 12.3519 6.23274 12.1566Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
   <div
     id="image-track"
     class="grid lg:grid-cols-3 gap-6"
@@ -44,39 +124,6 @@
     {% endfor %}
   </div>
 </section>
-<style>
-  #image-track {
-    display: flex;
-    gap: 2vmin;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  #image-track::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
-  }
-
-  .image-card {
-    flex: 0 0 33.333%; /* Adjust based on your design */ /* Ensure each card takes up one-third of the track width */
-    scroll-snap-align: center;
-    transition: transform 0.3s ease-in-out;
-    transform: scale(0.8); /* Default smaller scale for non-centered cards */
-  }
-
-  .image-card.center {
-    transform: scale(0.9);
-  }
-
-  /* Mobile-specific styles */
-  @media (max-width: 767px) {
-    .image-card {
-      flex: 0 0 80%; /* Adjust this value to show one full and part of the next image */
-      width: 80%; /* This width allows one card to be fully visible and the next card to peek */
-    }
-  }
-</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
@@ -92,6 +139,12 @@
   let startScrollLeft = 0;
   let velocity = 0;
   let lastTime = 0;
+
+  // Initialize position variables
+  let posX = 0,
+    posY = 0,
+    mouseX = 0,
+    mouseY = 0;
 
   // Function to handle the mouse down or touch start event
   const handleOnDown = (e) => {
@@ -175,11 +228,20 @@
   track.onmousedown = handleOnDown;
   track.ontouchstart = (e) => handleOnDown(e.touches[0]);
 
+  window.onmouseup = handleOnUp;
+  window.ontouchend = (e) => handleOnUp(e.touches[0]);
+  window.onmousemove = handleOnMove;
+  window.ontouchmove = (e) => handleOnMove(e.touches[0]);
+
+  // Animate the cursor movement
   TweenMax.to({}, 0.016, {
     repeat: -1,
     onRepeat: function () {
+      // Smoothly move the cursor towards the mouse position
       posX += (mouseX - posX) / 9;
       posY += (mouseY - posY) / 9;
+
+      // Set the cursor position
       TweenMax.set(cursor, {
         css: {
           left: posX - 20,
@@ -194,11 +256,13 @@
     mouseX = e.pageX;
     mouseY = e.pageY;
   });
+  // Add active class to cursor on slider hover
 
-  // Add and remove active class to cursor based on hover over the track
   track.addEventListener("mouseenter", () => {
     cursor.classList.add("active");
   });
+
+  // Remove active class from cursor on slider hover
   track.addEventListener("mouseleave", () => {
     cursor.classList.remove("active");
   });
