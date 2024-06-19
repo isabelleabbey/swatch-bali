@@ -228,6 +228,7 @@
   track.onmousedown = handleOnDown;
   track.ontouchstart = (e) => handleOnDown(e.touches[0]);
 
+  // Attach event handlers for stopping drag on the window to ensure it stops even if the cursor leaves the track
   window.onmouseup = handleOnUp;
   window.ontouchend = (e) => handleOnUp(e.touches[0]);
   window.onmousemove = handleOnMove;
