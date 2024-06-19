@@ -218,6 +218,9 @@
   track.onmousedown = handleOnDown;
   track.ontouchstart = (e) => handleOnDown(e.touches[0]);
 
+  // Add a scroll event listener to update scale when the track is scrolled
+  track.addEventListener("scroll", updateScale);
+
   // Animate the cursor movement
   TweenMax.to({}, 0.016, {
     repeat: -1,
