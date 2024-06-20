@@ -56,6 +56,7 @@
     .image-card {
       flex: 0 0 80%; /* Adjust this value to show one full and part of the next image */
       width: 80%; /* This width allows one card to be fully visible and the next card to peek */
+      padding-right: 4vw;
     }
 
     .cursor {
@@ -67,7 +68,6 @@
 <section class="wrapper w-full">
   <div class="cursor">
     <i class="fas fa-arrow-left"></i>
-    
   </div>
   <div
     id="image-track"
@@ -95,7 +95,7 @@
         </span>
       </div>
     </div>
- 
+
     {% endfor %}
   </div>
 </section>
@@ -263,6 +263,11 @@
     // Move to the next card, including the gap
     track.scrollLeft += cardWidth + gap;
     updateScale(); // Update the scale of the cards
+
+    // After moving cards, check and adjust if necessary
+    if (track.scrollLeft > track.scrollWidth - track.clientWidth) {
+      track.scrollLeft = track.scrollWidth - track.clientWidth;
+    }
   }
 
   function movePreviousCard() {
@@ -272,6 +277,11 @@
     // Move to the previous card, including the gap
     track.scrollLeft -= cardWidth + gap;
     updateScale(); // Update the scale of the cards
+
+    // After moving cards, check and adjust if necessary
+    if (track.scrollLeft < 0) {
+      track.scrollLeft = 0;
+    }
   }
 
   // Add active class to cursor on slider hover
