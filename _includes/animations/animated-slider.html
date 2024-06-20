@@ -1,7 +1,7 @@
 <style>
   #image-track {
     display: flex;
-    gap: 2vmin;
+    gap: 0vmin;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -79,7 +79,7 @@
     <div class="image-card">
       {% for image in item.featured_images limit:1 %}
       <div
-        class="bg-image-style aspect-portrait h-[80vh] md:h-auto border-[16px] border-[{{item.project_colour}}]"
+        class="bg-image-style aspect-portrait w-full h-[40vh] md:h-[65vh] border-[16px] border-[{{item.project_colour}}]"
         style="background-image: url('{{ image.image }}');"
         draggable="false"
       ></div>

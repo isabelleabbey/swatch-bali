@@ -11,15 +11,15 @@ property:
    -
       title: Two bed - type 01
       building_size: 50.8 sq. m
-      land_plot: 156.5 sq. m (smallest)
+      land_plot: 
    -
       title: Two bed - type 02
       building_size: 50.8 sq. m
-      land_plot: 228.3 sq. m (end site)
+      land_plot: 
    -
       title: Four bed
       building_size: 119.3 sq. m
-      land_plot: 299.2 sq. m (smallest)
+      land_plot: 
 featured_images:
    -
       image: /images/swatch-architects-bali-architecture-makalu-villa-house-1.jpg

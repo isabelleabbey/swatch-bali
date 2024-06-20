@@ -794,9 +794,6 @@ p:last-child {
 .h-\[75vh\] {
   height: 75vh;
 }
-.h-\[80vh\] {
-  height: 80vh;
-}
 .h-screen {
   height: 100vh;
 }
@@ -1205,6 +1202,9 @@ p:last-child {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.font-medium {
+  font-weight: 500;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -1326,11 +1326,11 @@ p:last-child {
   .md\:hidden {
     display: none;
   }
+  .md\:h-\[65vh\] {
+    height: 65vh;
+  }
   .md\:h-\[95vh\] {
     height: 95vh;
-  }
-  .md\:h-auto {
-    height: auto;
   }
   .md\:min-h-\[50vh\] {
     min-height: 50vh;
