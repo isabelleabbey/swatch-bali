@@ -4,24 +4,22 @@ title: Makalu Villas
 location: Ubud, Bali
 project_colour: '#cab196'
 description_html: >-
-   Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis? Velit,
-   iure quaerat accusantium illum quasi praesentium, dicta animi fuga sunt,
-   nesciunt autem nemo omnis dolorum explicabo quia ea ratione?
-project_type: Five 2-bed villas and two studio villas
+   Makalu Villas is an exclusive development comprising six luxurious villas in the tranquil setting of Ubud, Bali. Each villa offers an intimate and serene retreat, centred around an opulent swimming pool environment, offering a peaceful sanctuary for relaxation and contemplation.
+project_type: FOUR 2-BED VILLAS AND TWO 4-BED VILLAS
 project_status: Under construction
 property:
    -
-      title: Studio
-      building_size: XX
-      land_plot: XX
-   -
       title: Two bed - type 01
-      building_size: XX
-      land_plot: XX
+      building_size: 50.8 sq. m
+      land_plot: 156.5 sq. m (smallest)
    -
       title: Two bed - type 02
-      building_size: XX
-      land_plot: XX
+      building_size: 50.8 sq. m
+      land_plot: 228.3 sq. m (end site)
+   -
+      title: Four bed
+      building_size: 119.3 sq. m
+      land_plot: 299.2 sq. m (smallest)
 featured_images:
    -
       image: /images/swatch-architects-bali-architecture-makalu-villa-house-1.jpg

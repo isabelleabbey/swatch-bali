@@ -74,42 +74,27 @@
     data-mouse-down-at="0"
     data-prev-percentage="0"
   >
-    {% for item in site.data.information.work.gallery %}
+    {% for item in site.projects %}
     <div class="image-card">
+      {% for image in item.featured_images limit:1 %}
       <div
-        class="bg-image-style aspect-portrait h-[80vh] md:h-auto border-[16px] {% cycle 'border-accent', 'border-main' %}"
-        style="background-image: url('{{ item.image_path }}');"
+        class="bg-image-style aspect-portrait h-[80vh] md:h-auto border-[16px] border-[{{item.project_colour}}]"
+        style="background-image: url('{{ image.image }}');"
         draggable="false"
       ></div>
+      {% endfor %}
       <div
-        class="{% cycle 'bg-accent', 'bg-main' %} pt-8 pb-8 px-4 lg:flex justify-between"
+        class="bg-[{{item.project_colour}}] pt-8 pb-8 px-4 lg:flex justify-between"
       >
-        <h3 class="subtitle text-light mb-2 uppercase" data-aos="fade-in">
-          {{ item.name }}
+        <h3 class="subtitle mb-2 uppercase" data-aos="fade-in">
+          {{ item.title }}
         </h3>
-        <span class="subtitle text-light" data-aos="fade-in">
+        <span class="subtitle uppercase" data-aos="fade-in">
           {{ item.location }}
         </span>
       </div>
     </div>
-    <!-- Delete the image-card below as its only for testing  -->
-    <div class="image-card">
-      <div
-        class="bg-image-style aspect-portrait h-[80vh] md:h-auto border-[16px] {% cycle 'border-accent', 'border-main' %}"
-        style="background-image: url('{{ item.image_path }}');"
-        draggable="false"
-      ></div>
-      <div
-        class="{% cycle 'bg-accent', 'bg-main' %} pt-8 pb-8 px-4 lg:flex justify-between"
-      >
-        <h3 class="subtitle text-light mb-2 uppercase" data-aos="fade-in">
-          {{ item.name }}
-        </h3>
-        <span class="subtitle text-light" data-aos="fade-in">
-          {{ item.location }}
-        </span>
-      </div>
-    </div>
+ 
     {% endfor %}
   </div>
 </section>

@@ -4,24 +4,18 @@ title: Padang Villas
 location: Ubud, Bali
 project_colour: '#9ab4c8'
 description_html: >-
-   Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis? Velit,
-   iure quaerat accusantium illum quasi praesentium, dicta animi fuga sunt,
-   nesciunt autem nemo omnis dolorum explicabo quia ea ratione?
-project_type: Five 2-bed villas and two studio villas
+   Padang Villas integrates open-plan living with exquisitely designed outdoor spaces, offering an immersive living experience. Each of the four villas boasts a luxurious rooftop terrace, featuring a welcoming seating area and a calming pool, perfect for residents to unwind and enjoy the beautiful Bali weather.
+project_type: THREE 2-BED VILLAS AND ONE 3-BED VILLA
 project_status: Under construction
 property:
    -
-      title: Studio
-      building_size: XX
-      land_plot: XX
+      title: Two Bed
+      building_size: 54.4 sq. m
+      land_plot: 156.5 sq.m (required)
    -
-      title: Two bed - type 01
-      building_size: XX
-      land_plot: XX
-   -
-      title: Two bed - type 02
-      building_size: XX
-      land_plot: XX
+      title: Three Bed
+      building_size: 60.1 sq. m
+      land_plot: 156.5 sq. m (required)
 featured_images:
    -
       image: >-

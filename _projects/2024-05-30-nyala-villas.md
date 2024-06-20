@@ -4,24 +4,14 @@ title: Nyala Villas
 location: Ubud, Bali
 project_colour: '#e2d5bc'
 description_html: >-
-   Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis? Velit,
-   iure quaerat accusantium illum quasi praesentium, dicta animi fuga sunt,
-   nesciunt autem nemo omnis dolorum explicabo quia ea ratione?
-project_type: Five 2-bed villas and two studio villas
+   Nyala Villas features four elegant villas nestled in the picturesque hills above Nyang Nyang Beach, Bali. Each villa provides a tranquil escape, combining luxury amenities with beautiful architectural elements. Private terraces offer a green oasis where residents can unwind and relax.
+project_type: Four 2-bed villas
 project_status: Under construction
 property:
    -
-      title: Studio
-      building_size: XX
-      land_plot: XX
-   -
-      title: Two bed - type 01
-      building_size: XX
-      land_plot: XX
-   -
-      title: Two bed - type 02
-      building_size: XX
-      land_plot: XX
+      title: two bed
+      building_size: 82.0 sq. m
+      land_plot: 195.8 sq. m (smallest)
 featured_images:
    -
       image: >-
