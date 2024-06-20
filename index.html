@@ -147,44 +147,26 @@ seo:
 
     <!-- Right Column -->
     <div class="pb-12 lg:pb-0 lg:pl-10p">
+
+
+   
       <ul>
+
         <!-- 1st Work -->
         {% include animations/animated-span.html %}
+
+        {% for item in site.projects %}
         <li class="py-4 flex justify-between">
-          <span class="uppercase" data-aos="fade-in">Padang Villas</span>
+          <span class="uppercase" data-aos="fade-in">{{item.title}}</span>
           <span class="text-accent text-sm uppercase" data-aos="fade-in"
-            >2 Bed Villa Studio</span
+            >{{item.project_type}}</span
           >
         </li>
         {% include animations/animated-span.html %}
+        {% endfor %}
+        
 
-        <!-- 2nd Work -->
-
-        <li class="py-4 flex justify-between">
-          <span class="uppercase" data-aos="fade-in">Amari Villas</span>
-          <span class="text-accent text-sm uppercase" data-aos="fade-in"
-            >2 Bed Villa / Studio</span
-          >
-        </li>
-        {% include animations/animated-span.html %}
-
-        <!-- 3rd Work -->
-        <li class="py-4 flex justify-between">
-          <span class="uppercase" data-aos="fade-in">Makalu Villas</span>
-          <span class="text-accent text-sm uppercase" data-aos="fade-in"
-            >X Bed Villa</span
-          >
-        </li>
-        {% include animations/animated-span.html %}
-
-        <!-- 4th Work -->
-        <li class="py-4 flex justify-between">
-          <span class="uppercase" data-aos="fade-in">Nyala Villas</span>
-          <span class="text-accent text-sm uppercase" data-aos="fade-in"
-            >X Bed Villa / Detail</span
-          >
-        </li>
-        {% include animations/animated-span.html %}
+       
       </ul>
     </div>
   </div>

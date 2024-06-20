@@ -588,9 +588,6 @@ p:last-child {
 .relative {
   position: relative;
 }
-.sticky {
-  position: sticky;
-}
 .bottom-0 {
   bottom: 0px;
 }
@@ -966,6 +963,22 @@ p:last-child {
 .border-t-\[24px\] {
   border-top-width: 24px;
 }
+.border-\[\#9ab4c8\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(154 180 200 / var(--tw-border-opacity));
+}
+.border-\[\#a3a98a\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(163 169 138 / var(--tw-border-opacity));
+}
+.border-\[\#cab196\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(202 177 150 / var(--tw-border-opacity));
+}
+.border-\[\#e2d5bc\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 213 188 / var(--tw-border-opacity));
+}
 .border-accent {
   --tw-border-opacity: 1;
   border-color: rgb(153 163 151 / var(--tw-border-opacity));
@@ -989,22 +1002,6 @@ p:last-child {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-.border-\[\#9ab4c8\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(154 180 200 / var(--tw-border-opacity));
-}
-.border-\[\#a3a98a\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(163 169 138 / var(--tw-border-opacity));
-}
-.border-\[\#cab196\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(202 177 150 / var(--tw-border-opacity));
-}
-.border-\[\#e2d5bc\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(226 213 188 / var(--tw-border-opacity));
 }
 .bg-\[\#9ab4c8\] {
   --tw-bg-opacity: 1;
@@ -1033,10 +1030,6 @@ p:last-child {
 .bg-main {
   --tw-bg-opacity: 1;
   background-color: rgb(199 185 163 / var(--tw-bg-opacity));
-}
-.bg-\[yellow\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 0 / var(--tw-bg-opacity));
 }
 .bg-contain {
   background-size: contain;
@@ -1412,6 +1405,9 @@ p:last-child {
   .md\:pb-0 {
     padding-bottom: 0px;
   }
+  .md\:pb-5 {
+    padding-bottom: 1.25rem;
+  }
   .md\:pl-10 {
     padding-left: 2.5rem;
   }
@@ -1426,9 +1422,6 @@ p:last-child {
   }
   .md\:pt-20 {
     padding-top: 5rem;
-  }
-  .md\:pb-5 {
-    padding-bottom: 1.25rem;
   }
   .md\:text-left {
     text-align: left;
@@ -1570,6 +1563,9 @@ p:last-child {
   .lg\:pb-12 {
     padding-bottom: 3rem;
   }
+  .lg\:pb-5 {
+    padding-bottom: 1.25rem;
+  }
   .lg\:pb-5p {
     padding-bottom: 5%;
   }
@@ -1596,12 +1592,6 @@ p:last-child {
   }
   .lg\:pt-5p {
     padding-top: 5%;
-  }
-  .lg\:pb-5 {
-    padding-bottom: 1.25rem;
-  }
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
   }
   .lg\:text-right {
     text-align: right;
