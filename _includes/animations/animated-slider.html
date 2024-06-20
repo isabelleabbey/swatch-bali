@@ -71,7 +71,7 @@
   </div>
   <div
     id="image-track"
-    class="grid lg:grid-cols-3 gap-6"
+    class="grid lg:grid-cols-3 gap-2"
     data-mouse-down-at="0"
     data-prev-percentage="0"
   >
@@ -79,7 +79,7 @@
     <div class="image-card">
       {% for image in item.featured_images limit:1 %}
       <div
-        class="bg-image-style aspect-portrait w-full h-[40vh] md:h-[65vh] border-[16px] border-[{{item.project_colour}}]"
+        class="bg-image-style aspect-portrait w-full h-[50vh] md:h-[65vh] border-[16px] border-[{{item.project_colour}}]"
         style="background-image: url('{{ image.image }}');"
         draggable="false"
       ></div>
