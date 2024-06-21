@@ -54,9 +54,9 @@
   /* Mobile-specific styles */
   @media (max-width: 767px) {
     .image-card {
-      flex: 0 0 80%; /* Adjust this value to show one full and part of the next image */
-      width: 80%; /* This width allows one card to be fully visible and the next card to peek */
-      padding-right: 4vw;
+      flex: 0 0 70%; /* Adjust this value to show one full and part of the next image */
+      width: 70%; /* This width allows one card to be fully visible and the next card to peek */
+      scroll-snap-align: center; /* Align cards to center */
     }
 
     .cursor {
@@ -196,11 +196,6 @@
     });
   };
 
-  // Initialize the scale for the center card on page load
-  document.addEventListener("DOMContentLoaded", () => {
-    updateScale();
-  });
-
   // Attach event handlers for dragging
   track.onmousedown = handleOnDown;
   track.ontouchstart = (e) => handleOnDown(e.touches[0]);
@@ -256,31 +251,55 @@
     }
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    // Clone the first and last cards
+    const firstCard = cards[0].cloneNode(true);
+    const lastCard = cards[cards.length - 1].cloneNode(true);
+
+    // Prepend the last card clone and append the first card clone
+    track.prepend(lastCard);
+    track.appendChild(firstCard);
+
+    // Adjust initial scroll position to the first real card
+    track.scrollLeft = firstCard.offsetLeft;
+
+    updateScale();
+  });
+
   function moveNextCard() {
     const cardWidth = cards[0].offsetWidth;
-    const gap = parseInt(window.getComputedStyle(track).gap); // Get the computed gap size
+    const gap = parseInt(window.getComputedStyle(track).gap);
 
-    // Move to the next card, including the gap
     track.scrollLeft += cardWidth + gap;
-    updateScale(); // Update the scale of the cards
+    updateScale();
 
-    // After moving cards, check and adjust if necessary
-    if (track.scrollLeft > track.scrollWidth - track.clientWidth) {
-      track.scrollLeft = track.scrollWidth - track.clientWidth;
+    // Check if we've scrolled to the appended clone
+    if (
+      track.scrollLeft >=
+      track.scrollWidth - track.clientWidth - cardWidth - gap
+    ) {
+      // Use requestAnimationFrame to avoid flickering
+      requestAnimationFrame(() => {
+        // Reset scroll position to the first real card
+        track.scrollLeft = cards[0].offsetLeft;
+      });
     }
   }
 
   function movePreviousCard() {
     const cardWidth = cards[0].offsetWidth;
-    const gap = parseInt(window.getComputedStyle(track).gap); // Get the computed gap size
+    const gap = parseInt(window.getComputedStyle(track).gap);
 
-    // Move to the previous card, including the gap
     track.scrollLeft -= cardWidth + gap;
-    updateScale(); // Update the scale of the cards
+    updateScale();
 
-    // After moving cards, check and adjust if necessary
-    if (track.scrollLeft < 0) {
-      track.scrollLeft = 0;
+    // Check if we've scrolled to the prepended clone
+    if (track.scrollLeft <= cards[0].offsetLeft) {
+      // Use requestAnimationFrame to avoid flickering
+      requestAnimationFrame(() => {
+        // Reset scroll position to the last real card
+        track.scrollLeft = cards[cards.length - 1].offsetLeft;
+      });
     }
   }
 
