@@ -695,6 +695,9 @@ p:last-child {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mb-\[-2px\] {
+  margin-bottom: -2px;
+}
 .mb-\[-5px\] {
   margin-bottom: -5px;
 }
@@ -736,15 +739,6 @@ p:last-child {
 }
 .mt-auto {
   margin-top: auto;
-}
-.mb-\[-1px\] {
-  margin-bottom: -1px;
-}
-.mb-\[-3rem\] {
-  margin-bottom: -3rem;
-}
-.mb-\[-2px\] {
-  margin-bottom: -2px;
 }
 .block {
   display: block;
@@ -829,6 +823,9 @@ p:last-child {
 }
 .min-h-\[90vh\] {
   min-height: 90vh;
+}
+.w-\[100vw\] {
+  width: 100vw;
 }
 .w-\[150px\] {
   width: 150px;
@@ -1358,6 +1355,9 @@ p:last-child {
   }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md\:justify-center {
+    justify-content: center;
   }
   .md\:justify-between {
     justify-content: space-between;
