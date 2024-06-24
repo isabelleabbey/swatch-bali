@@ -14,7 +14,7 @@
 
   <!-- Logo -->
   <div
-    class="logo flex-grow flex md:justify-center w-full col-span-full md:col-span-1"
+    class="logo flex-grow flex md:justify-center w-full col-span-2 md:col-span-1"
   >
     <a
       href="/index.html"
@@ -49,4 +49,12 @@
   {% include navigation/burger-menu.html %}
 </header>
 
-<style></style>
+<style>
+  /* Mobile-specific styles */
+  @media (max-width: 767px) {
+    .logo {
+      height: 50px;
+      width: ;
+    }
+  }
+</style>

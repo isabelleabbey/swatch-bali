@@ -38,7 +38,14 @@
   <div class="right">{% include navigation/burger-menu.html %}</div>
 </header>
 
-<style></style>
+<style>
+  /* Mobile-specific styles */
+  @media (max-width: 767px) {
+    .logo {
+      height: 51px;
+    }
+  }
+</style>
 
 <!-- GSAP TWEEN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>

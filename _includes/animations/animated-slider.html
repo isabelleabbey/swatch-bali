@@ -4,10 +4,10 @@
 <style>
   .swiper-slide {
     transition: transform 0.5s ease-out;
-    transform: scale(0.8) translate3d(0, 0, 0); /* Add translate3d to enable hardware acceleration */
+    transform: scale(0.9) translate3d(0, 0, 0); /* Add translate3d to enable hardware acceleration */
   }
   .swiper-slide.center {
-    transform: scale(0.9) translate3d(0, 0, 0);
+    transform: scale(1) translate3d(0, 0, 0);
   }
   .swiper-container {
     cursor: none;
@@ -47,38 +47,36 @@
   }
 </style>
 
-<sesction>
-  <div class="cursor">
-    <i class="fas fa-arrow-left"></i>
-  </div>
+<div class="cursor">
+  <i class="fas fa-arrow-left"></i>
+</div>
 
-  <div class="swiper-container w-full">
-    <div id="image-track" class="swiper-wrapper w-[100vw]">
-      {% for item in site.projects %}
-      <div class="swiper-slide">
-        {% for image in item.featured_images limit:1 %}
+<div class="swiper-container w-full">
+  <div id="image-track" class="swiper-wrapper w-[100vw]">
+    {% for item in site.projects %}
+    <div class="swiper-slide">
+      {% for image in item.featured_images limit:1 %}
 
-        <div
-          class="bg-image-style aspect-portrait w-full h-[50vh] md:h-[65vh] border-[16px] border-[{{item.project_colour}}]"
-          style="background-image: url('{{ image.image }}');"
-          draggable="false"
-        ></div>
-        {% endfor %}
-        <div
-          class="bg-[{{item.project_colour}}] pt-8 pb-8 px-4 lg:flex justify-between"
-        >
-          <h3 class="subtitle mb-2 uppercase" data-aos="fade-in">
-            {{ item.title }}
-          </h3>
-          <span class="subtitle uppercase" data-aos="fade-in"
-            >{{ item.location }}</span
-          >
-        </div>
-      </div>
+      <div
+        class="bg-image-style aspect-portrait w-full h-[50vh] md:h-[65vh] border-[16px] border-[{{item.project_colour}}]"
+        style="background-image: url('{{ image.image }}');"
+        draggable="false"
+      ></div>
       {% endfor %}
+      <div
+        class="bg-[{{item.project_colour}}] pt-8 pb-8 px-4 lg:flex justify-between"
+      >
+        <h3 class="subtitle mb-2 uppercase" data-aos="fade-in">
+          {{ item.title }}
+        </h3>
+        <span class="subtitle uppercase" data-aos="fade-in"
+          >{{ item.location }}</span
+        >
+      </div>
     </div>
+    {% endfor %}
   </div>
-</sesction>
+</div>
 
 <!-- Add Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -101,9 +99,9 @@
 
       slides.forEach((slide, index) => {
         if (index === swiper.activeIndex) {
-          slide.style.transform = "scale(0.9)";
+          slide.style.transform = "scale(1)";
         } else {
-          slide.style.transform = "scale(0.8)";
+          slide.style.transform = "scale(0.9)";
         }
       });
     };
@@ -169,8 +167,8 @@
     });
 
     var swiper = new Swiper(".swiper-container", {
-      slidesPerView: 1.4,
-      spaceBetween: 10,
+      slidesPerView: 1.5,
+      spaceBetween: 2,
       centeredSlides: true,
       loop: true,
       breakpoints: {

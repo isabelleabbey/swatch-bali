@@ -147,42 +147,23 @@ seo:
 
     <!-- Right Column -->
     <div class="pb-12 lg:pb-0 lg:pl-10p">
-
-
-   
       <ul>
-
         <!-- 1st Work -->
-        {% include animations/animated-span.html %}
-
-        {% for item in site.projects %}
+        {% include animations/animated-span.html %} {% for item in site.projects
+        %}
         <li class="py-4 flex justify-between">
           <span class="uppercase" data-aos="fade-in">{{item.title}}</span>
           <span class="text-accent text-sm uppercase" data-aos="fade-in"
             >{{item.project_type}}</span
           >
         </li>
-        {% include animations/animated-span.html %}
-        {% endfor %}
-        
-
-       
+        {% include animations/animated-span.html %} {% endfor %}
       </ul>
     </div>
   </div>
-
 </section>
 
-
-<section>
-
+<section class="mb-12">
   <!-- Gallery -->
   {% include /animations/animated-slider.html %}
-</section>
-
-
-<section>
-
-  <!-- Gallery -->
-  {% include /sliders/press-slider.html %}
 </section>
