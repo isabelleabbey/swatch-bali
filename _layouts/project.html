@@ -3,44 +3,46 @@ layout: alternative-layout
 ---
 
 <section class="grid md:grid-cols-2 grid-cols-1 lg:pb-0 pb-12">
-    <div class="flex flex-col  items-start justify-end md:sticky md:top-0 md:h-[95vh] md:pb-0  lg:px-8 px-[5%] py-12">
+  <div
+    class="flex flex-col items-start justify-end md:sticky md:top-0 md:h-[95vh] md:pb-0 lg:px-8 px-[5%] py-12"
+  >
+    <h1 class="serif-lg mb-6 mt-8 md:mt-0">{{page.title}}</h1>
+    <h2 class="serif-md margin-heading">{{page.location}}</h2>
+    <div class="mb-8 lg:w-3/4">{{page.description_html}}</div>
+    <p class="subtitle-md mb-4">{{page.project_type}}</p>
+    <p class="subtitle-md mb-20">Status: {{page.project_status}}</p>
 
-      
-
-
-        <h1 class="serif-lg mb-6">{{page.title}}</h1>
-        <h2 class="serif-md margin-heading">{{page.location}}</h2>
-        <div class="mb-8 lg:w-3/4">{{page.description_html}}</div>
-        <p class="subtitle-md mb-4">{{page.project_type}}</p>
-        <p class="subtitle-md mb-20">Status: {{page.project_status}}</p>
-
-        <div class="grid items-center w-full ">
-         
-            {% for item in page.property %}
-            <div class="col-span-full grid grid-cols-4 md:gap-0 gap-2 py-3">
-            <div class="col-span-2">
-                <p class="subtitle-md">{{item.title}}</p>
-            </div>
-            <div>
-                <p class="uppercase subtitle-sm">Building size: {{item.building_size}}</p>
-            </div>
-            <div>
-                <p class="uppercase subtitle-sm">Land plot: {{item.land_plot}}</p>
-            </div>
-            <div class="col-span-full">
-            {% include animations/animated-span.html %}
-            </div>
-            </div>
-            {% endfor %}
+    <div class="grid items-center w-full">
+      {% for item in page.property %}
+      <div class="col-span-full grid grid-cols-4 md:gap-0 gap-2 py-3">
+        <div class="col-span-2">
+          <p class="subtitle-md">{{item.title}}</p>
         </div>
-
-        <a href="/projects" class="link" data-aos="fade-in"> Back to projects </a>
+        <div>
+          <p class="uppercase subtitle-sm">
+            Building size: {{item.building_size}}
+          </p>
+        </div>
+        <div>
+          <p class="uppercase subtitle-sm">Land plot: {{item.land_plot}}</p>
+        </div>
+        <div class="col-span-full">
+          {% include animations/animated-span.html %}
+        </div>
+      </div>
+      {% endfor %}
     </div>
 
+    <a href="/projects" class="link" data-aos="fade-in"> Back to projects </a>
+  </div>
 
-    <div>
-        {% for item in page.project_gallery %}
-        <img src="{{item.image}}" alt="" class=" mb-4 w-full object-contain object-center">
-        {% endfor %}
-    </div>
+  <div>
+    {% for item in page.project_gallery %}
+    <img
+      src="{{item.image}}"
+      alt=""
+      class="mb-4 w-full object-contain object-center"
+    />
+    {% endfor %}
+  </div>
 </section>
