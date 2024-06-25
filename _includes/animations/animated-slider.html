@@ -15,42 +15,9 @@
     width: 100vw;
     max-width: 100%;
   }
-
-  .cursor {
-    position: absolute;
-    z-index: 999;
-    transition: 0.3s linear transform, 0.2s linear opacity;
-    user-select: none;
-    pointer-events: none;
-    transform: scale(0.8);
-    opacity: 0;
-    background: rgba(255, 255, 255, 0.6);
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cursor.active {
-    opacity: 1;
-    transform: scale(2);
-  }
-
-  /* Mobile-specific styles */
-  @media (max-width: 767px) {
-    .cursor {
-      display: none;
-    }
-  }
 </style>
 
-<div class="cursor">
-  <i class="fas fa-arrow-left"></i>
-  <!-- <img src="images/arrow.png"> -->
-</div>
+
 
 <div class="swiper-container w-full">
   <div id="image-track" class="swiper-wrapper w-[100vw]">
@@ -62,6 +29,7 @@
         class="bg-image-style aspect-portrait w-full h-[45vh] md:h-[60vh] border-[16px] border-[{{item.project_colour}}]"
         style="background-image: url('{{ image.image }}');"
         draggable="false"
+       
       ></div>
       {% endfor %}
       <div
@@ -83,18 +51,9 @@
 <!-- Add Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const cursor = document.querySelector(".cursor");
-    const swiperContainer = document.querySelector(".swiper-container");
-
-    let posX = 0,
-      posY = 0,
-      mouseX = 0,
-      mouseY = 0;
-
+const swiperContainer = document.querySelector(".swiper-container");
     const updateScale = () => {
       const swiper = swiperContainer.swiper;
       const slides = document.querySelectorAll(".swiper-slide");
@@ -108,71 +67,16 @@
       });
     };
 
-    // Function to move to the next card
-    function moveNextCard() {
-      swiper.slideNext();
-    }
-
-    // Function to move to the previous card
-    function movePreviousCard() {
-      swiper.slidePrev();
-    }
-
-    // Click event to detect where user clicks and move slides accordingly
-    swiperContainer.addEventListener("click", function (e) {
-      const screenWidth = window.innerWidth;
-      const clickX = e.clientX; // Get the horizontal coordinate of the click
-
-      if (clickX > screenWidth / 2) {
-        // Click on the right side of the screen
-        moveNextCard();
-      } else {
-        // Click on the left side of the screen
-        movePreviousCard();
-      }
-    });
-
-    window.addEventListener("mousemove", function (e) {
-      mouseX = e.pageX;
-      mouseY = e.pageY;
-
-      const cursorIcon = cursor.querySelector("i");
-      if (mouseX < window.innerWidth / 2) {
-        cursorIcon.classList.remove("fa-arrow-right");
-        cursorIcon.classList.add("fa-arrow-left");
-      } else {
-        cursorIcon.classList.remove("fa-arrow-left");
-        cursorIcon.classList.add("fa-arrow-right");
-      }
-    });
-
-    TweenMax.to({}, 0.016, {
-      repeat: -1,
-      onRepeat: function () {
-        posX += (mouseX - posX) / 9;
-        posY += (mouseY - posY) / 9;
-        TweenMax.set(cursor, {
-          css: {
-            left: posX - 12.5, // Center the cursor
-            top: posY - 12.5, // Center the cursor
-          },
-        });
-      },
-    });
-
-    swiperContainer.addEventListener("mouseenter", () => {
-      cursor.classList.add("active");
-    });
-
-    swiperContainer.addEventListener("mouseleave", () => {
-      cursor.classList.remove("active");
-    });
-
     var swiper = new Swiper(".swiper-container", {
       slidesPerView: 1.5,
       spaceBetween: 2,
       centeredSlides: true,
       loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      speed: 500,
       breakpoints: {
         // Adjustments for larger screens
         640: {

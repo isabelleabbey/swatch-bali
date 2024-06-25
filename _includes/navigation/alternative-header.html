@@ -24,7 +24,7 @@
     >
       <img
         src="{{ site.data.site-settings.brand.primary_logo_path }}"
-        class="inline-block h-14 object-contain mb-[-2px]"
+        class="inline-block h-14 object-contain"
       />
     </a>
   </div>
@@ -50,6 +50,21 @@
 </header>
 
 <style>
+  .line {
+    margin-top: -1px;
+  }
+
+  @media (min-width: 768px) and (max-width: 868px) {
+    .line {
+      margin-top: -4px;
+    }
+  }
+
+  @media (min-width: 869px) and (max-width: 896px) {
+    .line {
+      margin-top: -3px;
+    }
+  }
   /* Mobile-specific styles */
   @media (max-width: 767px) {
     .logo img {
