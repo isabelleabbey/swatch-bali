@@ -49,6 +49,7 @@
 
 <div class="cursor">
   <i class="fas fa-arrow-left"></i>
+  <!-- <img src="images/arrow.png"> -->
 </div>
 
 <div class="swiper-container w-full">
@@ -56,9 +57,9 @@
     {% for item in site.projects %}
     <div class="swiper-slide">
       {% for image in item.featured_images limit:1 %}
-
+      <a href="{{project.url}}">
       <div
-        class="bg-image-style aspect-portrait w-full h-[50vh] md:h-[65vh] border-[16px] border-[{{item.project_colour}}]"
+        class="bg-image-style aspect-portrait w-full h-[45vh] md:h-[60vh] border-[16px] border-[{{item.project_colour}}]"
         style="background-image: url('{{ image.image }}');"
         draggable="false"
       ></div>
@@ -66,7 +67,7 @@
       <div
         class="bg-[{{item.project_colour}}] pt-8 pb-8 px-4 lg:flex justify-between"
       >
-        <h3 class="subtitle mb-2 uppercase" data-aos="fade-in">
+        <h3 class="serif-lg mb-2" data-aos="fade-in">
           {{ item.title }}
         </h3>
         <span class="subtitle uppercase" data-aos="fade-in"
@@ -74,6 +75,7 @@
         >
       </div>
     </div>
+  </a>
     {% endfor %}
   </div>
 </div>

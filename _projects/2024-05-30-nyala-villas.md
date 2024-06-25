@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Nyala Villas
-location: Ubud, Bali
+location: Nyang Nyang, Bali
 project_colour: '#e2d5bc'
 description_html: >-
    Nyala Villas features four elegant villas nestled in the picturesque hills above Nyang Nyang Beach, Bali. Each villa provides a tranquil escape, combining luxury amenities with beautiful architectural elements. Private terraces offer a green oasis where residents can unwind and relax.
