@@ -13,7 +13,7 @@
     <a href="/index.html" class="text-center">
       <img
         src="{{ site.data.site-settings.brand.primary_logo_path }}"
-        class="inline-block h-14 object-contain mb-[-2px]"
+        class="margin inline-block h-14 object-contain"
       />
     </a>
   </div>
@@ -39,7 +39,11 @@
 </header>
 
 <style>
+  .margin {
+    margin-bottom: -1.4px;
+  }
   /* Mobile-specific styles */
+
   @media (max-width: 767px) {
     .logo img {
       height: 2.5rem;
