@@ -59,6 +59,7 @@
 
 
 <script>
+if (!window.inEditorMode) {
   document.addEventListener("DOMContentLoaded", function () {
     // Initialize AOS on page load in the root of the application so its available across the whole page.
     AOS.init({
@@ -70,6 +71,7 @@
       once: true, // The animation only to appear once, set to false if you want it to appear everytime the user scrolls to the section.
     });
   });
+}
 </script>
 
 </html>

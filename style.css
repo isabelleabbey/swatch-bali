@@ -75,6 +75,14 @@
 
 }
 
+/* fix for AOS in cloudcannon */
+body.cms-editor-active {
+    [data-aos^=fade], [data-aos^=fade] * {
+      opacity: 1 !important;
+     }
+   }
+
+
 /* ----------- ADDITIONAL COMPONENTS  --------- */
 
 @layer components {

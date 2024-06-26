@@ -24,7 +24,7 @@
     {% for item in site.projects %}
     <div class="swiper-slide">
       {% for image in item.featured_images limit:1 %}
-      <a href="{{project.url}}">
+      <a href="{{item.url}}">
       <div
         class="bg-image-style aspect-portrait w-full h-[45vh] md:h-[60vh] border-[16px] border-[{{item.project_colour}}]"
         style="background-image: url('{{ image.image }}');"
