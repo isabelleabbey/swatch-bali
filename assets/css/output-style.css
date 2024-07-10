@@ -615,6 +615,9 @@ p:last-child {
 .z-20 {
   z-index: 20;
 }
+.z-0 {
+  z-index: 0;
+}
 .order-first {
   order: -9999;
 }
@@ -713,9 +716,6 @@ p:last-child {
 .ml-\[5\%\] {
   margin-left: 5%;
 }
-.ml-auto {
-  margin-left: auto;
-}
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -809,6 +809,9 @@ p:last-child {
 .h-screen {
   height: 100vh;
 }
+.h-full {
+  height: 100%;
+}
 .max-h-\[100vh\] {
   max-height: 100vh;
 }
@@ -853,15 +856,6 @@ p:last-child {
 }
 .w-full {
   width: 100%;
-}
-.w-\[25\%\] {
-  width: 25%;
-}
-.w-\[45\%\] {
-  width: 45%;
-}
-.w-\[55\%\] {
-  width: 55%;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1351,11 +1345,11 @@ body.cms-editor-active {
   .md\:w-\[85\%\] {
     width: 85%;
   }
-  .md\:w-full {
-    width: 100%;
-  }
   .md\:w-auto {
     width: auto;
+  }
+  .md\:w-full {
+    width: 100%;
   }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));

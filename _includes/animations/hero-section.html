@@ -18,10 +18,22 @@
   ></div>
 
   <!-- Right Column -->
+  {% if page.banner.image-right.video_path %}
+  <div class="right-column  h-[100vh] opacity-0 relative">
+    <video playsinline autoplay poster="{{ page.banner.image-right.image_path }}" muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="{{page.banner.image-right.video_path}}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  {% else %}
   <div
     class="right-column bg-image-style h-[100vh] opacity-0"
     style="background-image: url('{{ page.banner.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"
   ></div>
+  {% endif %}
+
+
 </section>
 
 <style>
