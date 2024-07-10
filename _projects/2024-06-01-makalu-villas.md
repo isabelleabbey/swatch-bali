@@ -16,10 +16,6 @@ property:
       building_size: 120 sq.m
       land_plot: 160 sq.m
    -
-      title: Two bed - type 02
-      building_size: 50.8 sq. m
-      land_plot:
-   -
       title: Four bed
       building_size: 200 sq.m
       land_plot: 320 sq.m
