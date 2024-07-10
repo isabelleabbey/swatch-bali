@@ -4,17 +4,18 @@ title: Mahua Villas
 location: Nyang Nyang, Bali
 project_colour: '#e2d5bc'
 description_html: >-
-   <p>Mahua Villas features four elegant villas nestled in the picturesque hills
-   above Nyang Nyang Beach, Bali. Each villa provides a tranquil escape,
-   combining luxury amenities with beautiful architectural elements. Private
-   terraces offer a green oasis where residents can unwind and relax.</p>
+   <p>Mahua Villas features four elegant villas nestled in the picturesque
+   clifftop hills above Nyang Nyang Beach, Bali. Each villa provides a tranquil
+   escape, combining luxury amenities with beautiful architectural elements.
+   Private terraces offer a green oasis where residents can unwind and
+   relax.</p>
 project_type: Four 2-bed villas
-project_status: Under construction
+project_status: Technical Design
 property:
    -
       title: two bed
-      building_size: 82.0 sq. m
-      land_plot: 195.8 sq. m (smallest)
+      building_size: 138 sq.m
+      land_plot: 213 sq.m
 featured_images:
    -
       image: /images/swatch-architects-bali-architecture-mahua-villas-1.jpg

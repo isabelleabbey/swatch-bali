@@ -1,25 +1,28 @@
 ---
 layout: project
 title: Makalu Villas
-location: Ubud, Bali
+location: Umalas, Bali
 project_colour: '#cab196'
 description_html: >-
-   Makalu Villas is an exclusive development comprising six luxurious villas in the tranquil setting of Ubud, Bali. Each villa offers an intimate and serene retreat, centred around an opulent swimming pool environment, offering a peaceful sanctuary for relaxation and contemplation.
+   <p>Makàlu Villas, where tropical luxury meets Japandi interiors, is an
+   exclusive SWATCH development comprising six villas in the lush setting of
+   Umalas, Bali. Designed to promote well-being and tranquillity, it features a
+   12.5m lap pool through the statement timber portal frame structure.</p>
 project_type: FOUR 2-BED VILLAS AND TWO 4-BED VILLAS
-project_status: Under construction
+project_status: Technical Design
 property:
    -
       title: Two bed - type 01
-      building_size: 50.8 sq. m
-      land_plot: 
+      building_size: 120 sq.m
+      land_plot: 160 sq.m
    -
       title: Two bed - type 02
       building_size: 50.8 sq. m
-      land_plot: 
+      land_plot:
    -
       title: Four bed
-      building_size: 119.3 sq. m
-      land_plot: 
+      building_size: 200 sq.m
+      land_plot: 320 sq.m
 featured_images:
    -
       image: /images/swatch-architects-bali-architecture-makalu-villa-house-1.jpg
