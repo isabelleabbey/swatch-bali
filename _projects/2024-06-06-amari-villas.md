@@ -4,18 +4,28 @@ title: Amari Villas
 location: Ubud, Bali
 project_colour: '#a3a98a'
 description_html: >-
-   Amari Villas, a vision of style and comfort, is a luxury complex featuring a collection of 5 exquisite contemporary villas nestled gracefully within the jungle surroundings of Ubud. The villas boast an unparalleled combination of prime location and luxury living.
+   <p>Amari Villas, a vision of style and comfort, is a luxury complex featuring
+   a collection of 7</p><p>exquisite contemporary villas nestled gracefully
+   within the jungle surroundings of Ubud. Large crittall glazing create a
+   seamless transition from indoor to outdoor, harnessing daylight and fostering
+   a strong connection with nature. The floor plans exhibit openness and
+   spaciousness, complemented by a neutral, warm material palette that
+   cultivates a serene ambiance.</p>
 project_type: Five 2-bed villas and Two studio villas
 project_status: Under construction
 property:
    -
-      title: Two bed
-      building_size: 116.1 sq. m
-      land_plot:
-   -
       title: Studio
-      building_size: 43.1 sq. m
-      land_plot: 
+      building_size: 45 sq.m
+      land_plot: 90 sq.m
+   -
+      title: Two bed - Type 01
+      building_size: 96 sq.m
+      land_plot: 200 sq.m
+   -
+      title: Two bed - Type 02
+      building_size: 120 sq.m
+      land_plot: 257 sq.m
 featured_images:
    -
       image: /images/swatch-architects-bali-design-studio-amari-two-bed-1.jpg
