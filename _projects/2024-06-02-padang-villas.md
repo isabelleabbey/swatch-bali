@@ -1,21 +1,25 @@
 ---
 layout: project
 title: Padang Villas
-location: Ulu Watu, Bali
+location: Uluwatu, Bali
 project_colour: '#9ab4c8'
 description_html: >-
-   Padang Villas integrates open-plan living with exquisitely designed outdoor spaces, offering an immersive living experience. Each of the four villas boasts a luxurious rooftop terrace, featuring a welcoming seating area and a calming pool, perfect for residents to unwind and enjoy the beautiful Bali weather.
+   <p>Padang Villas integrates open-plan living with exquisitely designed
+   outdoor spaces, offering an immersive living experience. Each of the four
+   villas boasts a luxurious rooftop terrace, featuring a welcoming seating area
+   and a calming plunge pool, perfect for residents to unwind and enjoy the
+   stunning Bali sunsets.</p>
 project_type: THREE 2-BED VILLAS AND ONE 3-BED VILLA
 project_status: Under construction
 property:
    -
       title: Two Bed
-      building_size: 54.4 sq. m
-      land_plot: 
+      building_size: 120 sq.m
+      land_plot: 115 sq.m
    -
       title: Three Bed
-      building_size: 60.1 sq. m
-      land_plot: 
+      building_size: 130 sq.m
+      land_plot: 140 sq.m
 featured_images:
    -
       image: >-
