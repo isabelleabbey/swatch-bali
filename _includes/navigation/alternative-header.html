@@ -1,6 +1,6 @@
 <header class="absolute md:bg-none top-0 z-10 w-full grid grid-cols-3 px-4">
   <!-- Left Column -->
-  <div class="md:flex items-center pb-1 hidden">
+  <div class="swatch-architecture md:flex items-center pb-1 hidden">
     {% for item in site.data.navigation.header limit:1 %}
     <a
       href="{{ item.nav_link }}"
@@ -56,7 +56,7 @@
 
   @media (min-width: 768px) and (max-width: 868px) {
     .line {
-      margin-top: -4px;
+      margin-top: -5px;
     }
   }
 
@@ -65,8 +65,29 @@
       margin-top: -3px;
     }
   }
+
+  @media (min-width: 768px) and (max-width: 819px) {
+    .swatch-architecture {
+      display: none;
+    }
+
+    .logo {
+      justify-content: flex-start;
+    }
+
+    .line {
+      margin-top: -1px;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    .line {
+      margin-top: -1.5px;
+    }
+  }
+
   /* Mobile-specific styles */
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .logo img {
       height: 2.5rem;
       margin-top: 1rem;

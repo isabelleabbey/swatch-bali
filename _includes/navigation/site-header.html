@@ -1,6 +1,6 @@
 <header class="nav absolute md:bg-none top-0 z-10 w-full grid grid-cols-3 px-4">
   <!-- Left Column -->
-  <div class="left xl:flex items-center pb-1 hidden">
+  <div class="left md:flex items-center pb-1 hidden">
     {% for item in site.data.navigation.header limit:1 %}
     <a href="{{ item.nav_link }}" class="uppercase text-sm"
       >{{ item.nav_title }}</a
@@ -42,7 +42,19 @@
   .margin {
     margin-bottom: -1.4px;
   }
+
+  @media (min-width: 768px) and (max-width: 819px) {
+    .left {
+      display: none;
+    }
+  }
   /* Mobile-specific styles */
+
+  @media (max-width: 840px) {
+    .line {
+      margin-top: 0.5px;
+    }
+  }
 
   @media (max-width: 767px) {
     .logo img {
