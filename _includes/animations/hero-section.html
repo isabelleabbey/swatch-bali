@@ -20,9 +20,9 @@
   <!-- Right Column -->
   {% if page.banner.image-right.video_path %}
   <div
-    class="h-[100vh] opacity-0 relative"
+    class="right-column h-[100vh] opacity-0 relative"
     data-aos="fade-in"
-    data-aos-delay="3000"
+    data-aos-delay="300"
   >
     <video
       playsinline
@@ -39,10 +39,8 @@
 
   {% else %}
   <div
-    class="bg-image-style h-[100vh] opacity-0"
+    class="right-column bg-image-style h-[100vh] opacity-0"
     style="background-image: url('{{ page.banner.image-right.image_path }}'); background-position: {{ page.header.image-right.image_focus }};"
-    data-aos="fade-in"
-    data-aos-delay="3000"
   ></div>
   {% endif %}
 </section>
@@ -65,7 +63,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
 <script>
-  window.onload = function () {
+  document.addEventListener("DOMContentLoaded", function () {
     // Function to check if the device is mobile
     function isMobile() {
       return window.matchMedia("(max-width: 768px)").matches;
@@ -136,11 +134,11 @@
       delay: 2.5,
     });
 
-    // TweenMax.to(".right-column", 2, {
-    //   opacity: 1,
-    //   zIndex: 0,
-    //   ease: "cubic-bezier(0.68, -0.55, 0.27, 1.55)",
-    //   delay: 2.8,
-    // });
-  };
+    TweenMax.to(".right-column", 2, {
+      opacity: 1,
+      zIndex: 0,
+      ease: "cubic-bezier(0.68, -0.55, 0.27, 1.55)",
+      delay: 2.8,
+    });
+  });
 </script>
