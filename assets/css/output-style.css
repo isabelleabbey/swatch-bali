@@ -677,10 +677,6 @@ p:last-child {
   margin-top: 20%;
   margin-bottom: 20%;
 }
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 .-mb-\[0\.7px\] {
   margin-bottom: -0.7px;
 }
@@ -692,6 +688,9 @@ p:last-child {
 }
 .mb-12 {
   margin-bottom: 3rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
@@ -756,8 +755,14 @@ p:last-child {
 .mt-auto {
   margin-top: auto;
 }
-.mb-16 {
-  margin-bottom: 4rem;
+.mb-\[1\.4px\] {
+  margin-bottom: 1.4px;
+}
+.-mb-\[1\.4px\] {
+  margin-bottom: -1.4px;
+}
+.-mb-\[2\.3px\] {
+  margin-bottom: -2.3px;
 }
 .block {
   display: block;
@@ -1189,6 +1194,9 @@ p:last-child {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
+.text-\[16px\] {
+  font-size: 16px;
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1204,9 +1212,6 @@ p:last-child {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-\[16px\] {
-  font-size: 16px;
 }
 .font-medium {
   font-weight: 500;
@@ -1336,6 +1341,9 @@ body.cms-editor-active {
   .md\:mt-6 {
     margin-top: 1.5rem;
   }
+  .md\:-mb-\[1\.4px\] {
+    margin-bottom: -1.4px;
+  }
   .md\:flex {
     display: flex;
   }
@@ -1360,17 +1368,14 @@ body.cms-editor-active {
   .md\:w-\[40\%\] {
     width: 40%;
   }
-  .md\:w-\[85\%\] {
-    width: 85%;
+  .md\:w-\[87\%\] {
+    width: 87%;
   }
   .md\:w-auto {
     width: auto;
   }
   .md\:w-full {
     width: 100%;
-  }
-  .md\:w-\[87\%\] {
-    width: 87%;
   }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
