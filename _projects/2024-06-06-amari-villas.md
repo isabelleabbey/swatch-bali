@@ -5,7 +5,7 @@ location: Ubud, Bali
 project_colour: '#a3a98a'
 description_html: >-
    <p>Amari Villas, a vision of style and comfort, is a luxury complex featuring
-   a collection of 7</p><p>exquisite contemporary villas nestled gracefully
+   a collection of 7 exquisite contemporary villas nestled gracefully
    within the jungle surroundings of Ubud. Large crittall glazing create a
    seamless transition from indoor to outdoor, harnessing daylight and fostering
    a strong connection with nature. The floor plans exhibit openness and

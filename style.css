@@ -138,6 +138,8 @@ body.cms-editor-active {
     .serif-lg { @apply font-serif text-[1.8rem] leading-[1em]  }
 
     .serif-md {  @apply font-serif text-[1.4rem] leading-[1em] }
+    .serif-sm {  @apply font-serif text-[14px] leading-[1em] }
+
 
     /* Spacing */
     .margin-heading {

@@ -18,14 +18,14 @@ header-menu:
     nav_link: /contact
 footer:
   - nav_title: Home
-    nav_link: /index
-  - nav_title: About
+    nav_link: /index 
+  - nav_title: Practice
     nav_link: /practice 
   - nav_title: Projects
-    nav_link: /projects
-  - nav_title: Careers
-    nav_link: /careers  
+    nav_link: /projects 
   - nav_title: Invest
     nav_link: /invest
+  - nav_title: Careers
+    nav_link: /careers 
   - nav_title: Contact
     nav_link: /contact

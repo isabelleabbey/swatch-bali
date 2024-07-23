@@ -12,7 +12,7 @@ project_type: FOUR 2-BED VILLAS AND TWO 4-BED VILLAS
 project_status: Technical Design
 property:
    -
-      title: Two bed - type 01
+      title: Two bed
       building_size: 120 sq.m
       land_plot: 160 sq.m
    -

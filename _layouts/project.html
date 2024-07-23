@@ -4,17 +4,19 @@ layout: alternative-layout
 
 <section class="grid md:grid-cols-2 grid-cols-1 lg:pb-0 pb-12">
   <div
-    class="flex flex-col items-start justify-end md:sticky md:top-0 md:h-[95vh] md:pb-0 lg:px-8 px-[5%] py-12"
+    class="flex flex-col items-start justify-end md:sticky md:top-0 md:h-screen md:pb-0 md:pt-12 lg:px-8 px-[5%] pt-12 pb-4"
   >
-    <h1 class="serif-lg mb-6 mt-8 md:mt-0">{{page.title}}</h1>
-    <h2 class="serif-md margin-heading">{{page.location}}</h2>
+  <a href="/projects" class="link md:absolute md:top-12" data-aos="fade-in"> Back to projects </a>
+
+    <h1 class="serif-lg mb-4 mt-8 md:mt-0">{{page.title}}</h1>
+    <h2 class="serif-sm margin-heading">{{page.location}}</h2>
     <div class="mb-8 lg:w-3/4">{{page.description_html}}</div>
     <p class="subtitle-md mb-4">{{page.project_type}}</p>
     <p class="subtitle-md mb-20">Status: {{page.project_status}}</p>
 
     <div class="grid items-center w-full">
       {% for item in page.property %}
-      <div class="col-span-full grid grid-cols-4 md:gap-0 gap-2 py-3">
+      <div class="col-span-full grid grid-cols-4 md:gap-0 gap-1 md:py-3 pb-3">
         <div class="col-span-2">
           <p class="subtitle-md">{{item.title}}</p>
         </div>
@@ -23,7 +25,7 @@ layout: alternative-layout
             Building size: {{item.building_size}}
           </p>
         </div>
-        <div class="xl:row-start-auto x:col-start-auto row-start-2 col-start-3 xl:col-span-1 col-span-2 mb-6">
+        <div class="xl:row-start-auto x:col-start-auto row-start-2 col-start-3 xl:col-span-1 col-span-2 mb-1">
           <p class="uppercase subtitle-sm">Land plot: {{item.land_plot}}</p>
         </div>
         <div class="col-span-full">
@@ -32,8 +34,6 @@ layout: alternative-layout
       </div>
       {% endfor %}
     </div>
-
-    <a href="/projects" class="link" data-aos="fade-in"> Back to projects </a>
   </div>
 
   <div>

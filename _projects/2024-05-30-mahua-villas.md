@@ -20,8 +20,6 @@ featured_images:
    -
       image: /images/swatch-architects-bali-architecture-mahua-villas-1.jpg
    -
-      image: /images/swatch-architects-bali-architecture-mahua-villas-7.jpg
-   -
       image: /images/swatch-architects-bali-architecture-mahua-villas-3.jpg
    -
       image: /images/swatch-architects-bali-architecture-mahua-villas-4.jpg
