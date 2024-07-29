@@ -2,7 +2,8 @@
 layout: project
 title: Makalu Villas
 location: Umalas, Bali
-project_colour: '#cab196'
+project_colour: >-
+   #cab196
 description_html: >-
    <p>Makàlu Villas, where tropical luxury meets Japandi interiors, is an
    exclusive SWATCH development comprising six villas in the lush setting of

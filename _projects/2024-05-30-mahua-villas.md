@@ -2,7 +2,8 @@
 layout: project
 title: Mahua Villas
 location: Nyang Nyang, Bali
-project_colour: '#e2d5bc'
+project_colour: >-
+   #e2d5bc
 description_html: >-
    <p>Mahua Villas features four elegant villas nestled in the picturesque
    clifftop hills above Nyang Nyang Beach, Bali. Each villa provides a tranquil

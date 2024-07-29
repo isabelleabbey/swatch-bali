@@ -2,7 +2,8 @@
 layout: project
 title: Padang Villas
 location: Uluwatu, Bali
-project_colour: '#9ab4c8'
+project_colour: >-
+   #9ab4c8
 description_html: >-
    <p>Padang Villas integrates open-plan living with exquisitely designed
    outdoor spaces, offering an immersive living experience. Each of the four
