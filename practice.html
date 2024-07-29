@@ -145,7 +145,7 @@ process:
   ></div>
 
   <!-- Right Column -->
-  <div class="md:mt-0 mt-4">
+  <div class="md:mt-0 mt-12">
     {% for item in page.process %}
     <div
       class="flex justify-between items-end"
@@ -158,7 +158,7 @@ process:
       </h2>
     </div>
     {% include animations/animated-span.html %}
-    <p class="mt-6 mb-16">{{item.description}}</p>
+    <p class="mt-6 md:mb-16 mb-12">{{item.description}}</p>
     {% endfor %}
   </div>
 </section>

@@ -2302,6 +2302,10 @@ p:last-child {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -2352,9 +2356,6 @@ p:last-child {
 }
 .mb-12 {
   margin-bottom: 3rem;
-}
-.mb-16 {
-  margin-bottom: 4rem;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
@@ -2870,9 +2871,6 @@ p:last-child {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
-.border-\[\] {
-  border-color: ;
-}
 .bg-\[\#9ab4c8\] {
   --tw-bg-opacity: 1;
   background-color: rgb(154 180 200 / var(--tw-bg-opacity));
@@ -2896,9 +2894,6 @@ p:last-child {
 .bg-main {
   --tw-bg-opacity: 1;
   background-color: rgb(199 185 163 / var(--tw-bg-opacity));
-}
-.bg-\[\] {
-  background-color: ;
 }
 .bg-none {
   background-image: none;
@@ -3008,11 +3003,11 @@ p:last-child {
 .pb-1 {
   padding-bottom: 0.25rem;
 }
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
 .pb-12 {
   padding-bottom: 3rem;
-}
-.pb-20 {
-  padding-bottom: 5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -3744,6 +3739,9 @@ body.cms-editor-active {
   }
   .md\:mb-12 {
     margin-bottom: 3rem;
+  }
+  .md\:mb-16 {
+    margin-bottom: 4rem;
   }
   .md\:mb-8 {
     margin-bottom: 2rem;
