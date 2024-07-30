@@ -12,7 +12,7 @@ description_html: >-
    a strong connection with nature. The floor plans exhibit openness and
    spaciousness, complemented by a neutral, warm material palette that
    cultivates a serene ambiance.</p>
-project_type: Five 2-bed villas and Two studio villas
+project_type: FIVE 2-BED AND TWO STUDIO VILLAS
 project_status: Under construction
 property:
    -

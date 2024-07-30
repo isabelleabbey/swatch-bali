@@ -9,7 +9,7 @@ description_html: >-
    exclusive SWATCH development comprising six villas in the lush setting of
    Umalas, Bali. Designed to promote well-being and tranquillity, it features a
    12.5m lap pool through the statement timber portal frame structure.</p>
-project_type: FOUR 2-BED VILLAS AND TWO 4-BED VILLAS
+project_type: FOUR 2-BED AND TWO 4-BED VILLAS
 project_status: Technical Design
 property:
    -

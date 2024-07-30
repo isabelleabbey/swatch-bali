@@ -10,17 +10,17 @@ description_html: >-
    villas boasts a luxurious rooftop terrace, featuring a welcoming seating area
    and a calming plunge pool, perfect for residents to unwind and enjoy the
    stunning Bali sunsets.</p>
-project_type: THREE 2-BED VILLAS AND ONE 3-BED VILLA
+project_type: ONE 3-BED AND THREE 2-BED VILLAS
 project_status: Under construction
 property:
-   -
-      title: Two Bed
-      building_size: 120 sq.m
-      land_plot: 115 sq.m
    -
       title: Three Bed
       building_size: 130 sq.m
       land_plot: 140 sq.m
+   -
+      title: Two Bed
+      building_size: 120 sq.m
+      land_plot: 115 sq.m
 featured_images:
    -
       image: >-
