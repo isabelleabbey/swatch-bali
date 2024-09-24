@@ -18,36 +18,34 @@ property:
       land_plot: 200 sq.m
 featured_images:
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-1.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-1.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-4.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-2.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-5.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-3.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-6.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-4.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-7.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-5.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-8.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-6.jpg
 project_gallery:
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-1.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-1.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-4.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-2.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-5.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-3.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-6.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-4.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-7.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-11.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-8.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-5.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-9.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-13.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-11.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-14.jpg
    -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-10.jpg
-   -
-      image: /images/swatch-architects-bali-architecture-makalu-villa-house-3.jpg
+      image: /images/swatch-architects-bali-architecture-nyala-villas-6.jpg
 ---
