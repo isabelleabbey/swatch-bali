@@ -2,27 +2,33 @@ seo:
   site_name: Swatch Architects
   title: Swatch Architects
   type: website
-  description: Swatch is a London born and Bali based Architecture studio, designing projects in an intimate and hands-on way, collaborating and creating with people that we know and trust.
-  keywords: Bali, Architecture, architect, design, studio, villa, house 
+  description: >-
+    Swatch is a London born and Bali based Architecture studio, designing
+    projects in an intimate and hands-on way, collaborating and creating with
+    people that we know and trust.
+  keywords: Bali, Architecture, architect, design, studio, villa, house
   social_image: /images/swatch-architects-bali-architecture-design-studio-villa-house-9.jpg
-  author: Swatch Architects 
-  twitter_description: Swatch is a London born and Bali based Architecture studio, designing projects in an intimate and hands-on way, collaborating and creating with people that we know and trust.
+  author: Swatch Architects
+  twitter_description: >-
+    Swatch is a London born and Bali based Architecture studio, designing
+    projects in an intimate and hands-on way, collaborating and creating with
+    people that we know and trust.
 social:
   instagram_username: swatcharchitects
   facebook_username:
   pinterest_username:
   linkedin_username: swatch-architects
-  twitter_username: 
-  tiktok_username: 
+  twitter_username:
+  tiktok_username:
   youtube_username:
 brand:
-  primary_color: '#E5E0D3'
-  secondary_color: '#C7B9A3'
-  light_color: '#F1EDE6'
-  dark_color: '#231F20'
-  bright_color: '#C98665'
+  primary_color: '#e5e0d3'
+  secondary_color: '#c7b9a3'
+  light_color: '#f1ede6'
+  dark_color: '#231f20'
+  bright_color: '#c98665'
   primary_logo_path: /images/swatch-architects-bali-logo-primary.png
-  secondary_logo_path: 
+  secondary_logo_path:
   submark_logo_path: images/swatch-architects-sublogo.png
 technical:
   google-analytics_embed:
