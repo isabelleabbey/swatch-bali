@@ -2866,6 +2866,10 @@ p:last-child {
   --tw-border-opacity: 1;
   border-color: rgb(226 213 188 / var(--tw-border-opacity));
 }
+.border-\[\#e5d3bb\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 211 187 / var(--tw-border-opacity));
+}
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -2901,6 +2905,10 @@ p:last-child {
 .bg-\[\#e2d5bc\] {
   --tw-bg-opacity: 1;
   background-color: rgb(226 213 188 / var(--tw-bg-opacity));
+}
+.bg-\[\#e5d3bb\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 211 187 / var(--tw-bg-opacity));
 }
 .bg-light {
   --tw-bg-opacity: 1;
