@@ -26,14 +26,14 @@
       {% for image in item.featured_images limit:1 %}
       <a href="{{item.url}}">
       <div
-        class="bg-image-style aspect-portrait w-full h-[45vh] md:h-[60vh] border-[16px] border-[{{item.project_colour}}]"
-        style="background-image: url('{{ image.image }}');"
+        class="bg-image-style aspect-portrait w-full h-[45vh] md:h-[60vh]"
+        style="background-image: url('{{ image.image }}'); border: 16px solid {{item.project_colour}};"
         draggable="false"
        
       ></div>
       {% endfor %}
       <div
-        class="bg-[{{item.project_colour}}] pt-8 pb-8 px-4 lg:flex justify-between"
+        class="pt-8 pb-8 px-4 lg:flex justify-between" style="background-color: {{item.project_colour}};"
       >
         <h3 class="serif-lg mb-2" data-aos="fade-in">
           {{ item.title }}
