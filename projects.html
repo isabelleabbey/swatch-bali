@@ -12,7 +12,8 @@ seo:
 ---
 
 <section class="grid lg:grid-cols-2 items-center grid-cols-1">
-  {% for item in site.projects %}
+  {% assign sorted = site.projects | reverse %}
+  {% for item in sorted %}
 
   <div>
     <a href="{{item.url}}">
