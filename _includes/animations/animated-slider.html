@@ -21,7 +21,8 @@
 
 <div class="swiper-container w-full">
   <div id="image-track" class="swiper-wrapper w-[100vw]">
-    {% for item in site.projects %}
+    {% assign sorted = site.projects | reverse %}
+    {% for item in sorted %}
     <div class="swiper-slide">
       {% for image in item.featured_images limit:1 %}
       <a href="{{item.url}}">

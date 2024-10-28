@@ -102,8 +102,9 @@ seo:
     <div class="pb-12 lg:pb-0 lg:pl-10p">
       <ul>
         <!-- 1st Work -->
-        {% include animations/animated-span.html %} {% for item in site.projects
-        %}
+        {% include animations/animated-span.html %} 
+        {% assign sorted = site.projects | reverse %}
+        {% for item in sorted %}
         <a href="{{item.url}}">
         <li class="py-4 flex justify-between">
           <span class="w-[50%] md:w-auto uppercase" data-aos="fade-in">{{item.title}}</span>
