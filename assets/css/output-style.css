@@ -2811,9 +2811,6 @@ p:last-child {
 .border-\[0\.5px\] {
   border-width: 0.5px;
 }
-.border-\[16px\] {
-  border-width: 16px;
-}
 .border-x {
   border-left-width: 1px;
   border-right-width: 1px;
@@ -2850,26 +2847,6 @@ p:last-child {
 .border-hidden {
   border-style: hidden;
 }
-.border-\[\#9ab4c8\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(154 180 200 / var(--tw-border-opacity));
-}
-.border-\[\#a3a98a\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(163 169 138 / var(--tw-border-opacity));
-}
-.border-\[\#cab196\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(202 177 150 / var(--tw-border-opacity));
-}
-.border-\[\#e2d5bc\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(226 213 188 / var(--tw-border-opacity));
-}
-.border-\[\#e5d3bb\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 211 187 / var(--tw-border-opacity));
-}
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -2889,26 +2866,6 @@ p:last-child {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-.bg-\[\#9ab4c8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(154 180 200 / var(--tw-bg-opacity));
-}
-.bg-\[\#a3a98a\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(163 169 138 / var(--tw-bg-opacity));
-}
-.bg-\[\#cab196\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(202 177 150 / var(--tw-bg-opacity));
-}
-.bg-\[\#e2d5bc\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 213 188 / var(--tw-bg-opacity));
-}
-.bg-\[\#e5d3bb\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 211 187 / var(--tw-bg-opacity));
 }
 .bg-light {
   --tw-bg-opacity: 1;
@@ -3728,9 +3685,6 @@ body.cms-editor-active {
 }
 
 @media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
-  }
   .md\:sticky {
     position: sticky;
   }
@@ -3756,9 +3710,6 @@ body.cms-editor-active {
   }
   .md\:-mb-\[1\.4px\] {
     margin-bottom: -1.4px;
-  }
-  .md\:mb-0 {
-    margin-bottom: 0px;
   }
   .md\:mb-12 {
     margin-bottom: 3rem;
@@ -3795,9 +3746,6 @@ body.cms-editor-active {
   }
   .md\:h-\[60vh\] {
     height: 60vh;
-  }
-  .md\:h-\[65vh\] {
-    height: 65vh;
   }
   .md\:h-screen {
     height: 100vh;
@@ -3925,9 +3873,6 @@ body.cms-editor-active {
   }
   .lg\:mb-12 {
     margin-bottom: 3rem;
-  }
-  .lg\:ml-24 {
-    margin-left: 6rem;
   }
   .lg\:ml-8 {
     margin-left: 2rem;
